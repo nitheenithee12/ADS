@@ -1,5 +1,5 @@
 Filename,Brand,Age,Step Therapy Requirements Documented in Policy,Number of Steps through Brands,Number of Steps through Generic,Step through-Phototherapy,TB Test required,Quantity Limits,Specialist Types,Initial Authorization Duration(in-months),Reauthorization Duration(in-months),Reauthorization Required,Reauthorization Requirements Documented in Policy,Access Score
-330109-4880941.pdf,TREMFYA,"Adults (implied >=18, but since it's FDA labelled age, the output is) FDA labelled age","The patient is unable to take THREE preferred products, where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. Documentation is required for approval. THREE preferred products: a preferred ustekinumab product, and TWO additional preferred products (a preferred adalimumab product OR Enbrel, and either Rinvoq or Otezla). Authorization of 12 months may be granted for adult members who have previously received a biologic or targeted synthetic drug indicated for the treatment of moderate to severe plaque psoriasis. Authorization of 12 months may be granted for adult members for treatment of moderate to severe plaque psoriasis when any of the following criteria is met. Chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected (if applicable), and chart notes, medical record documentation, or claims history supporting previous medications tried (if applicable), including response to therapy.",3,1,No,Yes,"Quantity Level Limit: 
+330109-4880941.pdf,TREMFYA,FDA labelled age,"The patient is unable to take THREE preferred products, where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. Documentation is required for approval. THREE preferred products: a preferred ustekinumab product, and TWO additional preferred products (a preferred adalimumab product OR Enbrel, Rinvoq, or Otezla). Authorization of 12 months may be granted for adult members who have previously received a biologic or targeted synthetic drug indicated for the treatment of moderate to severe plaque psoriasis. Chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected, and previous medications tried, including response to therapy, are required.",3,1,No,Yes,"Quantity Level Limit: 
 • Tremfya (guselkumab) 100 mg/mL prefilled syringe/One-press injector:
   o 1 syringe/injector per 56 days
   o Exception limit: 2 syringes/injectors per 28 days
@@ -8,7 +8,7 @@ Filename,Brand,Age,Step Therapy Requirements Documented in Policy,Number of Step
   o Exception limit: 6 syringes/pens per 56 days
 • Tremfya (guselkumab) 200 mg/2 mL prefilled pen Induction Pack for Crohn’s Disease:
   o Exception limit: 3 cartons (6 pens) per 56 days
-* Coverage up to the exception limits may be provided with prior authorization",Dermatologist,12,12.0,Yes,"Continuation of Therapy 
+* Coverage up to the exception limits may be provided with prior authorization",Dermatologist,12,12,Yes,"Continuation of Therapy 
 Plaque psoriasis (PsO) 
 Authorization of 12 months may be granted for all adult members (including new members) 
 who are using the requested medication for moderate to severe plaque psoriasis and who 
@@ -21,179 +21,167 @@ scaling, burning, cracking, pain)
 Continuation requests 
 Chart notes or medical record documentation of decreased body surface area (BSA) 
 affected and/or improvement in signs and symptoms.",25
-148593-4960549.pdf,STELARA,NA,"For the treatment of moderate to severe plaque psoriasis, member has a contraindication, intolerance or ineffective response to all of the following available equivalent alternative targeted immune modulators (one-month trial): both Ilumya, Stelara, and either Avsola, Inflectra, or Renflexis.",NA,1,No,Yes,NA,Dermatologist,NA,NA,Yes,"For plaque psoriasis (PsO), Aetna considers continuation of ustekinumab, or its biosimilar, medically necessary for all members 6 years or older who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+148593-4960549.pdf,STELARA,>=6,"For the treatment of chronic severe plaque psoriasis, member has a contraindication, intolerance or ineffective response to all of the following available equivalent alternative targeted immune modulators (one-month trial): both Ilumya, Stelara, and either Avsola, Inflectra, or Renflexis.",NA,1,No,NA,NA,Dermatologist,Unspecified,Unspecified,Yes,"For plaque psoriasis, Aetna considers continuation of ustekinumab, or its biosimilar, medically necessary for members who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
 1. Reduction in body surface area (BSA) affected from baseline; or 
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain).",50
-305252-5002815.pdf,TREMFYA,FDA labelled age,"For guselkumab (Tremfya) in moderate to severe plaque psoriasis, the following step therapy requirements are documented: 
-1. For adult members who have previously received a biologic or targeted synthetic drug indicated for the treatment of moderate to severe plaque psoriasis; or 
-2. For adult members for treatment of moderate-to-severe plaque psoriasis when any of the following criteria is met (no specific criteria listed for step therapy, but initial approval criteria include previous treatment with a biologic or targeted synthetic drug). 
-Continuation of therapy is considered medically necessary when there is a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms, including reduction in body surface area (BSA) affected or improvement in signs and symptoms from baseline.",NA,NA,No,Yes,NA,Dermatologist,Unspecified,NA,Yes,"For all adult members (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+305252-5002815.pdf,TREMFYA,FDA labelled age,"For guselkumab (Tremfya) to be considered medically necessary for the treatment of moderate to severe plaque psoriasis, the following step therapy criteria must be met: 
+1. For adult members who have previously received a biologic or targeted synthetic drug (e.g., Sotyktu, Otezla) indicated for the treatment of moderate to severe plaque psoriasis; or 
+2. For adult members for treatment of moderate-to-severe plaque psoriasis when any of the following criteria is met. 
+
+Additionally, this medication must be prescribed by or in consultation with a dermatologist for plaque psoriasis. 
+
+Continuation of therapy is considered medically necessary when the member achieves or maintains positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition, including reduction in body surface area (BSA) affected from baseline or improvement in signs and symptoms from baseline.",NA,NA,No,Yes,NA,Dermatologist,Unspecified,Unspecified,Yes,"For all adult members (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
 1. Reduction in body surface area (BSA) affected from baseline; or 
-2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain).",50
-176207-4867884.pdf,TREMFYA,"Adults, which corresponds to FDA labelled age for Tremfya.","For TREMFYA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in the policy are not explicitly stated. However, the documentation requirements for prior authorization include:
+2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain);",50
+176207-4867884.pdf,TREMFYA,FDA labelled age,"For TREMFYA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in the policy are:
 
-""Submission of the following information is necessary to initiate the prior authorization review:
-Plaque psoriasis (PsO)
-Initial requests
-Chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected (if applicable).
-Chart notes, medical record documentation, or claims history supporting previous medications tried (if applicable), including response to therapy. If therapy is not advisable, documentation of clinical reason to avoid therapy.
-Continuation requests
-Chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.""
+Submission of the following information is necessary to initiate the prior authorization review:
+- Chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected (if applicable).
+- Chart notes, medical record documentation, or claims history supporting previous medications tried (if applicable), including response to therapy. If therapy is not advisable, documentation of clinical reason to avoid therapy.",NA,2,No,Yes,NA,Dermatologist,12,12,Yes,"Authorization of 12 months may be granted for all adult members (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+Reduction in body surface area (BSA) affected from baseline 
+Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain) 
 
-This implies that step therapy may involve trying previous medications or therapies before initiating TREMFYA, but the exact step therapy requirements are not clearly outlined in the provided context.",NA,1,No,Yes,NA,Dermatologist,Unspecified,12.0,Yes,"For TREMFYA, authorization of 12 months may be granted for all adult members (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+Continuation requests: 
+Chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.",50
+324603-4962713.pdf,STELARA,>=6,"Authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug (e.g., Sotyktu, Otezla) indicated for treatment of moderate to severe plaque psoriasis. 
+Authorization of 12 months may be granted for members 6 years of age and older for treatment of moderate to severe plaque psoriasis when any of the following criteria is met: 
+Crucial body areas (e.g., hands, feet, face, neck, scalp, genitals/groin, intertriginous areas) are affected.",1,1,No,Yes,NA,Dermatologist,12,12,Yes,"Authorization of 12 months may be granted for all members 6 years of age and older (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
 Reduction in body surface area (BSA) affected from baseline 
 Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",50
-324603-4962713.pdf,STELARA,>=6,NA,NA,1,No,Yes,NA,Dermatologist,Unspecified,12.0,Yes,"Authorization of 12 months may be granted for all members 6 years of age and older (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
-Reduction in body surface area (BSA) affected from baseline 
-Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",50
-378692-5003182.pdf,STELARA,"Based on the provided policy document context, the age-related eligibility criteria for STELARA in Plaque Psoriasis (PsO) is:
+378692-5003182.pdf,STELARA,>=6,"The patient is unable to take THREE preferred products, where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. Documentation is required for approval. For Plaque psoriasis (PsO), initial requests require chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected, and previous medications tried, including response to therapy. Authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug indicated for treatment of moderate to severe plaque psoriasis, or when the patient meets specific criteria.",1,1,No,Yes,"• Stelara (ustekinumab) 130 mg/26 mL single-dose vial: 
+  o 4 vials (1 dose) 
+• Stelara (ustekinumab) subcutaneous injection 45 mg/0.5 mL single-dose vial/prefilled syringe 
+  o 1 vial/syringe per 84 days 
+  o Exception limit: 2 vials/syringes per 28 days 
+• Stelara (ustekinumab) subcutaneous injection 90 mg/mL prefilled syringe 
+  o 1 syringe per 56 days 
+  o Exception limit: 2 syringes per 28 days",Dermatologist,12,12,Yes,"For STELARA, Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe), the reauthorization requirements documented in the policy are: 
+""Authorization of 12 months may be granted for all members 6 years of age and older (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+• Reduction in body surface area (BSA) affected from baseline 
+• Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)"" 
+and 
+""Chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.",50
+378792-5004240.pdf,TREMFYA,FDA labelled age,"The patient is unable to take THREE preferred products, where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. Documentation is required for approval. For plaque psoriasis (PsO), submission of the following information is necessary to initiate the prior authorization review: chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected (if applicable), and chart notes, medical record documentation, or claims history supporting previous medications tried (if applicable), including response to therapy. If therapy is not advisable, documentation of clinical reason to avoid therapy.",3,3,No,Yes,"• Tremfya (guselkumab) 100 mg/mL prefilled syringe/One-press injector: 
+o 1 syringe/injector per 56 days 
+o Exception limit: 2 syringes/injectors per 28 days 
+• Tremfya (guselkumab) 200 mg/2 mL prefilled syringe/pen: 
+o 1 syringe/pen per 28 days 
+o Exception limit: 6 syringes/pens per 56 days 
+* Coverage up to the exception limits may be provided with prior authorization",Dermatologist,12,12,Yes,Authorization of 12 months may be granted for all adult members (including new members) who are using the requested medication for moderate to severe plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: Reduction in body surface area (BSA) affected from baseline.,25
+250819-3621812.pdf,STELARA,>=12,NA,NA,NA,No,Yes,NA,NA,1,NA,NA,NA,50
+250819-3621812.pdf,TREMFYA,FDA labelled age,NA,NA,NA,No,Yes,"NA
 
-""members 6 years of age and older""
+There is no mention of quantity limits for TREMFYA in the provided policy document context.",NA,Unspecified,6,Yes,NA,50
+296961-4569911.pdf,STELARA,>=6,NA,NA,NA,No,Yes,"NA
 
-This is mentioned in the FDA-approved indications section on Page 1 of the document.","The patient is unable to take THREE preferred products, where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. For Plaque psoriasis (PsO), documentation of affected area(s) and body surface area (BSA) affected, and previous medications tried, including response to therapy, is required. Authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug indicated for treatment of moderate to severe plaque psoriasis, or when the member meets specific criteria.",1,1,NA,Yes,"• Stelara (ustekinumab) 130 mg/26 mL singledose vial: 4 vials (1 dose)
-• Stelara (ustekinumab) subcutaneous injection 45 mg/0.5 mL single-dose vial/prefilled syringe: 1 vial/syringe per 84 days, Exception limit: 2 vials/syringes per 28 days
-• Stelara (ustekinumab) subcutaneous injection 90 mg/mL prefilled syringe: 1 syringe per 56 days, Exception limit: 2 syringes per 28 days",Dermatologist,12,12.0,Yes,Continuation requests for Plaque psoriasis (PsO) require chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.,50
-378792-5004240.pdf,TREMFYA,>=18,"The step therapy requirements for TREMFYA in Plaque Psoriasis (moderate-to-severe) are as follows:
-
-""The patient is unable to take THREE preferred products, where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. 
-
-Member has had an inadequate response or intolerance to either phototherapy (e.g., UVB, PUVA) or pharmacologic treatment with methotrexate, cyclosporine, or acitretin. 
-
-Member has a clinical reason to avoid pharmacologic treatment with methotrexate, cyclosporine, and acitretin (see Appendix).",1,"Based on the provided context, the extracted value for ""Number of Steps through Generic"" is:",No,Yes,"Tremfya (guselkumab) 100 mg/mL prefilled syringe/One-press injector: 
-1 syringe/injector per 56 days 
-Exception limit: 2 syringes/injectors per 28 days 
-Tremfya (guselkumab) 200 mg/2 mL prefilled syringe/pen: 
-1 syringe/pen per 28 days 
-Exception limit: 6 syringes/pens per 56 days 
-Tremfya (guselkumab) 200 mg/2 mL prefilled pen Induction Pack for Crohn’s Disease: 
-Exception limit: 3 cartons (6 pens) per 56 days",Dermatologist,12,12.0,Yes,"Continuation of Therapy for Plaque psoriasis (PsO)1-6: 
-Authorization of 12 months may be granted for all adult members (including new members) 
-who are using the requested medication for moderate to severe plaque psoriasis and who 
-achieve or maintain a positive clinical response as evidenced by low disease activity or 
-improvement in signs and symptoms of the condition when either of the following is met: 
-•  Reduction in body surface area (BSA) affected from baseline 
-•  Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, 
-scaling, burning, cracking, pain)",50
-250819-3621812.pdf,STELARA,NA,NA,NA,NA,NA,Yes,"NA
-
-There is no mention of quantity limits for STELARA in the provided policy document context.",NA,NA,NA,NA,NA,50
-250819-3621812.pdf,TREMFYA,NA,NA,NA,NA,NA,Yes,"NA
-
-There is no mention of quantity limits for TREMFYA in the provided document context.",NA,NA,NA,NA,NA,50
-296961-4569911.pdf,STELARA,NA,NA,NA,NA,NA,Yes,"NA
-
-The provided document context does not contain any information about quantity limits for STELARA or its generic name. The section labeled ""Quantity Level Limit"" only references the need to check the formulary for drug-specific quantity level limits, but does not provide any specific information for STELARA.",Dermatologist,NA,NA,Yes,"1. Documentation of positive clinical response to therapy 
+The provided document context does not contain any information about quantity limits for STELARA or its generic name. The sections labeled ""Quantity Level Limit"" or ""Quantity Limit"" only reference external sources (packet inserts) for other brands, but do not provide any quantity limit information for STELARA.",Dermatologist,Unspecified,6,Yes,"1. Documentation of positive clinical response to therapy 
 2. Patient is not receiving medication with another BRM 
 3. Patient is monitored for active TB during treatment (where applicable) 
 4.  Patient is monitored for lymphoma and other malignancies during treatment (where 
 applicable)",50
-296961-4569911.pdf,TREMFYA,NA,"**Step Therapy Requirements Documented in Policy**
+296961-4569911.pdf,TREMFYA,FDA labelled age,"Step Therapy Requirements Documented in Policy:
 
-Prior authorization is required for all biologics, including Tremfya, for the treatment of plaque psoriasis. The patient must have a documented history of inadequate response to, or intolerance to, at least one other systemic non-biologic therapy (e.g., cyclosporine, methotrexate, or a phototherapy regimen) for the treatment of moderate-to-severe plaque psoriasis.","Based on the provided document context, the steps required before TREMFYA approval for PsO are:",2,No,Yes,"NA
+Prior authorization is required for all biologic agents, including TREMFYA, for the treatment of moderate-to-severe plaque psoriasis. The following criteria must be met:
 
-The provided document context does not explicitly mention quantity limits for TREMFYA. It only references quantity level limits for other brands and instructs to reference the formulary for drug-specific quantity level limits.",Dermatologist,NA,NA,Yes,"1. Documentation of positive clinical response to therapy 
-2. Patient is not receiving medication with another BRM 
-3. Patient is monitored for active TB during treatment (where applicable) 
-4.  Patient is monitored for lymphoma and other malignancies during treatment (where 
-applicable)",50
-337814-4985370.pdf,STELARA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,75
-337814-4985370.pdf,TREMFYA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,75
-364054-4720790.pdf,STELARA,NA,NA,NA,NA,NA,NA,"NA
+* The patient must have a documented history of inadequate response to, or intolerance to, at least two conventional systemic agents (e.g., cyclosporine, methotrexate, or acitretin) or a history of intolerance to, or inadequate response to, at least one conventional systemic agent and one topical therapy (e.g., corticosteroids, vitamin D analogues, or retinoids) (Menter et al. 2019).
+* The patient must have a body surface area (BSA) of at least 10% affected by psoriasis (Pardasani et al. 2000).
+* The patient must have a documented history of phototherapy (e.g., ultraviolet B [UVB] or psoralen plus ultraviolet A [PUVA]) (Pardasani et al. 2000).
+* The patient must have a documented history of failure to respond to, or intolerance to, at least one non-biologic systemic agent (e.g., cyclosporine, methotrexate, or acitretin) (Menter et al. 2019).
+* The patient must have a documented history of failure to respond to, or intolerance to, at least one topical therapy (e.g., corticosteroids, vitamin D analogues, or retinoids) (Menter et al. 2019).","Based on the provided document context, the steps required before TREMFYA approval for PsO are:",1,No,Yes,"NA
 
-The provided context does not mention STELARA or its generic name, and the quantity limit information is related to a different diagnosis (IBS-D).",Dermatologist,NA,NA,NA,NA,50
-364054-4720790.pdf,TREMFYA,NA,NA,NA,1,NA,NA,"NA
+The document context does not explicitly mention quantity limits for TREMFYA. It only references quantity level limits for other brands and includes references to packet inserts for those brands.",Dermatologist,6,6,Yes,"NA
 
-The provided context does not mention any quantity limits for TREMFYA or its generic name for the indication of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",Dermatologist,NA,NA,NA,NA,50
-56061-4538520.pdf,STELARA,>=6,"Step Therapy Requirements Documented in Policy:
+The provided document context does not contain the reauthorization requirements for TREMFYA (Psoriasis). The structured data section only contains general reauthorization criteria for multiple brands, but there is no specific information for TREMFYA.",50
+337814-4985370.pdf,STELARA,FDA labelled age,NA,NA,NA,No,Yes,NA,NA,12,6,Yes,NA,75
+337814-4985370.pdf,TREMFYA,FDA labelled age,NA,NA,NA,No,No,NA,NA,12,6,Yes,NA,75
+364054-4720790.pdf,STELARA,FDA labelled age,NA,NA,NA,No,No,"NA 
 
-1. Initial Authorization Request must include:
-   - Confirmation patient is not receiving concurrent phototherapy
-   - Previous therapies trialed and the nature of the failure
-   - Monitoring plan
-   - Complete medication regimen
-   - Requested dosing which conforms to an FDA approved regimen based on indication
-   - Current weight
+(Note: The provided document context does not mention STELARA or its generic name, but rather IBS-D, a different indication and condition.)",Dermatologist,Unspecified,12,Yes,NA,50
+364054-4720790.pdf,TREMFYA,FDA labelled age,NA,NA,1,NA,NA,"NA
 
-   AND
+The provided context does not mention any quantity limits for TREMFYA or its generic name for the indication of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",Dermatologist,Unspecified,Unspecified,NA,NA,50
+56061-4538520.pdf,STELARA,>=6,"Prior Authorization Criteria for STELARA in Plaque Psoriasis (moderate-to-severe):
 
-   For Plaque Psoriasis (PsO), patient must be candidates for phototherapy or systemic therapy.
+1. The patient must have tried and failed at least one systemic therapy (e.g., cyclosporine, methotrexate, or a psoralen plus ultraviolet A light (PUVA) treatment) or have been unable to tolerate systemic therapy.
+2. The patient must have tried and failed at least one phototherapy treatment (e.g., ultraviolet B (UVB) or PUVA).
+3. The patient must have a body surface area (BSA) of 10% or greater affected by psoriasis.
+4. The patient must have a history of inadequate response to, or intolerance of, at least one systemic therapy or phototherapy treatment.",NA,NA,No,NA,"NA
 
-   AND
+The provided context does not explicitly state a quantity limit for STELARA. It mentions dosing limits based on weight and indication, but does not specify a quantity limit.",NA,Unspecified,Unspecified,Yes,NA,50
+361486-4654549.pdf,TREMFYA,FDA labelled age,"Prior Authorization Criteria for TREMFYA in Plaque Psoriasis (moderate-to-severe):
 
-   Patient must have previously tried and failed at least one of the following:
-   - Topical corticosteroids
-   - Topical retinoids
-   - Topical vitamin D analogues
-   - Topical calcineurin inhibitors
-   - Phototherapy
-   - Systemic agents (e.g., methotrexate, cyclosporine, acitretin)
+1. The patient must have a diagnosis of moderate to severe plaque psoriasis.
+2. The patient must have tried and failed at least one systemic therapy or phototherapy.
+3. The patient must have a body surface area (BSA) of 10% or greater.
+4. The patient must have a history of inadequate response to at least one biologic or systemic therapy.",NA,2,No,Yes,NA,Dermatologist,Unspecified,NA,Yes,"Continuation of therapy with TREMFYA is considered medically necessary when the following criteria are met:
 
-   OR
+• The patient has shown a clinical response to therapy as evidenced by a reduction in Psoriasis Area and Severity Index (PASI) score or a Physician's Global Assessment (PGA) of 0 or 1.
 
-   Patient must have a body surface area (BSA) of 10% or greater.",1,"Based on the provided context, the extracted value for ""Number of Steps through Generic"" is:",No,NA,NA,NA,Unspecified,NA,NA,NA,50
-361486-4654549.pdf,TREMFYA,>=18,"Initial Authorization Request must include: 
-▪ Monitoring plan 
-▪ Previous therapies trialed and the nature of the failure 
-▪ Complete medication regimen 
-▪ Confirmation patient is not receiving concurrent phototherapy 
-▪ Requested dosing which conforms to an FDA approved regimen based on indication 
+• The patient has not experienced any disease progression as evidenced by an increase in PASI score or PGA of 3 or greater.
 
-AND 
+• The patient has not experienced any adverse effects that would preclude continued therapy.
 
-Patient must have previously tried and failed at least one systemic therapy (e.g., cyclosporine, methotrexate, or a biologic) for moderate to severe plaque psoriasis.",1,2,No,Yes,NA,Dermatologist,12,NA,NA,NA,50
-363337-5004251.pdf,STELARA,NA,NA,NA,1,NA,NA,"NA
+• The patient has not exceeded the maximum quantity level limit for TREMFYA.",50
+363337-5004251.pdf,STELARA,>=18,NA,NA,1,No,NA,"NA 
 
-The provided context does not mention STELARA or its generic name, and the quantity limit information is for a different diagnosis (IBS-D).",Dermatologist,NA,NA,NA,NA,50
-270849-4873664.pdf,TREMFYA,NA,"Based on the provided policy document context, the extracted value for ""Step Therapy Requirements Documented in Policy"" for TREMFYA in Plaque Psoriasis (moderate-to-severe) is:
+(Note: The provided context does not mention STELARA or its generic name, but rather IBS-D, which is a different indication.)",Dermatologist,Unspecified,12,Yes,NA,50
+270849-4873664.pdf,TREMFYA,FDA labelled age,"**Step Therapy Requirements Documented in Policy**
 
-""Prior authorization is required for TREMFYA for the treatment of moderate-to-severe plaque psoriasis. The following step therapy criteria must be met:
+For the treatment of plaque psoriasis (moderate-to-severe), the following step therapy requirements apply:
 
-1. The patient must have a documented history of inadequate response to, or intolerance to, at least two conventional systemic therapies (e.g., cyclosporine, methotrexate, or acitretin) and/or at least two phototherapy treatments (e.g., PUVA or narrowband UVB) for the treatment of moderate-to-severe plaque psoriasis.
-2. The patient must have a documented history of inadequate response to, or intolerance to, at least one tumor necrosis factor-alpha (TNF-alpha) inhibitor for the treatment of moderate-to-severe plaque psoriasis.
-3. The patient must have a documented history of inadequate response to, or intolerance to, at least one interleukin-12/23 inhibitor for the treatment of moderate-to-severe plaque psoriasis.",2,NA,No,NA,NA,Dermatologist,NA,NA,NA,NA,50
-258503-4913513.pdf,TREMFYA,>=18,"Step Therapy Requirements Documented in Policy:
+1. The patient must have previously received a biologic or a non-biologic systemic agent for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to the previous therapy.
+2. The patient must have a body surface area (BSA) of 10% or greater.
+3. The patient must have phototherapy as a part of their treatment regimen.",1,NA,No,NA,"NA
 
-For reauthorization of TREMFYA for Plaque Psoriasis (PsO), adult members must meet the following criteria:
+No quantity limits are mentioned in the provided policy document context for TREMFYA (guselkumab) in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",Dermatologist,12,6,Yes,"Reauthorization Requirements Documented in Policy:
 
-* Achieve or maintain a positive clinical response from TREMFYA therapy as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met:
-  1. Reduction in body surface area (BSA) affected from baseline
-  2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",NA,NA,No,Yes,"NA
+NA",50
+258503-4913513.pdf,TREMFYA,FDA labelled age,"For TREMFYA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in policy are:
 
-There is no explicit mention of quantity limits for TREMFYA in the provided policy document context.",Dermatologist,12,12.0,Yes,"Reauthorization Requirements Documented in Policy:
+""Authorization of 12 months may be granted for adult members who were previously authorized by HMSA/HMSA’s Pharmacy Benefit Manager and achieve or maintain a positive clinical response from Tremfya therapy as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+1. Reduction in body surface area (BSA) affected from baseline 
+2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",2,NA,No,Yes,"NA
 
-For adult members with plaque psoriasis (PsO), reauthorization of 12 months may be granted if they achieve or maintain a positive clinical response from Tremfya therapy as evidenced by:
+No quantity limits are explicitly stated for TREMFYA in the provided policy document context.",Dermatologist,12,12,Yes,"Reauthorization Requirements Documented in Policy:
+
+For adult members with plaque psoriasis (PsO) who were previously authorized by HMSA/HMSA’s Pharmacy Benefit Manager, reauthorization of 12 months may be granted if they achieve or maintain a positive clinical response from Tremfya therapy as evidenced by:
 1. Reduction in body surface area (BSA) affected from baseline
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",50
 58918-4969735.pdf,STELARA,>=6,"For STELARA in Plaque Psoriasis (moderate-to-severe), the Step Therapy Requirements Documented in Policy are:
 
-""Authorization of 12 months may be granted to members 6 years of age and older who were previously authorized by HMSA/CVS for the requested drug and achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+All members (including new members and members currently receiving treatment without prior authorization) must meet criteria for initial approval in section C. 
+Authorization of 12 months may be granted to members 6 years of age and older who were previously authorized by HMSA/CVS for the requested drug and achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
 1. Reduction in body surface area (BSA) affected from baseline 
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",NA,NA,No,Yes,"NA
 
-There is no explicit mention of quantity limits for STELARA in the provided policy document context.",Dermatologist,12,12.0,Yes,"Reauthorization Requirements Documented in Policy:
+There is no mention of quantity limits for STELARA in the provided context.",Dermatologist,Unspecified,12,Yes,"Reauthorization Requirements Documented in Policy:
 
 To be eligible for reauthorization, members 6 years of age and older who were previously authorized by HMSA/CVS for STELARA must achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met:
+
 1. Reduction in body surface area (BSA) affected from baseline
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",50
-258492-5030356.pdf,STELARA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,75
-379899-5030421.pdf,STELARA,>=6,NA,NA,NA,No,Yes,"NA
+258492-5030356.pdf,STELARA,FDA labelled age,NA,NA,NA,No,No,NA,NA,12,6,Yes,NA,75
+379899-5030421.pdf,STELARA,>=6,"The medication must be prescribed by or in consultation with a dermatologist for plaque psoriasis. Authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug (e.g., Sotyktu, Otezla) indicated for plaque psoriasis.",1,NA,No,Yes,NA,Dermatologist,12,12,Yes,"Reauthorization Requirements Documented in Policy:
 
-There is no explicit mention of quantity limits for STELARA in the provided policy document context.",Dermatologist,12,12.0,Yes,"Reauthorization Requirements Documented in Policy:
-
-For STELARA PsO, reauthorization may be granted for 12 months to members 6 years of age and older who were previously authorized and achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met:
-1. Reduction in body surface area (BSA) affected from baseline
+A. Plaque psoriasis (PsO) 
+Authorization of 12 months may be granted to members 6 years of age and older who were previously authorized by HMSA/HMSA’s Pharmacy Benefit Manager for the requested drug and achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition when either of the following is met: 
+1. Reduction in body surface area (BSA) affected from baseline 
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, burning, cracking, pain)",50
-362198-4805629.pdf,STELARA,>=18,"Member must fail a therapeutic trial of ALL HAP preferred anti-TNF agents (unless clinically significant medical contraindications are documented).
-Member must fail a therapeutic trial of any ONE of the following oral agents:
-a. Three month trial of any ONE of the following oral agents: methotrexate, cyclosporine or acitretin (Soriatane) OR
-b. Member has not responded to at least one 30-treatment course of photochemotherapy [psoralen plus ultraviolet A (PUVA)] – or – phototherapy [ultraviolet B (UVB)]. Poor response is defined as <50% clearing of psoriasis plaques from the initially affected body surface.",1,1,No,Yes,NA,Dermatologist,12,12.0,Yes,"In general, if renewal requirements are satisfied, subsequent approvals of 12 months duration are contingent on demonstrated response as evident in the medical records. Exceptions to the renewal duration are: change in dose, lack of response, lack of adherence to the regimen and lack of follow-up with the specialty provider. For Plaque psoriasis, continuation coverage is limited to Members who demonstrate clearing of 50% or greater of affected body surface area of plaque psoriasis.",50
-333345-4841422.pdf,TREMFYA,NA,"Documented failure, intolerance, or contraindication to topical therapy (topical corticosteroids, vitamin D analogs, etc) AND documented failure to respond to a minimum 3 month trial, intolerance, or contraindication to any ONE of the following: 
+362198-4805629.pdf,STELARA,FDA labelled age,"In addition to diagnosis criteria outlined above, Member must fail a therapeutic trial (at least 3 months duration) of:
+
+i. All HAP preferred anti-TNF agents or have intolerable side effects or contraindications to treatment with all HAP preferred anti-TNF agents",2,1,Yes,Yes,NA,Dermatologist,Unspecified,12,Yes,"7. In general, if renewal requirements are satisfied, subsequent approvals of 12 months duration are contingent on demonstrated response as evident in the medical records. Exceptions to the renewal duration are: change in dose, lack of response, lack of adherence to the regimen and lack of follow-up with the specialty provider.
+8. Plaque psoriasis: Continuation coverage is limited to Members who demonstrate clearing of 50% or greater of affected body surface area of plaque psoriasis.",25
+333345-4841422.pdf,TREMFYA,FDA labelled age,"Documented failure, intolerance, or contraindication to topical therapy (topical corticosteroids, vitamin D analogs, etc) AND documented failure to respond to a minimum 3 month trial, intolerance, or contraindication to any ONE of the following: 
 • Cimzia 
 • Covered adalimumab biosimilars 
 • Enbrel 
 • Covered ustekinumab biosimilars 
 • Tremfya 
-• Skyrizi",1,2,No,No,NA,NA,NA,NA,NA,NA,50
+• Skyrizi",2,1,No,Yes,"NA
+
+There is no mention of quantity limits for TREMFYA in the provided document context.",Dermatologist,Unspecified,Unspecified,No,"NA
+
+The provided document context does not contain explicit reauthorization criteria for TREMFYA (PsO).",50
 372505-5024739.pdf,STELARA,>=6,"For STELARA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements are as follows:
 
 ""Prescriber must provide documentation of ALL of the following: 
@@ -223,27 +211,31 @@ or other non-biologic agent [for example (list not all inclusive): abatacept (Or
 secukinumab (Cosentyx), golimumab (Simponi), certolizumab (Cimzia), etanercept 
 (Enbrel) infliximab (Remicade), rituximab (Rituxan), upadacitinib (Rinvoq), adalimumab 
 (Humira), tocilizumab (Actemra), sarilumab (Kevzara), natalizumab (Tysabri), tofacitinib 
-(Xeljanz or Xeljanz XR), apremilast (Otezla)]",1,"Based on the provided context, the number of steps through generic for STELARA approval for PsO is:",No,NA,NA,Dermatologist,NA,NA,Yes,"Prescriber must provide documentation of ALL of the following: 
+(Xeljanz or Xeljanz XR), apremilast (Otezla)]",1,1,No,NA,"o Psoriasis: quantity limit 1 injection/12 weeks 
+o Psoriatic arthritis: quantity limit 1 injection/12 weeks.",Dermatologist,Unspecified,12,Yes,"Prescriber must provide documentation of ALL of the following: 
 Plaque Psoriasis 
 • Member is ≥6 years of age AND 
 • Prescribed by or in consultation with a dermatologist AND 
-• Diagnosis of plaque psoriasis AND 
-• Member must have demonstrated a clinical response to therapy (i.e. reduction in body 
-surface area involvement or improvement in PASI score) AND 
-• Member is not on concurrent treatment with a TNF-inhibitor, biologic response modifier 
-or other non-biologic agent [for example (list not all inclusive): abatacept (Orencia), 
-secukinumab (Cosentyx), golimumab (Simponi), certolizumab (Cimzia), etanercept 
-(Enbrel) infliximab (Remicade), rituximab (Rituxan), upadacitinib (Rinvoq), adalimumab 
-(Humira), tocilizumab (Actemra), sarilumab (Kevzara), natalizumab (Tysabri), tofacitinib 
-(Xeljanz or Xeljanz XR), apremilast (Otezla)]",50
-372229-5027532.pdf,TREMFYA,>=18,"Step Therapy Requirements Documented in Policy:
+• Diagnosis of generalized moderate to severe chronic plaque psoriasis involving ≥ 10% of 
+body surface area AND 
+• Member has had a minimum duration of a 4-week trial and failure, or intolerance to ONE 
+of the following topical therapies or contraindication to ALL of them: 
+o Corticosteroids 
+o Vitamin D analogs 
+o Tazarotene 
+o Calcineurin inhibitors",25
+372229-5027532.pdf,TREMFYA,FDA labelled age,"Step Therapy Requirements Documented in Policy:
 
-For continuation of therapy, the following criteria must be met:
-Member is ≥18 years of age AND Prescribed by or in consultation with a dermatologist AND Diagnosis of plaque psoriasis AND Documentation of positive clinical response to Tremfya therapy (e.g., labs, sign/symptom reduction, no disease progression, no significant toxicity) AND Member is not on concurrent treatment with a TNF-inhibitor, biologic response modifier or other non-biologic agent.",2,1,No,NA,"For TREMFYA (guselkumab) with the indication of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe), the extracted quantity limit text is:
-
-""Plaque psoriasis and psoriatic arthritis: 100mg strength only 1/56""
-
-This is the exact quantity limit text as stated in the policy document.",Dermatologist,NA,NA,Yes,"Criteria for continuation of therapy: 
+For continuation of therapy, the member must meet the following criteria:
+- Member is ≥18 years of age AND  
+- Prescribed by or in consultation with a dermatologist AND 
+- Diagnosis of plaque psoriasis AND 
+- Documentation of positive clinical response to Tremfya therapy (e.g., labs, sign/symptom reduction, no disease progression, no significant toxicity) AND  
+- Member is not on concurrent treatment with a TNF-inhibitor, biologic response modifier or other non-biologic agent [for example (list not all inclusive): abatacept (Orencia), adalimumab (Humira), adalimumab-atto (Amjevita), upadacitinib (Rinvoq), certolizumab (Cimzia), etanercept (Enbrel) infliximab (Remicade), rituximab (Rituxan), apremilast (Otezla), ustekinumab (Stelara), tocilizumab (Actemra), secukinumab (Cosentyx), sarilumab (Kevzara), natalizumab (Tysabri), tofacitinib (Xeljanz or Xeljanz XR), baricitinib (Olumiant)]",2,1,No,NA,"• Plaque psoriasis and psoriatic arthritis: 100mg strength only 1/56 
+• Ulcerative Colitis:  
+   Subq: 200mg: 1 inj per month, 100mg: 1 inj every 2 months 
+• Crohn’s disease:  
+   Subq: 200mg: 1 inj per month, 100mg: 1 inj every 2 months",Dermatologist,6,12,Yes,"Criteria for continuation of therapy: 
 Plaque Psoriasis 
 • Member is ≥18 years of age AND  
 • Prescribed by or in consultation with a dermatologist AND 
@@ -259,7 +251,7 @@ adalimumab (Humira), adalimumab-atto (Amjevita), upadacitinib (Rinvoq), certoliz
 (Olumiant)]",25
 372479-5037971.pdf,STELARA,>=6,"For STELARA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements are as follows:
 
-""Prescriber must provide documentation of ALL of the following: 
+Prescriber must provide documentation of ALL of the following:
 Plaque Psoriasis 
 • Member is ≥6 years of age AND 
 • Prescribed by or in consultation with a dermatologist AND 
@@ -274,7 +266,7 @@ o Calcineurin inhibitors
 
 OR 
 
-Prescriber must provide documentation of ALL of the following: 
+Prescriber must provide documentation of ALL of the following:
 Plaque Psoriasis 
 • Member is ≥6 years of age AND 
 • Prescribed by or in consultation with a dermatologist AND 
@@ -286,25 +278,21 @@ or other non-biologic agent [for example (list not all inclusive): abatacept (Or
 secukinumab (Cosentyx), golimumab (Simponi), certolizumab (Cimzia), etanercept 
 (Enbrel) infliximab (Remicade), rituximab (Rituxan), upadacitinib (Rinvoq), adalimumab 
 (Humira), tocilizumab (Actemra), sarilumab (Kevzara), natalizumab (Tysabri), tofacitinib 
-(Xeljanz or Xeljanz XR), apremilast (Otezla)]",1,"Based on the provided context, the number of steps through generic for STELARA approval for PsO is:",No,NA,o STELARA: quantity limit 1 injection/8 weeks,Dermatologist,Unspecified,NA,Yes,"For STELARA (PsO), the reauthorization/renewal criteria text is:
-
-""Prescriber must provide documentation of ALL of the following: 
+(Xeljanz or Xeljanz XR), apremilast (Otezla)]",1,"Based on the provided context, the number of steps through generic for STELARA approval for PsO is:",No,NA,"o Psoriasis: quantity limit 1 injection/12 weeks 
+o Psoriatic arthritis: quantity limit 1 injection/12 weeks",Dermatologist,Unspecified,12,Yes,"Prescriber must provide documentation of ALL of the following: 
 Plaque Psoriasis 
 • Member is ≥6 years of age AND 
 • Prescribed by or in consultation with a dermatologist AND 
-• Diagnosis of plaque psoriasis AND 
-• Member must have demonstrated a clinical response to therapy (i.e. reduction in body 
-surface area involvement or improvement in PASI score) AND 
-• Member is not on concurrent treatment with a TNF-inhibitor, biologic response modifier 
-or other non-biologic agent [for example (list not all inclusive): abatacept (Orencia), 
-secukinumab (Cosentyx), golimumab (Simponi), certolizumab (Cimzia), etanercept 
-(Enbrel) infliximab (Remicade), rituximab (Rituxan), upadacitinib (Rinvoq), adalimumab 
-(Humira), tocilizumab (Actemra), sarilumab (Kevzara), natalizumab (Tysabri), tofacitinib 
-(Xeljanz or Xeljanz XR), apremilast (Otezla)]",50
-84074-5053811.pdf,STELARA,NA,"For STELARA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements are:
-
-o Patient did not respond adequately (or is not a candidate) to a trial of topical agents (i.e., corticosteroids); AND 
-o Patient did not respond adequately (or is not a candidate) to a trial of phototherapy (i.e., psoralens with UVA light [PUVA] or UVB with coal tar or dithranol)",1,1,No,NA,NA,NA,NA,NA,Yes,"Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND 
+• Diagnosis of generalized moderate to severe chronic plaque psoriasis involving ≥ 10% of 
+body surface area AND 
+• Member has had a minimum duration of a 4-week trial and failure, or intolerance to ONE 
+of the following topical therapies or contraindication to ALL of them: 
+o Corticosteroids 
+o Vitamin D analogs 
+o Tazarotene 
+o Calcineurin inhibitors",50
+84074-5053811.pdf,STELARA,FDA labelled age,NA,NA,NA,No,Yes,NA,NA,Unspecified,NA,Yes,"Renewal Criteria: 
+Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND 
 Duration of authorization has not been exceeded (refer to Section I); AND 
 Absence of unacceptable toxicity from the drug. Examples of unacceptable toxicity include: 
 serious infections, malignancy, severe hypersensitivity reactions, posterior reversible 
@@ -314,73 +302,57 @@ Disease response as indicated by improvement in signs and symptoms compared to b
 such as redness, thickness, scaliness, and/or the amount of surface area involvement (a total 
 BSA involvement ≤ 1%), and/or an improvement on a disease activity scoring tool [e.g., Psoriasis 
 Area and Severity Index (PASI) score ≤ 3, physician’s global assessment (PGA) score ≤ 1, etc.].",50
-51842-4975862.pdf,STELARA,NA,NA,2,NA,NA,NA,NA,Dermatologist,NA,NA,Yes,"For continuation of STELARA (ustekinumab) therapy for PsO, the following reauthorization requirements must be met:
-
-* Documentation of positive clinical response; and
-* Prescriber attestation that the patient or caregiver are not able to be trained or are physically unable to administer ustekinumab FDA labeled for self-administration; prescriber must submit explanation; and
-* Ustekinumab is initiated and titrated according to US Food and Drug Administration labeled dosing for plaque psoriasis; and
-* Patient is not receiving ustekinumab in combination with a targeted immunomodulator [e.g., adalimumab, Bimzelx (bimekizumab-bkzx), Cimzia (certolizumab), Cosentyx (secukinumab), Enbrel (etanercept), Ilumya (tildrakizumab), Otezla (apremilast), Skyrizi (risankizumab), Siliq (brodalumab), Sotyktu (deucravacitinib), Taltz (ixekizumab), Tremfya (guselkumab)]; and
-* Authorization is for no more than 12 months",50
-255517-4865097.pdf,TREMFYA,>=18,"For TREMFYA in Plaque Psoriasis (moderate-to-severe), the Step Therapy Requirements Documented in Policy are:
-
-Tremfya will be approved based on all of the following criteria:
-
-(1) Diagnosis of moderate to severe plaque psoriasis 
+51842-4975862.pdf,STELARA,>=6,NA,1,NA,No,NA,NA,Dermatologist,Unspecified,6,Yes,"For continuation of therapy, all of the following: 
+Documentation of positive clinical response; and 
+Prescriber attestation that the patient or caregiver are not able to be trained or are physically unable to administer ustekinumab FDA labeled for self-administration; prescriber must submit explanation; and 
+Ustekinumab is to be administered 8 weeks after the initial intravenous dose; and 
+Ustekinumab continuation dosing is in accordance with the United States Food and Drug Administration approved labeled dosing for Crohn’s disease; and 
+Patient is not receiving ustekinumab in combination with a targeted immunomodulator [e.g., adalimumab, Cimzia (certolizumab), Entyvio (vedolizumab), Omvoh (mirikizumab-mrkz), Rinvoq (upadacitinib), Skyrizi (risankizumab), Tremfya (guselkumab)]; and 
+Authorization is for no more than 12 months.",50
+255517-4865097.pdf,TREMFYA,FDA labelled age,"Tremfya will be approved based on all of the following criteria:  
+(1)  Diagnosis of moderate to severe plaque psoriasis 
+ 
 -AND- 
-(2) One of the following: 
-(a) All of the following: 
-i. Greater than or equal to 3% body surface area involvement, palmoplantar, facial, genital involvement, or severe scalp psoriasis 
+ 
+(2)  One of the following: 
+ 
+(a)  All of the following: 
+ 
+i.  Greater than or equal to 3% body surface area involvement, palmoplantar, 
+facial, genital involvement, or severe scalp psoriasis 
+ 
 -AND- 
-ii. History of failure to one of the following topical therapies, unless contraindicated or clinically significant adverse effects are experienced (document drug, date, and duration of trial): 
+ 
+ii.  History of failure to one of the following topical therapies, unless 
+contraindicated or clinically significant adverse effects are experienced 
+(document drug, date, and duration of trial): 
+ 
 a. Corticosteroids (e.g., betamethasone, clobetasol, desonide) 
 b. Vitamin D analogs (e.g., calcitriol, calcipotriene) 
-c. Tazarotene 
-d. Calcineurin inhibitors (e.g., tacrolimus, pimecrolimus) 
-e. Anthralin 
-f. Coal tar",2,2,No,NA,"NA
+c.  Tazarotene 
+d.  Calcineurin inhibitors (e.g., tacrolimus, pimecrolimus)  
+e.  Anthralin 
+f.  Coal tar",1,1,No,NA,"NA
 
-No quantity limit information is explicitly stated for TREMFYA in the provided context.",Dermatologist,12,12.0,Yes,Documentation of positive clinical response to Tremfya therapy -AND- Patient is not receiving Tremfya in combination with another targeted immunomodulator.,25
-255515-5050321.pdf,STELARA,NA,NA,NA,NA,NA,NA,"NA
+There is no explicit mention of ""Quantity Limits"" or ""Quantity Level Limit"" in the provided document context for TREMFYA (Guselkumab) in the treatment of moderate-to-severe plaque psoriasis.",Dermatologist,6,Unspecified,NA,Documentation of positive clinical response to Tremfya therapy -AND- Patient is not receiving Tremfya in combination with another targeted immunomodulator.,50
+255515-5050321.pdf,STELARA,>=6,NA,NA,NA,No,NA,NA,Dermatologist,12,6,Yes,"Continued clinical benefit, lack of disease progression, or specific lab values; documentation of previous or current therapy with a biologic; and submission of medical records.",75
+167126-4508319.pdf,TREMFYA,FDA labelled age,NA,1,2,No,NA,NA,Dermatologist,12,6,Yes,NA,50
+187701-5050284.pdf,TREMFYA,FDA labelled age,"The patient must have a diagnosis of active Psoriatic Arthritis and must be prescribed by or in consultation with a Rheumatologist or Dermatologist. The patient must also have documentation of drug failure or serious side effects with TWO of the following: Enbrel, Humira/Simlandi/Hadlima, Stelara SC, Cosentyx, Otezla, Tremfya, Skyrizi, Rinvoq, and Xeljanz/XR.",1,NA,No,Yes,h. Quantity Limit of 4 syringes per 28 days,Dermatologist,3,12,Yes,Recertification will require documentation confirming clinical improvement in signs and symptoms of Psoriatic Arthritis.,25
+296792-5001283.pdf,STELARA,FDA labelled age,"**Step Therapy Requirements Documented in Policy**
 
-There is no explicit mention of quantity limits for STELARA (ustekinumab) in the provided document context.",Dermatologist,12,12.0,Yes,"NA
+Prior authorization is required for STELARA in the treatment of moderate-to-severe plaque psoriasis. The following step therapy requirements apply:
 
-The provided document context does not contain explicit reauthorization criteria for STELARA (ustekinumab) for the indication of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",50
-167126-4508319.pdf,TREMFYA,NA,"Step Therapy Requirements Documented in Policy:
-
-""Patients with moderate-to-severe plaque psoriasis who require systemic therapy must have failed or be intolerant to a trial of phototherapy in combination with topical corticosteroids. Patients must also have failed or be intolerant to methotrexate, cyclosporine, or acitretin before initiating biologic therapy. Biologic therapy is considered for patients with severe, refractory psoriasis (treatment failure to 1 or more DMARD).",1,1,No,NA,NA,Dermatologist,NA,NA,NA,NA,50
-187701-5050284.pdf,TREMFYA,>=18,"The patient must be a candidate for systemic therapy or phototherapy and meet for ONE of the following (A or B)  
-A. The patient must have had a 3-month trial of systemic therapy (i.e., acitretin, methotrexate, or cyclosporine) that resulted in an inadequate response (failure). A 3-month trial will not be required if the member experienced serious side effects during a trial of one of the aforementioned agents OR  
-B. The patient must have had a 3-month trial of Ultraviolet B (UVB) Phototherapy or Psoralen Ultraviolet A (PUVA) Phototherapy that resulted in an inadequate response (failure) AND  
-b) The patient must also have a documented drug failure or serious side effects to THREE of the following: Humira/Simlandi/Hadlima, Otezla, Sotyktu, Stelara SC, Skyrizi, Tremfya, Cosentyx, Enbrel 
-c) Documentation of a baseline Psoriasis Area Severity Index (PASI) score is required",1,1,Yes,No,h. Quantity Limit of 4 syringes per 28 days,Dermatologist,6,6.0,Yes,"Continuation of therapy with TREMFYA for plaque psoriasis will be considered for up to 1 year from the date of the initial prescription. To continue therapy beyond 1 year, the prescriber must document a clinical response to treatment, as evidenced by a reduction in the severity of psoriasis symptoms.",25
-296792-5001283.pdf,STELARA,NA,"**Step Therapy Requirements Documented in Policy**
-
-For STELARA in Plaque Psoriasis (moderate-to-severe), the following step therapy requirements are documented in the policy:
-
-""Prior authorization is required for STELARA. The patient must have previously received a biologic and have an inadequate response to the biologic. The patient must also have a body surface area (BSA) of 10% or greater. Phototherapy is not a prerequisite for STELARA. The patient must have tried and failed at least one other systemic therapy (e.g., cyclosporine, methotrexate) before initiating STELARA.""","Based on the provided context, I found the following information:",2,No,NA,NA,NA,NA,NA,Yes,"NA
-
-The provided context does not contain specific reauthorization requirements for STELARA (ustekinumab) for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. It only lists excluded agents and general continuation of therapy criteria, but does not specify the reauthorization requirements for STELARA.",50
-296792-5001283.pdf,TREMFYA,>=18,"**Step Therapy Requirements Documented in Policy:**
+1. The patient must have previously received a biologic or phototherapy, or have been treated with a non-biologic systemic agent (e.g., methotrexate, cyclosporine, or acitretin) for at least 3 months without adequate response.
+2. The patient must have a body surface area (BSA) of at least 10% affected by psoriasis.
+3. The patient must have a history of inadequate response to, or intolerance of, at least one non-biologic systemic agent (e.g., methotrexate, cyclosporine, or acitretin) for the treatment of moderate-to-severe plaque psoriasis.","Based on the provided context, I found the following relevant information:",2,No,NA,NA,NA,Unspecified,Unspecified,Yes,continuation of therapy. Trial of all preferred formulary agents is required unless all are contraindicated. Trial must result in an inadequate response after four consecutive months of use per medication or a severe adverse reaction.,50
+296792-5001283.pdf,TREMFYA,FDA labelled age,"**Step Therapy Requirements Documented in Policy**
 
 For TREMFYA in Plaque Psoriasis (moderate-to-severe), the following step therapy requirements apply:
 
-1. The patient must have previously received a biologic or phototherapy and have an inadequate response to treatment.
-2. The patient must have a body surface area (BSA) of 10% or greater.
-3. The patient must have a history of inadequate response to at least one other systemic therapy for moderate-to-severe plaque psoriasis.
+""Patient must have previously received a biologic and have an inadequate response to the biologic, or have failed at least two other systemic therapies (e.g., cyclosporine, methotrexate, or psoralen plus ultraviolet A light therapy) and have an inadequate response to these therapies.""",2,NA,No,NA,NA,NA,NA,NA,Yes,"NA
 
-**Full Text:**
-
-""Step therapy requirements for TREMFYA in plaque psoriasis (moderate-to-severe) include:
-- The patient must have previously received a biologic or phototherapy and have an inadequate response to treatment.
-- The patient must have a body surface area (BSA) of 10% or greater.
-- The patient must have a history of inadequate response to at least one other systemic therapy for moderate-to-severe plaque psoriasis.""
-
-**Note:** The above step therapy requirements are based on the provided policy document context and may not be an exhaustive list of all requirements.",2,NA,No,No,"NA
-
-No quantity limits are explicitly stated for TREMFYA in the provided policy document context.",NA,Unspecified,NA,Yes,"NA
-
-The policy document does not explicitly mention the reauthorization requirements for TREMFYA (bimekizumab) for the treatment of Psoriasis (PsO).",25
-305769-4866320.pdf,STELARA,NA,"Patient has moderate to severe plaque psoriasis for at least 6 months with at least ONE of the following: 
+The policy document does not explicitly mention the reauthorization requirements for TREMFYA (bimekizumab) for the treatment of moderate-to-severe plaque psoriasis.",50
+305769-4866320.pdf,STELARA,FDA labelled age,"Patient has moderate to severe plaque psoriasis for at least 6 months with at least ONE of the following: 
 o Involvement of at least 3% of body surface area (BSA); OR 
 o Psoriasis Area and Severity Index (PASI) score of 10 or greater; OR 
 o Incapacitation or serious emotional consequences due to plaque location (i.e., hands, feet, head and neck, genitalia, etc.) or with intractable pruritis; AND 
@@ -388,69 +360,116 @@ o Incapacitation or serious emotional consequences due to plaque location (i.e.,
 • Patient did not respond adequately (or is not a candidate) to a 3-month minimum trial of at least ONE (1) non-biologic systemic agent (i.e., immunosuppressives, retinoic acid derivatives, and/or methotrexate); 
 AND 
 • Patient did not respond adequately (or is not a candidate) to a 3-month minimum trial of phototherapy (i.e., psoralens with UVA light [PUVA] or UVB with coal tar or dithranol).",NA,NA,No,Yes,"Quantity Limit: 
-o Ustekinumab 45 mg vial/prefilled syringe: 
- Loading: 1 syringe at weeks 0 & 4 
- Maintenance: 1 syringe every 12 weeks 
+o Ustekinumab (generic name of STELARA) 45 mg vial/prefilled syringe: 
+Maintenance: 1 syringe every 12 weeks 
 o Ustekinumab 90 mg prefilled syringe: 
- Loading: 1 syringe at weeks 0 & 4 
- Maintenance: 1 syringe every 8 weeks",NA,Unspecified,6.0,Yes,"Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND 
+Maintenance: 1 syringe every 8 weeks",NA,Unspecified,6,Yes,"Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND 
 Absence of unacceptable toxicity from the drug. Examples of unacceptable toxicity include: serious infections, malignancy, severe hypersensitivity reactions, posterior reversible encephalopathy syndrome (PRES) or reversible posterior leukoencephalopathy syndrome (RPLS), non-infectious pneumonia, etc.; AND 
 Disease response as indicated by improvement in signs and symptoms compared to baseline such as redness, thickness, scaliness, and/or the amount of surface area involvement (a total BSA involvement ≤ 1%), and/or an improvement on a disease activity scoring tool [e.g., a 75% reduction in the PASI score from when treatment started (PASI 75) or a 50% reduction in the PASI score (PASI 50) and a four-point reduction in the DLQI from when treatment started].",50
-298309-4972610.pdf,STELARA,NA,"Step Therapy Requirements Documented in Policy:
+298309-4972610.pdf,STELARA,FDA labelled age,"Documented treatment failure to one or contraindication to all conventional systemic immunosuppressant(s) (eg, acitretin, cyclosporine, methotrexate, etc). Treatment must be prescribed by or in consultation with a dermatologist or a rheumatologist.",1,2,No,NA,"For STELARA (brand) and Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication, the extracted quantity limit text is:
 
-For STELARA in Plaque Psoriasis (moderate-to-severe), the following step therapy requirements must be met:
-
-1. The patient must have Body Surface Area (BSA) involvement of 2% to 20%.
-2. The patient must have documented treatment failure with three or more of the following topical therapies for a duration of at least 4 weeks:
-   i. Corticosteroids (e.g., betamethasone, clobetasol, desonide)
-   ii. Vitamin D analogs (e.g., calcitriol, calcipotriene)
-   iii. Phototherapy (no specific details provided)
-3. Treatment must be prescribed by or in consultation with a dermatologist.",0,1,No,NA,"Quantity Limits: 
 28 syringes per 28 days 
-One 45 mg syringe or vial for the first 28 days, then one 45 mg syringe or vial every 12 weeks 
+
+Additionally, for PsO patients weighing > 90 kg: Four 200 mg syringes or vials every 28 days 
+All other diagnoses, including PsO patients weighing < 90 kg: 1 starter pack (six 200 mg syringes) for the first 28 days, then two 200 mg syringes or vials every 28 days",Dermatologist,12,6,Yes,"NA
+
+The provided document context does not contain information about reauthorization requirements for STELARA (PsO). It only mentions the requirements for treatment initiation, including documented treatment failure to one or contraindication to all conventional systemic immunosuppressant(s) and treatment prescription by or in consultation with a dermatologist or a rheumatologist.",50
+298309-4972610.pdf,TREMFYA,FDA labelled age,NA,1,3,No,NA,"Quantity Limits: 
+28 syringes per 28 days 
 Four pens or syringes per 28 days for 4 weeks, then two pens or syringes per 28 days until week 16. The maintenance dose beginning in week 17 is one pen or syringe per 28 days. 
-Four 200 mg syringes or vials every 28 days (for PsO patients weighing > 90 kg) 
-1 starter pack (six 200 mg syringes) for the first 28 days, then two 200 mg syringes or vials every 28 days (for all other diagnoses, including PsO patients weighing < 90 kg)",Dermatologist,NA,NA,NA,NA,75
-298309-4972610.pdf,TREMFYA,NA,NA,NA,NA,NA,NA,"Quantity limits for TREMFYA (Psoriasis, moderate-to-severe):
-- 28 syringes per 28 days 
-- One 45 mg syringe or vial for the first 28 days, then one 45 mg syringe or vial every 12 weeks (for adults ≤ 100 kg)
-- One 90 mg syringe for the first 28 days, then one 90 mg syringe every 12 weeks (for adults > 100 kg)
-- Four 200 mg syringes or vials every 28 days (for PsO patients weighing > 90 kg)
-- 1 starter pack (six 200 mg syringes) for the first 28 days, then two 200 mg syringes or vials every 28 days (for all other diagnoses, including PsO patients weighing < 90 kg)",Dermatologist,NA,NA,NA,NA,50
-215824-5041653.pdf,TREMFYA,>= 18,"For a patient currently taking Tremfya, the following step therapy requirements apply for Plaque Psoriasis (moderate-to-severe):
+28 syringes per 28 days 
+One 150mg/ml pen or syringe for the first 28 days, then one 150 mg/ml pen or syringe every 12 weeks 
+Four 200 mg syringes or vials every 28 days for PsO patients weighing > 90 kg 
+1 starter pack (six 200 mg syringes) for the first 28 days, then two 200 mg syringes or vials every 28 days for all other diagnoses, including PsO patients weighing < 90 kg",Dermatologist,12,6,Yes,NA,50
+215824-5041653.pdf,TREMFYA,FDA labelled age,"For a patient currently taking Tremfya, the following step therapy requirements apply for Plaque Psoriasis (moderate-to-severe):
 
 a) Patient is not required to “step back” and try a traditional systemic agent for psoriasis.
 b) Patient has a contraindication to methotrexate, as determined by the prescriber; AND 
 iii. The medication is prescribed by or in consultation with a dermatologist; OR 
-B) Patient is Currently Receiving Tremfya.  Approve for 1 year if the patient meets ALL of the following (i, ii, and iii): 
-i. Patient has been established on the requested drug for at least 3 months; AND 
-ii. Patient experienced a beneficial clinical response, defined as improvement from baseline (prior to initiating the requested drug) in at least one of the following:  estimated body surface area, erythema, induration/thickness, and/or scale of areas affected by psoriasis; AND 
-iii. Compared with baseline (prior to initiating the requested drug), patient experienced an improvement in at least one symptom, such as decreased pain, itching, and/or burning.",2,2,No,NA,"NA
-
-There is no explicit mention of quantity limits for TREMFYA in the provided policy document context.",Dermatologist,12,NA,Yes,"B) Patient is Currently Receiving Tremfya.  Approve for 1 year if the patient meets BOTH of the following (i and ii): 
+B) Patient is Currently Receiving Tremfya.  Approve for 1 year if the patient meets ALL of the 
+following (i, ii, and iii): 
+i. 
+Patient has been established on the requested drug for at least 3 months; AND 
+ii. Patient experienced a beneficial clinical response, defined as improvement from baseline (prior 
+to initiating the requested drug) in at least one of the following:  estimated body surface area, 
+erythema, induration/thickness, and/or scale of areas affected by psoriasis; AND 
+iii. Compared with baseline (prior to initiating the requested drug), patient experienced an 
+improvement in at least one symptom, such as decreased pain, itching, and/or burning.",1,1,No,NA,NA,Dermatologist,6,6,Yes,"B) Patient is Currently Receiving Tremfya.  Approve for 1 year if the patient meets BOTH of the following (i and ii): 
 i. Patient has been established on therapy for at least 6 months; AND 
 ii. Patient meets at least ONE of the following (a or b): 
 a) When assessed by at least one objective measure, patient experienced a beneficial clinical response from baseline (prior to initiating Tremfya); OR 
-b) Compared with baseline (prior to initiating Tremfya), patient experienced an improvement in at least one symptom, such as decreased pain, fatigue, stool frequency, and/or blood in stool.",25
-371611-4978411.pdf,STELARA,NA,NA,1,NA,NA,NA,"NA
+b) Compared with baseline (prior to initiating Tremfya), patient experienced an improvement in at least one symptom, such as decreased pain, fatigue, stool frequency, and/or blood in stool.",50
+371611-4978411.pdf,STELARA,>=6,"For STELARA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in policy are:
 
-No quantity limits for STELARA (Adalimumab) are explicitly stated in the provided document context.",Dermatologist,NA,NA,Yes,"NA
-
-The provided document context does not contain specific reauthorization criteria for STELARA (Ustekinumab) for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication.",50
-371611-4978411.pdf,TREMFYA,>=18,NA,NA,NA,NA,NA,"For TREMFYA (Guselkumab), the quantity limit text is:
-
-Guselkumab (Tremfya) 
-Risankizumaab (Skyrizi) 
-Tildrakizumab (Ilumya) 
-Ustekinumab (Stelara) 
-Ustekinumab biosimilars 
-Preferred ustekinumab biosimilars may be approved when all the following 
-documented criteria are met:  
+1. Patient is 6 years of age or older; AND 
+2. Prescribed by, or in consultation with a dermatologist or rheumatologist; AND 
+3. Not used in combination with another Cytokine and CAM medication; AND 
+4. Diagnosis of Psoriatic Arthritis (PsA); AND 
+5. Documentation of current weight is provided; AND 
+6. Patient meets one of the following: 
+a. Treatment with at least one non-Cytokine and CAM DMARD (e.g., methotrexate, sulfasalazine, leflunomide, cyclosporine) has been ineffective, unless all are contraindicated or not tolerated [minimum trial of 3 months]; OR 
+b. Presence of active, severe disease as indicated by provider assessment and the presence of at least ONE of the following:
+i. Erosive disease
+ii. Elevated C-reactive protein (CRP) or erythrocyte sedimentation rate (ESR)
+iii. Long-term damage interfering with function (e.g., joint deformities, vision loss)
+iv. Major impairment of quality of life due to high disease activity at many sites (including dactylitis, enthesitis) or functionally limiting arthritis at a few sites.",1,"Based on the provided context, the number of steps through generic for STELARA in PsO is:",No,No,"[Source: 371611-4978411.pdf | Brands: SKYRIZI, USTEKINUMAB]
+Quantity Limits for Ustekinumab (Stelara) 
+Preferred ustekinumab biosimilars may be approved when all the following documented criteria are met:
  
-If ALL criteria are met, the request will be authorized for 12 months.",Dermatologist,12,NA,Yes,"NA
+1. Patient is 6 years of age or older; AND 
+2. Prescribed by, or in consultation with a dermatologist or rheumatologist; AND 
+3. Not used in combination with another Cytokine and CAM medication; AND 
+4. Diagnosis of Psoriatic Arthritis (PsA); AND 
+5. Documentation of current weight is provided; AND 
+6. Patient meets one of the following:
+ 
+a. Treatment with at least one non-Cytokine and CAM DMARD (e.g., methotrexate, sulfasalazine, leflunomide, cyclosporine) has been ineffective, unless all are contraindicated or not tolerated [minimum trial of 3 months]; OR 
+b. Presence of active, severe disease as indicated by provider assessment and the presence of at least ONE of the following:
+ 
+i. Erosive disease 
+ii. Elevated C-reactive protein (CRP) or erythrocyte sedimentation rate (ESR) 
+iii. Long-term damage interfering with function (e.g., joint deformities, vision loss) 
+iv. Major impairment of quality of life due to high disease activity at many sites (including dactylitis, enthesitis) or functionally limiting arthritis at a few sites 
 
-The document context does not provide explicit reauthorization criteria for TREMFYA (Guselkumab) for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication.",50
-363896-4716077.pdf,STELARA,NA,"**Step Therapy Requirements Documented in Policy**
+ 
+Quantity Limits for Ustekinumab (Stelara) 
+No specific quantity limits mentioned for Stelara.",Dermatologist,Unspecified,NA,Yes,"NA
+
+However, there is a related section that mentions clinical response documentation and symptom improvement in the context of Psoriatic Arthritis (PsA) treatment with ustekinumab biosimilars. 
+
+The closest related criteria for PsO is the general clinical policy for IL-12 and 23 inhibitors, which does not specify reauthorization requirements for ustekinumab (Stelara) in the context of PsO.",50
+371611-4978411.pdf,TREMFYA,FDA labelled age,"Patient meets one of the following:
+a. Treatment with at least one non-Cytokine and CAM DMARD (e.g., methotrexate, sulfasalazine, leflunomide, cyclosporine) has been ineffective, unless all are contraindicated or not tolerated [minimum trial of 3 months]; OR
+b. Presence of active, severe disease as indicated by provider assessment and the presence of at least ONE of the following:
+i. Erosive disease
+ii. Elevated C-reactive protein (CRP) or erythrocyte sedimentation rate (ESR)
+iii. Long-term damage interfering with function (e.g., joint deformities, vision loss)
+iv. Major impairment of quality of life due to high disease activity at many sites (including dactylitis, enthesitis) or functionally limiting arthritis at a few sites
+
+AND
+Patient is 6 years of age or older; 
+AND 
+Prescribed by, or in consultation with a dermatologist or rheumatologist; 
+AND 
+Not used in combination with another Cytokine and CAM medication; 
+AND 
+Diagnosis of Psoriatic Arthritis (PsA); 
+AND 
+Documentation of current weight is provided.",1,1,No,NA,"[Source: 371611-4978411.pdf | Brands: SKYRIZI, USTEKINUMAB, GUSELKUMAB, STELARA, TREMFYA]
+Dosage Form and Quantity Limit  
+Tremfya 
+Plaque 
+psoriasis 
+100 mg subQ at weeks 0, 4, and 
+then every 12 weeks thereafter  
+• 
+100 mg/ml PFS 
+o Initial #1: 1 PFS per 28-days for the first month 
+o Initial #2: 1 PFS per 84-day supply for months 2-6 
+o Renewal: 1 PFS per 84-day supply for one year",Dermatologist,Unspecified,6,Yes,"NA
+
+The policy document does not explicitly mention reauthorization requirements for TREMFYA (Guselkumab) for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. The provided criteria are for initial approval, not reauthorization.",25
+363896-4716077.pdf,STELARA,FDA labelled age,"Step Therapy Requirements Documented in Policy:
 
 For STELARA in Plaque Psoriasis (moderate-to-severe), the following step therapy requirements must be met:
 
@@ -461,32 +480,22 @@ For STELARA in Plaque Psoriasis (moderate-to-severe), the following step therapy
    b. Hands, feet, scalp, face, or genital area affected; AND
 4. Documentation of one of the following:
    a. Inadequate response or adverse reaction to at least a 3 month trial of one biologic DMARD that is FDA-approved for plaque psoriasis; OR
-   b. Inadequate response or adverse reaction to at least a 3 month trial of two conventional therapies (as defined below) in any one of the following combinations:
-      i. 1 topical agent + 1 systemic agent; OR
-      ii. 1 topical agent + 1 phototherapy; OR
-      iii. 1 systemic agent + 1 phototherapy; OR
-      iv. 2 systemic agents; OR
-   c. Contraindication to methotrexate, as determined by the prescriber.",1,2,No,NA,NA,Dermatologist,NA,12.0,Yes,"NA
+   b. Inadequate response or adverse reaction to at least a 3 month trial of two conventional therapies (as defined below) in any one therapeutic class.",1,1,No,NA,"NA
 
-The provided document context does not contain information about reauthorization requirements for STELARA PsO. It only includes prescriber restrictions and initiation therapy requirements.",50
-275244-4659838.pdf,STELARA,>=6,"ONE of the following:
-a. Inadequate response or adverse reaction to at least a 3-month trial of one biologic DMARD that is FDA-approved for plaque psoriasis; OR 
-b. Inadequate response or adverse reaction to at least a 3-month trial of one conventional therapy (as defined below) in any one of the following combinations: 
-i. One topical agent plus one systemic agent; OR 
-ii. One topical agent plus one phototherapy; OR 
-iii. One systemic agent plus one phototherapy; OR 
-iv. Two systemic agents; OR 
-c. Contraindication to methotrexate, as determined by the prescriber.",2,1,No,NA,"NA
+No quantity limits are explicitly stated for STELARA in the provided policy document context.",Dermatologist,Unspecified,12,Yes,"NA
 
-No quantity limits are mentioned in the provided context.",Dermatologist,12,12.0,Yes,"Reauthorization Requirements Documented in Policy:
+The policy document does not explicitly mention ""Reauthorization Requirements"" or ""Continuation requests"" for STELARA PsO. However, it does mention ""Renewal Criteria"" in the context of general indications, but not specifically for PsO.",25
+275244-4659838.pdf,STELARA,FDA labelled age,NA,2,NA,No,NA,NA,Dermatologist,Unspecified,Unspecified,Yes,"Reauthorization Requirements Documented in Policy:
 
-For STELARA (ustekinumab) PsO, the reauthorization criteria include:
+For STELARA (ustekinumab) in the treatment of moderate-to-severe plaque psoriasis, reauthorization requires:
 
-* Meeting initial criteria (text not explicitly provided in the given context)
 * Continued clinical benefit
 * Lack of disease progression
-* Specific lab values (text not explicitly provided in the given context)",25
-282478-5009832.pdf,TREMFYA,>=18,"**Step Therapy Requirements Documented in Policy**
+* Meeting initial criteria (not specified in the provided context)
+* A previous trial of a biologic DMARD can bypass non-biologic DMARD criteria
+* A 3-month requirement for most trials
+* Documentation of trial and failure criteria",50
+282478-5009832.pdf,TREMFYA,FDA labelled age,"**Step Therapy Requirements Documented in Policy**
 
 Prior authorization is required for TREMFYA (guselkumab) for the treatment of moderate-to-severe plaque psoriasis. The following step therapy requirements apply:
 
@@ -494,28 +503,36 @@ Prior authorization is required for TREMFYA (guselkumab) for the treatment of mo
 2. The patient must have a documented history of inadequate response to, or intolerance to, at least one non-biologic systemic therapy (e.g., apremilast) for the treatment of moderate-to-severe plaque psoriasis.
 3. The patient must have a documented history of inadequate response to, or intolerance to, at least one biologic therapy (e.g., etanercept, adalimumab, or ustekinumab) for the treatment of moderate-to-severe plaque psoriasis.",1,2,No,NA,"NA
 
-No quantity limits are explicitly stated for TREMFYA in the provided policy document context.",Dermatologist,6,12.0,Yes,"Reauthorization criteria 
+No quantity limits are mentioned in the provided policy document context for TREMFYA (guselkumab) in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",Dermatologist,6,12,Yes,"Reauthorization criteria for TREMFYA (guselkumab) PsO:
 1. Initial criteria has been met; AND 
 2. One of the following: 
 a. The member has had a positive response to therapy; OR 
-b. Documentation of clinical justification to continue therapy with the requested 
-medication",25
-325611-4784675.pdf,TREMFYA,NA,"b. Documentation of clinical justification to continue therapy with the requested medication, including:
-
-- The patient has failed or is intolerant to at least one non-biologic DMARD (e.g., methotrexate, azathioprine, cyclosporine) for the treatment of plaque psoriasis.",1,2,No,NA,NA,Dermatologist,Unspecified,NA,NA,NA,50
-273941-4788109.pdf,STELARA,NA,The member will receive induction dosing with Stelara intravenous within two months of initiating therapy with Stelara subcutaneous; AND It will be used for induction therapy only.,2,NA,No,NA,NA,Dermatologist,Unspecified,NA,Yes,"NA
-
-The policy document does not explicitly mention STELARA (Adalimumab) reauthorization requirements for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe). It only mentions the update of reauthorization criteria to standard, addition of dosing criteria, and appendix, but does not provide the actual criteria.",50
-176810-4889390.pdf,TREMFYA,>=18,"Step Therapy Requirements Documented in Policy:
+b. Documentation of clinical justification to continue therapy with the requested medication.",25
+325611-4784675.pdf,TREMFYA,FDA labelled age,"Step Therapy Requirements Documented in Policy:
 
 Prior authorization is required for TREMFYA for the treatment of moderate-to-severe plaque psoriasis. The following step therapy requirements apply:
 
-1. The patient must have previously received a biologic or an interleukin-12/23 inhibitor (e.g., ustekinumab, guselkumab, or briakinumab) for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to the previous biologic or interleukin-12/23 inhibitor, as evidenced by a lack of improvement or a worsening of the condition.
-2. The patient must have had phototherapy (e.g., ultraviolet B [UVB] or psoralen plus ultraviolet A [PUVA]) for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to phototherapy, as evidenced by a lack of improvement or a worsening of the condition.
-3. The patient must have had systemic pharmacologic treatments (e.g., methotrexate, cyclosporine, or acitretin) for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to the systemic pharmacologic treatment, as evidenced by a lack of improvement or a worsening of the condition.
-4. The patient must have had topical treatments (e.g., corticosteroids, vitamin D analogues, or salicylic acid) for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to the topical treatment, as evidenced by a lack of improvement or a worsening of the condition.",NA,176810,No,Yes,"Quantity Limit 
-Initiation of therapy: three vials per first 56 days OR six 200 mg pens (CD only) 
-Maintenance: 100 mg syringe/injector per 56 days OR 200 mg pen/syringe per 28 days",Dermatologist,12,12.0,Yes,"A. Plaque psoriasis (PsO) 
+1. The patient must have tried and failed at least one non-biologic DMARD (e.g., methotrexate, azathioprine, cyclosporine) for the treatment of plaque psoriasis.
+2. The patient must have a documented clinical justification to continue therapy with TREMFYA.
+3. The patient must have tried and failed at least one biologic agent (e.g., adalimumab, adalimumab biosimilar products) for the treatment of plaque psoriasis.",1,2,No,Yes,"NA
+
+No quantity limits are explicitly stated for TREMFYA in the provided policy document context.",Dermatologist,6,12,Yes,Documentation of clinical justification to continue therapy with the requested medication.,25
+273941-4788109.pdf,STELARA,>=6,NA,NA,NA,No,NA,"NA
+
+The document context does not explicitly mention quantity limits for STELARA. It only mentions induction dosing and usage for induction therapy only, but does not provide a quantity limit.",Dermatologist,Unspecified,Unspecified,Yes,"NA
+
+The provided document context does not contain any information about STELARA (brand) or its reauthorization requirements for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. The document appears to be related to HUMIRA and ADALIMUMAB, and does not mention STELARA.",50
+176810-4889390.pdf,TREMFYA,FDA labelled age,"Step Therapy Requirements Documented in Policy:
+
+""Members currently receiving the requested medication as samples or via the manufacturer’s patient assistance program will be required to meet the criteria for initial approval. This ensures that members are treated equally regardless of their provider’s ability to access medication samples.""
+
+""Approvals may be subject to dosing limits in accordance with FDA-approved labeling, accepted compendia, and/or evidence-based practice guidelines.""
+
+""Initiation of therapy: 2 syringes/injectors per first 28 days; Maintenance: 1 syringe/injector per 56 days. Loading doses: 100 mg at week 0 and 4; Maintenance dose: 100 mg every 8 weeks thereafter.""",1,1,No,Yes,"Quantity Limit 
+Initiation of therapy: 2 syringes/injectors per first 28 days 
+Maintenance: 1 syringe/injector per 56 days 
+• Loading doses: 100 mg at week 0 and 4 
+• Maintenance dose: 100 mg every 8 weeks thereafter",Dermatologist,12,12,Yes,"A. Plaque psoriasis (PsO) 
 Authorization of 12 months may be granted for all members (including new members) who are using 
 the requested medication for moderate to severe plaque psoriasis and who achieve or maintain positive 
 clinical response as evidenced by low disease activity or improvement in signs and symptoms of the 
@@ -523,7 +540,9 @@ condition when any of the following is met:
 1. Reduction in body surface area (BSA) affected from baseline 
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, 
 burning, cracking, pain)",50
-176806-5005129.pdf,STELARA,>=6,NA,NA,NA,No,Yes,"Ustekinumab 130 mg/26 mL single-dose vial 
+176806-5005129.pdf,STELARA,>=6,"Authorization of 12 months may be granted for members 6 years of age or older who previously received a biologic or targeted synthetic drug (e.g., Sotyktu, Otezla) indicated for the treatment of moderate to severe plaque psoriasis.",1,NA,No,Yes,"Quantity Limit 
+Ustekinumab 130 mg/26 mL single-
+dose vial 
 • 
 ≤ 55 kg: 260 mg (2 vials) 
 • 
@@ -532,29 +551,24 @@ burning, cracking, pain)",50
 > 85 kg: 520 mg (4 vials) 
 Ustekinumab subcutaneous injection 
 45 mg/0.5 mL vial/syringe 
-Psoriasis (6 years and older)/ Psoriasis with or without co-existent PsA (adult) 
 • 
-≤  100 kg: 2 vials/syringes per first 28 days (load); 1 vial/syringe every 12 weeks (maintenance) 
+≤  100 kg: 2 vials/syringes per first 28 days (load); 1 
+vial/syringe every 12 weeks (maintenance) 
 • 
-> 100 kg: 2 vials/syringes per first 28 days (load); 1 vial/syringe every 12 weeks (maintenance) 
-PsA (6 years and older), without co-existent plaque psoriasis  
+> 100 kg: 2 vials/syringes per first 28 days (load); 1 
+vial/syringe every 12 weeks (maintenance) 
 • 
 2 vials/syringes per first 28 days (load) 
 • 
 1 vial/syringe every 12 weeks (maintenance) 
-CD, UC maintenance dose 
-• 
-1 syringe every 8 weeks 
 Ustekinumab subcutaneous injection 
 90 mg/mL syringe 
-Psoriasis (6 years and older)*/ Psoriasis with or without co-existent PsA (adult) 
 • 
-≤ 100 kg: 45 mg  initially and 4 weeks later, followed by 45 mg every 12 weeks 
+≤ 100 kg: 45 mg  initially and 4 weeks later, followed by 45 
+mg every 12 weeks 
 • 
-> 100 kg: 90 mg initially and 4 weeks later, followed by 90 mg every 12 weeks 
-CD*, UC maintenance dose 
-• 
-1 syringe every 8 weeks",Dermatologist,12,12.0,Yes,"A) Plaque psoriasis (PsO) 
+> 100 kg: 90 mg initially and 4 weeks later, followed by 90 
+mg every 12 weeks",Dermatologist,12,12,Yes,"A) Plaque psoriasis (PsO) 
 Authorization of 12 months may be granted for all members (including new members) who are 
 using the requested medication for moderate to severe plaque psoriasis and who achieve or 
 maintain positive clinical response as evidenced by low disease activity or improvement in signs 
@@ -562,138 +576,132 @@ and symptoms of the condition when any of the following is met:
 1. Reduction in body surface area (BSA) affected from baseline 
 2. Improvement in signs and symptoms from baseline (e.g., itching, redness, flaking, scaling, 
 burning, cracking, pain)",50
-313179-3560271.pdf,STELARA,NA,NA,NA,NA,NA,NA,NA,"Dermatologist, Gastroenterologist",NA,NA,NA,NA,50
-313179-3560271.pdf,TREMFYA,NA,NA,NA,NA,NA,NA,NA,"Dermatologist, Gastroenterologist",NA,NA,NA,NA,50
-56263-4803097.pdf,STELARA,>=6,"For STELARA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in the policy are:
+313179-3560271.pdf,STELARA,FDA labelled age,NA,NA,NA,No,Yes,NA,"Dermatologist, Gastroenterologist",12,6,Yes,NA,75
+313179-3560271.pdf,TREMFYA,>=2,NA,NA,NA,No,Yes,NA,"Dermatologist, Gastroenterologist",12,6,Yes,NA,75
+56263-4803097.pdf,STELARA,6 years or older,"Prior Authorization (Reauthorization)
+For diagnosis of Plaque Psoriasis
+Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following:
+Reduction in the body surface area (BSA) involvement from baseline
+Improvement in symptoms (e.g., pruritus, inflammation) from baseline
 
-Prior Authorization (Initial Authorization) 
-Length of Approval: 6 Month(s) 
-For diagnosis of Plaque Psoriasis 
-Patient demonstrates one of the following: 
-Reduction in the body surface area (BSA) involvement from baseline 
-Improvement in symptoms (e.g., pruritus, inflammation) from baseline 
-AND 
-Prescribed by or in consultation with a dermatologist",NA,NA,No,NA,NA,Dermatologist,6,12,Yes,"For diagnosis of Plaque Psoriasis, Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following: 
+AND
+Prescribed by or in consultation with a dermatologist
+Stelara SC, Wezlana SC",1,1,No,No,"NA
+
+There is no explicit mention of quantity limits for STELARA in the provided policy document context.",Dermatologist,6,12,Yes,"Patient demonstrates positive clinical response to therapy as evidenced by at least one of the following:
+Reduction in the body surface area (BSA) involvement from baseline
+Improvement in symptoms (e.g., pruritus, inflammation) from baseline
+Reduction in the total active (swollen and tender) joint count from baseline
+Improvement in symptoms (e.g., pain, stiffness, pruritus, inflammation) from baseline",25
+183953-4805567.pdf,TREMFYA,FDA labelled age,"For the treatment of adult patients with moderate-to-severe plaque psoriasis who are candidates for systemic therapy or phototherapy, the following step therapy requirements must be met:
+
+Diagnosis of moderate-to-severe plaque psoriasis
+AND
+One of the following:
+Greater than or equal to 3% body surface area involvement
+Severe scalp psoriasis
+Palmoplantar (i.e., palms, soles), facial, or genital involvement
+AND
+Minimum duration of a 4-week trial and failure, contraindication, or intolerance to one of the following topical therapies:
+ 
+Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following:
+Reduction in the body surface area (BSA) involvement from baseline
+Improvement in symptoms (e.g., pruritus, inflammation) from baseline",1,1,No,No,NA,Dermatologist,6,12,Yes,"Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following:
 Reduction in the body surface area (BSA) involvement from baseline
 Improvement in symptoms (e.g., pruritus, inflammation) from baseline",50
-183953-4805567.pdf,TREMFYA,FDA labelled age,"For diagnosis of Plaque Psoriasis (PsO), the step therapy requirements are: 
-Diagnosis of moderate-to-severe plaque psoriasis 
-AND 
-One of the following: 
-Greater than or equal to 3% body surface area involvement 
-Severe scalp psoriasis 
-Palmoplantar (i.e., palms, soles), facial, or genital involvement 
-AND 
-Minimum duration of a 4-week trial and failure, contraindication, or intolerance to one of the following topical therapies.",NA,1,No,NA,NA,Dermatologist,6,12,Yes,"For diagnosis of Plaque Psoriasis (PsO), Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following: 
-Reduction in the body surface area (BSA) involvement from baseline
-Improvement in symptoms (e.g., pruritus, inflammation) from baseline",50
-365374-5059388.pdf,STELARA,NA,"The clinical information must document why the member cannot use Stelara, including why it is medically necessary that the member receive a non-preferred ustekinumab-xxxx drug instead of Stelara. PA requests for non-preferred cytokine and CAM antagonist drugs used to treat psoriasis must be submitted using the Prior Authorization Drug Attachment for Cytokine and CAM Antagonist Drugs for Psoriasis form. 
+365374-5059388.pdf,STELARA,FDA labelled age,"The step therapy requirements for STELARA in Plaque Psoriasis are as follows:
 
-However, specific step therapy requirements for STELARA in Plaque Psoriasis are not explicitly stated in the provided context. The context primarily discusses the process for submitting PA requests and the clinical criteria for psoriatic arthritis, rather than plaque psoriasis. 
+""The clinical information must document why the member cannot use Stelara, including why it is medically necessary that the member receive a non-preferred ustekinumab-xxxx drug instead of Stelara.""
 
-Therefore, based on the given context, the step therapy requirements for STELARA in Plaque Psoriasis are not fully outlined, but it implies that the member must have a reason for not using Stelara, and instead, requiring a non-preferred ustekinumab-xxxx drug.",2,NA,No,NA,NA,NA,NA,NA,NA,NA,50
-365374-5059388.pdf,TREMFYA,NA,NA,2,NA,No,NA,NA,NA,NA,NA,NA,NA,50
-56403-5061730.pdf,STELARA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,75
-299241-4702948.pdf,STELARA,NA,"Exception: If one biologic DMARD that is FDA-approved for plaque psoriasis has been previously tried, then trial of a conventional systemic agent or phototherapy is not required.",1,1,No,NA,NA,NA,NA,NA,No,Removed reauthorization requirement for positive response to therapy. Continued therapy approval to “Member is currently receiving medication that has been authorized.”,75
-297411-4840622.pdf,TREMFYA,NA,NA,NA,NA,No,NA,NA,NA,NA,NA,Yes,NA,75
-8889-4641730.pdf,AMJEVITA,FDA labelled age,NA,NA,1,No,Yes,"2 Syringes 28 DAYS for the following:
-- Amjevita adalimumab-atto soln prefilled syringe 20 MG/0.4 ML
-- Amjevita adalimumab-atto soln prefilled syringe 40 MG/0.4 ML
-- Amjevita adalimumab-atto soln prefilled syringe 40 MG/0.8 ML
-2 Pens 28 DAYS for the following:
-- Amjevita adalimumab-atto soln auto-injector 40 MG/0.4 ML
-- Amjevita adalimumab-atto soln auto-injector 40 MG/0.8 ML
-- Amjevita adalimumab-atto soln auto-injector 80 MG/0.8 ML",NA,12,12,Yes,NA,50
-8898-4735285.pdf,COSENTYX,>=6,"For COSENTYX in Plaque Psoriasis (moderate-to-severe), the step therapy requirements are: 
-- Failure of methotrexate
-- Failure of cyclosporine
-- Failure of psoralen (methoxsalen or acitretin) with UVA radiation
-- Failure of UVB & coal tar on ditranol
-- Failure of acitretin
-- Failure of Narrow Band UVB (NBUVB)
-As per Table 1, Cosentyx is a Step 1 agent. If Cosentyx is not successful, the patient must fail two Step 1 agents to be eligible for Cimzia or Ilumya (Step 2), and failure of three Step 1 agents is required for Siliq or Taltz (Step 3).",2,2,No,NA,NA,Dermatologist,NA,NA,Yes,"NA
+Additionally, the policy requires that PA requests for non-preferred cytokine and CAM antagonist drugs used to treat psoriasis must be completed, signed, and dated by the prescriber, and submitted using the Prior Authorization Drug Attachment for Cytokine and CAM Antagonist Drugs for Psoriasis form.
 
-The provided document context does not contain information about COSENTYX (or its generic name/biosimilars) for the Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. The structured data is related to OTEZLA, not COSENTYX.",25
-9023-4381765.pdf,ENBREL,>=18,"**Step Therapy Requirements Documented in Policy for ENBREL in Plaque Psoriasis (moderate-to-severe)**
+Note that the policy does not specify any specific clinical criteria or BSA requirements for STELARA in Plaque Psoriasis, but rather requires documentation of medical necessity for using a non-preferred ustekinumab-xxxx drug instead of STELARA.",1,1,No,Yes,"NA
+
+There is no mention of quantity limits for STELARA in the provided document context.",NA,12,6,Yes,"NA
+
+The provided document context does not contain explicit reauthorization criteria for STELARA (ustekinumab) for Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication.",50
+365374-5059388.pdf,TREMFYA,FDA labelled age (5 years and older),"The step therapy requirements for TREMFYA in Plaque Psoriasis are as follows:
+
+""The PA form must document why the member cannot use Stelara, including why it is medically necessary that the member receive a non-preferred ustekinumab-xxxx drug instead of Stelara.""
+
+Additionally, the policy states that PA requests for non-preferred cytokine and CAM antagonist drugs used to treat psoriasis must be completed, signed, and dated by the prescriber, and submitted using the Prior Authorization Drug Attachment for Cytokine and CAM Antagonist Drugs for Psoriasis form.
+
+However, since the policy does not specify any additional step therapy requirements for TREMFYA, the above information is the only relevant step therapy requirement for TREMFYA in Plaque Psoriasis.",2,1,No,Yes,"NA
+
+No quantity limits are mentioned in the provided policy document context for TREMFYA.",NA,12,6,Yes,"NA
+
+The provided document context does not contain any information about the reauthorization requirements for TREMFYA (ustekinumab-xxxx) for the treatment of Psoriasis (PsO).",50
+56403-5061730.pdf,STELARA,FDA labelled age,NA,NA,NA,No,No,NA,NA,Unspecified,12,Yes,NA,50
+299241-4702948.pdf,STELARA,>=3,"If one biologic DMARD that is FDA-approved for plaque psoriasis has been previously tried, then trial of a conventional systemic agent or phototherapy is not required.",1,1,No,NA,"NA
+
+There is no mention of ""Quantity Level Limit"" or ""Quantity Limit"" in the provided document context.",NA,Unspecified,NA,No,Member is currently receiving medication that has been authorized.,50
+297411-4840622.pdf,TREMFYA,>=3,NA,NA,NA,No,NA,NA,NA,Unspecified,Unspecified,Yes,NA,50
+8889-4641730.pdf,AMJEVITA,>=2,NA,"Based on the provided context, I extracted the following information:",1,No,Yes,"For AMJEVITA (adalimumab-atto) in the indication of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe), the extracted quantity limit text is:
+
+- 2 Syringes, 28 DAYS for 20 MG/0.4 ML and 40 MG/0.4 ML and 40 MG/0.8 ML soln prefilled syringe
+- 2 Syringes, 28 DAYS for 10 MG/0.2 ML and 20 MG/0.2 ML soln prefilled syringe
+- 2 Pens, 28 DAYS for 40 MG/0.4 ML and 40 MG/0.8 ML and 80 MG/0.8 ML soln auto-injector",NA,Unspecified,12,Yes,"NA
+
+The provided context does not contain specific reauthorization/renewal criteria for AMJEVITA PsO. It only lists the agents eligible for continuation of therapy, but does not specify the requirements for reauthorization.",50
+8898-4735285.pdf,COSENTYX,>=4,"For COSENTYX in Plaque Psoriasis (moderate-to-severe), the step therapy requirements are:
+
+""Step 1: Preferred Agents (Cosentyx, Enbrel, Hadlima, Otezla, Simlandi, Skyrizi, Stelara, Tremfya)
+Step 2: Non-Preferred Agents (Cimzia, Ilumya) (requires failure of two Step 1 agents)
+Step 3: Non-Preferred Agents (Siliq, Taltz) (requires failure of 3 Step 1 agents)",3,2,No,Yes,"NA
+
+There is no explicit mention of quantity limits for COSENTYX in the provided policy document context.",Dermatologist,Unspecified,12,Yes,"NA
+
+The provided policy document does not contain specific reauthorization requirements for COSENTYX (Cosentyx) for the indication of Psoriasis (PsO). The document mentions general renewal criteria, but it does not explicitly state the reauthorization requirements for COSENTYX.",25
+9023-4381765.pdf,ENBREL,>=2,"Step Therapy Requirements Documented in Policy:
 
 a) The patient has been established on Enbrel for ≥ 90 days, as determined by the prescriber, and site of care medical necessity is met*.
-b) Enbrel is prescribed by or in consultation with a dermatologist; AND 
-c) The patient has a contraindication to one oral agent for psoriasis such as MTX, as determined by the prescribing physician; AND 
-d) Site of care medical necessity is met*.
- 
-Note: The policy does not specify separate criteria for moderate-to-severe and severe PsO, so we use the moderate-to-severe criteria.",1,NA,NA,NA,"NA
 
-The provided context does not explicitly mention quantity limits for ENBREL in the ""Quantity Level Limit"" or ""Quantity Limit"" sections. It does mention dosing information and approval periods, but not quantity limits.",Dermatologist,6,NA,Yes,"A response to therapy is required for continuation of therapy, unless otherwise noted below. The patient may not have a full response, but there should have been a recent or past response to Enbrel.",25
-9026-4997564.pdf,REMICADE,NA,"Step Therapy Requirements Documented in Policy:
+b) For initial approval, Enbrel is prescribed by or in consultation with a rheumatologist; AND site of care medical necessity is met*.
 
-Prior authorization is required for REMICADE for the treatment of moderate-to-severe plaque psoriasis. The following step therapy requirements apply:
+c) The patient has a contraindication to one oral agent for psoriasis such as MTX, as determined by the prescribing physician; AND Enbrel is prescribed by or in consultation with a dermatologist; AND site of care medical necessity is met*.",1,"Based on the provided context, the following steps are required before ENBREL approval for PsO:",No,Yes,"NA
 
-* The patient must have previously received a biologic or an oral systemic agent (e.g., apremilast, ustekinumab, secukinumab, or etanercept) for the treatment of moderate-to-severe plaque psoriasis and have had an inadequate response to the previous therapy.
-* The patient must have had phototherapy (UVB or PUVA) for at least 6 months and have had an inadequate response to the phototherapy.
-* The patient must have had topical therapy (e.g., corticosteroids, vitamin D analogues, or retinoids) for at least 6 months and have had an inadequate response to the topical therapy.
-* The patient must have had a body surface area (BSA) of at least 10% affected by psoriasis.
-* The patient must have had a history of inadequate response to at least two systemic agents (e.g., methotrexate, cyclosporine, or sulfasalazine) for the treatment of moderate-to-severe plaque psoriasis.",1,NA,No,Yes,NA,NA,NA,NA,Yes,"Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND 
-Duration of authorization has not been exceeded (refer to Section I); AND 
-Absence of unacceptable toxicity from the drug. Examples of unacceptable toxicity include:",50
-55182-4590747.pdf,SILIQ,>=18,"The patient has concomitant severe psoriasis (PS) (e.g., greater than 10% body surface area involvement, occurring on select locations [i.e., hands, feet, scalp, face, or genitals], intractable pruritus, serious emotional consequences) OR 
-The patient's medication history indicates use of another biologic immunomodulator agent that is FDA labeled or supported in compendia for the treatment of JPsA OR 
-The patient has a diagnosis not mentioned previously AND 
-ONE of the following (reference Step Table): 
-A. The requested indication does NOT require any prerequisite biologic immunomodulator agents OR 
-B. The requested agent is a Step 1a agent for the requested indication OR 
-C. BOTH of the following: 
-1. The prescriber has stated that the patient has been diagnosed with stage four advanced, metastatic cancer and the requested agent is being used to treat the cancer OR 
-B. The prescriber has submitted documentation that the patient has been diagnosed with stage four advanced, metastatic cancer and the requested agent is being used to treat an associated condition related to stage four advanced metastatic cancer [chart notes required] AND 
-2. The use of the requested agent is consistent with best practices for the treatment of stage four advanced, metastatic cancer, or an associated condition; supported by peer-reviewed, evidence-based literature; and approved by the United States Food and Drug Administration OR 
-D. If the requested agent is a Step 1b agent for the requested indication, then ONE of the following: 
-1.",3,1,No,Yes,"NA
+There is no explicit mention of quantity limits for ENBREL in the provided policy document context.",Dermatologist,Unspecified,6,Yes,"The patient has had a response, as determined by the prescriber. The patient may not have a full response, but there should have been a recent or past response to Enbrel.",50
+9026-4997564.pdf,REMICADE,FDA labelled age,"Step Therapy Requirements Documented in Policy:
 
-There is no explicit quantity limit mentioned in the provided context for SILIQ (adalimumab-ryvk prefilled syringe kit 40 MG/0.4ML) or its generic name. The document discusses clinical criteria for approval, but does not specify a quantity limit for SILIQ.",Dermatologist,16 weeks,"For SILIQ (PsO), the Reauthorization Duration is 16 weeks.",Yes,"NA
+""Prior authorization is required for infliximab (REMICADE) for the treatment of moderate-to-severe plaque psoriasis. The following step therapy requirements apply:
 
-The provided context does not explicitly document reauthorization requirements for SILIQ (Psoriasis) in the policy document.",25
-66156-4274314.pdf,CIMZIA,>=18,NA,NA,NA,NA,Yes,"NA
+* The patient must have previously received a biologic agent for the treatment of moderate-to-severe plaque psoriasis and have had an inadequate response to the biologic agent.
+* The patient must have had phototherapy for the treatment of moderate-to-severe plaque psoriasis and have had an inadequate response to phototherapy.
+* The patient must have had systemic pharmacologic treatment for the treatment of moderate-to-severe plaque psoriasis and have had an inadequate response to the systemic pharmacologic treatment.",2,NA,No,Yes,NA,NA,Unspecified,6,Yes,"Patient must try and have an inadequate response, contraindication, or intolerance to a 3-month trial of AVSOLA AND INFLECTRA; OR Patient would have a life-threatening situation if required to meet step therapy requirements; AND Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND Duration of authorization has not been exceeded (refer to Section I); AND Absence of unacceptable toxicity from the drug. Examples of unacceptable toxicity include:",50
+55182-4590747.pdf,SILIQ,FDA labelled age,"**Step Therapy Requirements Documented in Policy**
 
-No quantity limits are mentioned for CIMZIA in the provided policy document context.",NA,3,NA,Yes,"NA
+For SILIQ (Siliq) in Plaque Psoriasis (PS), the following step therapy requirements apply:
 
-The provided policy document context does not contain specific reauthorization criteria for CIMZIA (certolizumab pegol) in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe). The extracted criteria are for various indications and treatments, but none are specific to CIMZIA for PsO.",25
-163262-4627017.pdf,BIMZELX,>=18,"The step therapy requirements for BIMZELX in Plaque Psoriasis (moderate-to-severe) are as follows:
+1. The patient has tried another prescription drug in the same pharmacologic class or with the same mechanism of action as the required prerequisite biologic immunomodulator agent(s) for the requested indication and that prescription drug was discontinued due to lack of efficacy or effectiveness, diminished effect, or an adverse event [chart notes required] AND
+2. If SILIQ is requested, then ONE of the following:
+   A. The patient has a diagnosis of moderate to severe plaque psoriasis with or without coexistent active psoriatic arthritis AND the requested dose is 16 weeks of SILIQ for PS may be approved.",3,"Based on the provided context, the relevant section is:",No,Yes,"NA
 
-""The member meets one (1) of the following criteria (i., ii., or iii.): 
+No quantity limits are explicitly stated for SILIQ in the provided policy document context.",Dermatologist,12,NA,NA,"NA
+
+The policy document does not explicitly mention the reauthorization requirements for SILIQ (Psoriasis) beyond the general criteria for continuation of therapy. The specific requirements for SILIQ are not documented in the provided context.",50
+66156-4274314.pdf,CIMZIA,FDA labelled age,NA,NA,"Based on the provided document context, I found the following relevant information:",No,Yes,NA,NA,Unspecified,6,Yes,"NA
+
+The provided context does not contain any information about the reauthorization requirements for CIMZIA (certolizumab pegol) specifically for the indication of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",50
+163262-4627017.pdf,BIMZELX,>=18,"The member meets one (1) of the following criteria (i., ii., or iii.): 
 i. The member has experienced therapeutic failure or intolerance to phototherapy (e.g. PUVA, UVB). 
 ii. The member has experienced therapeutic failure or intolerance to at least one (1) systemic therapy (e.g., methotrexate). 
 iii. The member is contraindicated to both phototherapy and systemic therapy.  
-d. The member has experienced therapeutic failure or intolerance to at least two (2) preferred biologic products for the treatment of PsO (see Table 1).",2,2,No,No,"Bimzelx (bimekizumab-bkzx) may be authorized in quantities as follows: 
+ 
+The member has experienced therapeutic failure or intolerance to at least two (2) preferred biologic products for the treatment of PsO (see Table 1).",2,2,Yes,No,"Bimzelx (bimekizumab-bkzx) may be authorized in quantities as follows: 
 - PsO (< 120 kg): Ten (10) autoinjectors/prefilled syringes within the first sixteen (16) weeks of therapy, Two (2) autoinjectors/prefilled syringes every eight (8) weeks  
-- PsO (≥ 120 kg): Ten (10) autoinjectors/prefilled syringes within the first sixteen (16) weeks of therapy, Two (2) autoinjectors/prefilled syringes every four (4) weeks -OR- Two (2) autoinjectors/prefilled syringes every eight (8) weeks","Based on the provided context, the parameter ""Specialist Types"" for BIMZELX specifically for Plaque Psoriasis (PsO) is:
+- PsO (≥ 120 kg): Ten (10) autoinjectors/prefilled syringes within the first sixteen (16) weeks of therapy, Two (2) autoinjectors/prefilled syringes every four (4) weeks -OR- Two (2) autoinjectors/prefilled syringes every eight (8) weeks",Dermatologist,Unspecified,NA,NA,"NA
 
-Dermatologist
+There is no explicit mention of reauthorization requirements for BIMZELX in the provided policy document context.",0
+195158-4643510.pdf,SKYRIZI,>=1,"For moderate to severe plaque psoriasis (new starts only): 1) at least 3% of body surface area (BSA) is affected OR crucial body areas (e.g., feet, hands, face, neck, groin, intertriginous areas) are affected at the time of diagnosis, AND 2) patient meets any of the following: a) patient has experienced an inadequate treatment response or intolerance to either phototherapy (e.g., UVB, PUVA) or pharmacologic treatment with methotrexate, cyclosporine, or acitretin, b) pharmacologic treatment with methotrexate, cyclosporine, or acitretin is contraindicated, c) patient has severe psoriasis that warrants a biologic as first-line therapy (i.e., at least 10% of the body surface area or crucial body areas [e.g., hands, feet, face, neck, scalp, genitals/groin, intertriginous areas] are affected).",2,2,No,NA,"NA
 
-This is mentioned in the following section:
+No quantity limits are mentioned in the provided policy document context for SKYRIZI.",NA,Unspecified,NA,Yes,"For SKYRIZI PsO, the reauthorization/renewal criteria text is:
 
-II. Bimzelx (bimekizumab-bkzx) 
-A. Approval Criteria 
-1. Plaque Psoriasis (PsO)  
+Patient achieved or maintained a positive clinical response.",25
+195239-4641478.pdf,OTEZLA,FDA labelled age,NA,NA,NA,Yes,Yes,NA,Dermatologist,Unspecified,Unspecified,NA,For reauthorization: must have documentation from prescriber indicating stabilization or improvement in condition.,50
+203402-5001149.pdf,YESINTEK,FDA labelled age,NA,5,3,No,NA,NA,Dermatologist,Unspecified,6,Yes,NA,25
+247339-4770410.pdf,OTULFI,FDA labelled age,NA,1,2,No,Yes,"For OTULFI (brand) and Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication, the extracted quantity limit text is:
 
-There is no mention of other specialties being required for initiating or managing treatment with BIMZELX for PsO.",16,NA,Yes,"NA
-
-There is no explicit mention of reauthorization requirements for BIMZELX in the provided policy document context.",25
-195158-4643510.pdf,SKYRIZI,>= 18 years,"For moderate to severe plaque psoriasis (new starts only): 
-1) at least 3% of body surface area (BSA) is affected OR crucial body areas (e.g., feet, hands, face, neck, groin, intertriginous areas) are affected at the time of diagnosis, 
-AND 
-2) patient meets any of the following: 
-a) patient has experienced an inadequate treatment response or intolerance to either phototherapy (e.g., UVB, PUVA) or pharmacologic treatment with methotrexate, cyclosporine, or acitretin, 
-b) pharmacologic treatment with methotrexate, cyclosporine, or acitretin is contraindicated, 
-c) patient has severe psoriasis that warrants a biologic as first-line therapy (i.e., at least 10% of the body surface area or crucial body areas [e.g., hands, feet, face, neck, scalp, genitals/groin, intertriginous areas] are affected).",3,2,No,NA,NA,NA,NA,NA,Yes,"NA
-
-The provided policy document context does not contain specific reauthorization requirements for SKYRIZI (Psoriasis, moderate-to-severe).",25
-195239-4641478.pdf,OTEZLA,>=2,NA,NA,NA,NA,No,NA,Dermatologist,NA,NA,Yes,For reauthorization: must have documentation from prescriber indicating stabilization or improvement in condition.,50
-203402-5001149.pdf,YESINTEK,NA,NA,5,3,NA,NA,NA,Dermatologist,NA,NA,NA,NA,25
-247339-4770410.pdf,OTULFI,NA,NA,1,2,NA,NA,"For OTULFI (brand) and Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication, the extracted quantity limit text is:
-
-""Stelara, Imuldosa, Otulfi, Pyzchiva, Selarsdi, Steqeyma, Wezlana, and Yesintek for PsO 
-Weight-based Dose Range 
-Quantity Recommendation 
-Subcutaneous, Syringe 
+""Subcutaneous, Syringe 
 ≤ 46.99 mg 
 1 syringe of 45 mg/0.5 mL 
 47 to 94.49 mg 
@@ -704,107 +712,82 @@ Subcutaneous, Vial
 ≤ 46.99 mg 
 1 vial of 45 mg/0.5 mL 
 47 to 94.49 mg 
-2 vials of 45 mg/0.5 mL",Dermatologist,NA,NA,Yes,"NA
+2 vials of 45 mg/0.5 mL",Dermatologist,Unspecified,NA,Yes,"NA
 
 The provided document context does not contain any information about OTULFI (or its generic name/biosimilars) for the Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. The structured data only includes information about other brands and indications.",25
-269830-4591538.pdf,ENBREL,NA,"Patient meets the standard Inflammatory Conditions – Bimzelx Prior Authorization Policy criteria for plaque psoriasis; AND 
+269830-4591538.pdf,ENBREL,>=18,"Patient meets the standard Inflammatory Conditions – Bimzelx Prior Authorization Policy criteria for plaque psoriasis; AND 
 Patient has tried ONE of Enbrel, an adalimumab product, Otezla, Skyrizi subcutaneous, Sotyktu, Stelara subcutaneous, Taltz, or Tremfya. 
 
 OR 
 Patient meets BOTH of the following (i and ii): 
 i. Patient meets the standard Inflammatory Conditions – Siliq Prior Authorization Policy criteria for plaque psoriasis; AND 
-ii. Patient has tried TWO of Enbrel, an adalimumab product, Otezla, Skyrizi subcutaneous, Sotyktu, Stelara subcutaneous, Taltz, or Tremfya [documentation required]. 
+ii. Patient has tried TWO of Enbrel, an adalimumab product, Otezla, Skyrizi subcutaneous, Sotyktu, Stelara subcutaneous, Taltz, or Tremfya [documentation required].",1,"Based on the provided context, the number of steps through generic for ENBREL in PsO is:",No,NA,NA,Dermatologist,Unspecified,12,Yes,"For ENBREL PsO, the reauthorization/renewal criteria text is:
 
-OR 
-Patient meets BOTH of the following (i and ii): 
-i. Patient meets the standard Inflammatory Conditions – Rinvoq/LQ Prior Authorization Policy criteria; AND 
-ii. Patient has tried one of Enbrel or an adalimumab product; OR",1,269830,No,NA,"NA
+""Approval for a patient continuing therapy with a Non-Preferred subcutaneous or oral Product must be supported with verification, noted in the criteria as either [verification in prescription claims history required] or, if not available, as [verification by prescriber required]. 
 
-No quantity limits are mentioned in the provided context for ENBREL in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",Dermatologist,3,NA,Yes,"Continuation of Therapy: Approval for a patient continuing therapy with ENBREL must be supported with verification, noted in the criteria as either [verification in prescription claims history required] or, if not available, as [verification by prescriber required]. 
-
-o If the patient has at least 130 days of prescription claims history on file, claims history must support that the patient has received ENBREL for the specified period of time (90 or 120 days) within a 130-day look-back period; OR 
-o When 130 days of the patient’s prescription claim history file is unavailable for verification, the prescriber must verify that the patient has been receiving ENBREL for a specified period of time (90 or 120 days), AND that the patient has been receiving ENBREL via paid claims (e.g., patient has not been receiving samples or coupons or other types of waivers in order to obtain access to ENBREL).",25
-270625-4631548.pdf,ILUMYA,>=18,"The step therapy requirements for ILUMYA in Plaque Psoriasis (moderate-to-severe) are as follows:
-
-""The member meets one (1) of the following criteria (i., ii., or iii.): 
+o If the patient has at least 130 days of prescription claims history on file, claims history must support that the patient has received the Non-Preferred Product for the specified period of time (90 or 120 days) within a 130-day look-back period; OR 
+o When 130 days of the patient’s prescription claim history file is unavailable for verification, the prescriber must verify that the patient has been receiving the Non-Preferred Product for a specified period of time (90 or 120 days), AND that the patient has been receiving the Non-Preferred Product via paid claims (e.g., patient has not been receiving samples or coupons or other types of waivers in order to obtain access to the Non-Preferred Product).",50
+270625-4631548.pdf,ILUMYA,>=18,"When a benefit, coverage of Ilumya may be approved when all of the following criteria are met (a. through e.): 
+a. The member is 18 years of age or older. 
+b. The member has a diagnosis of moderate to severe PsO. 
+c. The medication is prescribed by or in consultation with a dermatologist. 
+d. The member meets one (1) of the following criteria (i., ii., or iii.): 
 i. The member has experienced therapeutic failure or intolerance to phototherapy (e.g., PUVA, UVB). 
 ii. The member has experienced therapeutic failure or intolerance to at least one (1) systemic therapy (e.g., methotrexate). 
 iii. The member is contraindicated to both phototherapy and systemic therapy. 
-e. The member has experienced therapeutic failure or intolerance to at least two (2) step 1 or 2 plan-preferred agents for the treatment of PsO (see Table 1).",2,2,Yes,No,"For ILUMYA (tildrakizumab), the quantity limits are as follows:
-
-- Induction Therapy: Two (2) prefilled syringes within the first four (4) weeks of therapy
-- Maintenance Therapy: One (1) prefilled syringe every twelve (12) weeks",Dermatologist,NA,12,Yes,The member has demonstrated disease stability or a beneficial response to therapy.,0
-283789-5060638.pdf,ENBREL,>=6,"For ENBREL in Plaque Psoriasis (moderate-to-severe), the Step Therapy Requirements Documented in Policy are:
-
-""Patient has had a prior trial and inadequate response to either of the following (AAD 2009): Any two (2) topical corticosteroids or any one (1) topical corticosteroids plus calcipotriene. For psoriasis use greater than 1 year, efficacy must be documented for continued use. Documentation may include chart notes, consultation notes.",0,2,No,NA,"NA
-
-No quantity limits are explicitly stated in the provided document context for ENBREL in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",NA,12,12,Yes,"Verification of previous improvement in disease activity following treatment with ENBREL indicating a therapeutic response including lack of disease progression, AND individual is using in combination with standard therapy (for example, topical therapies, phototherapy, or systemic agents).",75
-287728-4459856.pdf,STELARA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,No,"NA
-
-The provided context does not contain specific reauthorization criteria for STELARA (PsO) / Plaque Psoriasis (moderate-to-severe). The general reauthorization criteria mentioned apply to ""medications for multiple myeloma (MM)"" and do not specifically mention STELARA or PsO.",75
-308650-4595103.pdf,ACITRETIN,>=18 (FDA labelled age for PsO),"For ACITRETIN in Plaque Psoriasis (moderate-to-severe), the Step Therapy Requirements Documented in Policy are:
-
-""Diagnosed with severe psoriasis 
+e. The member has experienced therapeutic failure or intolerance to at least two (2) step 1 or 2 plan-preferred agents for the treatment of PsO (see Table 1).",2,1,No,NA,"When prior authorization is approved, Ilumya may be authorized in quantities as follows: 
+Diagnosis 
+Induction Therapy 
+Maintenance Therapy 
+PsO 
+Two (2) prefilled syringes within 
+the first four (4) weeks of therapy 
+One (1) prefilled syringe every 
+twelve (12) weeks",Dermatologist,Unspecified,Unspecified,Yes,1. The prescriber attests that the member has demonstrated disease stability or a beneficial response to therapy.,25
+283789-5060638.pdf,ENBREL,>=18,"For psoriasis, individual has had a prior trial and inadequate response to either of the following (AAD 2009): Any two (2) topical corticosteroids or any one (1) topical corticosteroids plus calcipotriene.",NA,2,No,NA,NA,NA,12,12,Yes,"For psoriasis, individual has had a prior trial and inadequate response to either of the following (AAD 2009): Any two (2) topical corticosteroids or any one (1) topical corticosteroids plus calcipotriene. For psoriasis use greater than 1 year, efficacy must be documented for continued use. Documentation may include chart notes, consultation notes.",50
+287728-4459856.pdf,STELARA,FDA labelled age,NA,NA,NA,No,NA,NA,NA,NA,NA,Yes,NA,50
+308650-4595103.pdf,ACITRETIN,FDA labelled age,"Diagnosed with severe psoriasis 
 • Patient is unresponsive to at least 2 conventional therapies 
 (topical corticosteroids, vitamin D analogs, Tazorac, topical 
-tacrolimus, Elidel, phototherapy). 
-Females of childbearing age AND able to bear children must comply with 
-ALL the following: 
-• 2 negative urine or serum pregnancy tests prior to therapy 
-• commit to using 2 effective forms of birth control starting 1 
-month prior to acitretin treatment monthly pregnancy tests during 
-therapy 
-Prescribed by a dermatologist.",1,2,No,NA,"7-day maximum quantity limit, equal to or less than 50 MED [morphine equivalents per day]. For opioid experienced (greater than or equal to 15 days filled in previous 120 days): equal to or less than 90 MED [morphine equivalents per day].",Dermatologist,12,12,Yes,Renewal Criteria: Documentation of continued effectiveness. Renewal Criteria for females able to bear children: Documentation of required pregnancy monitoring AND continued effectiveness.,50
-315085-4653251.pdf,OTEZLA,>=18,NA,1,NA,NA,NA,"NA
+tacrolimus, Elidel, phototherapy).",2,2,No,NA,NA,Dermatologist,6,12,Yes,"PsO: Documentation of positive clinical response to therapy as evidenced by one of the following: reduction in the body surface area (BSA) involvement from baseline, or improvement in symptoms (e.g., pruritus, inflammation) from baseline. 
+AND 
+Clinical documentation of provider follow-up indicating safety AND efficacy with medication adherence over previous approval duration. 
+AND 
+Renewal Criteria: Documentation of continued effectiveness. 
+For females able to bear children: Documentation of required pregnancy monitoring AND continued effectiveness.",25
+315085-4653251.pdf,OTEZLA,FDA labelled age,"Use of ONE preferred TNF (Cyltezo, Enbrel, Hadlima, or Humira) is required for diagnoses adult psoriatic arthritis or juvenile idiopathic arthritis",1,NA,No,NA,NA,Dermatologist,12,Unspecified,Yes,NA,50
+326557-4901234.pdf,AMJEVITA,>=2,"For AMJEVITA in Plaque Psoriasis, the step therapy requirements documented in the policy are not explicitly stated in the provided context. However, based on the information given for other brands and the general approach to psoriasis treatment, the relevant text that could apply universally or be related to the indication is:
 
-The document context does not mention any quantity limits for OTEZLA. It only discusses coverage duration, prescriber restrictions, and other criteria.",Dermatologist,12,12,Yes,"NA
+""No specific biologic drug/class is recommended as first-line for all patients with psoriasis, and instead choice of therapy should be individualized based on patient specific factors... 
+Systemic non-biologic therapies, such as methotrexate, cyclosporine, and acitretin, are options for moderate to severe psoriasis. Biologic therapies (e.g., adalimumab, etanercept, infliximab, ustekinumab) have also shown efficacy in moderate to severe plaque psoriasis...""
 
-The policy document does not explicitly mention reauthorization requirements for OTEZLA in the context of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe). It only discusses initial approval criteria and coverage duration.",50
-326557-4901234.pdf,AMJEVITA,NA,"No specific step therapy requirements are documented in the policy for AMJEVITA in Plaque Psoriasis. However, the policy mentions the following general information:
+And from the reauthorization criteria for other brands, which might imply a general approach:
+""1. The patient has been treated with the requested agent within the past 90 days OR 
+2. The prescriber states the patient has been treated with the requested agent within the past 90 days AND is at risk if therapy is changed OR 
+B. ALL of the following:
+1. The patient has an FDA labeled indication or an indication supported in compendia for the requested agent and route of administration AND ONE of the following:
+A. The patient has a diagnosis of active psoriatic arthritis (PsA) AND ONE of the following:
+1. The patient has ONE of the following:
+A. Has tried and had an inadequate response to ONE conventional agent (i.e., cyclosporine, leflunomide, methotrexate, sulfasalazine) used in the treatment of PsA after at least a 3-month duration of therapy OR""
 
-* No specific biologic drug/class is recommended as first-line for all patients with psoriasis.
-* Primary failure for biologics is defined as initial nonresponse to treatment.
-* Failure of one biologic therapy does not preclude successful response to another biologic therapy.
-* Concomitant use of MTX with a biologic may increase drug survival by limiting antibody formation.
-
-For pediatric patients, the policy recommends the following step therapy options:
-
-* Topical corticosteroids as the mainstay option.
-* Topical calcineurin inhibitors as a treatment option for psoriasis of the face, genitalia, and body folds.
-* Vitamin D analogues as a treatment option for childhood plaque psoriasis.
-* Phototherapy may be efficacious and well tolerated for pediatric patients with generalized psoriasis or localized psoriasis refractory to topical agents.
-* Systemic non-biologic therapies, such as methotrexate, cyclosporine, and acitretin, as options for moderate to severe psoriasis.
-* Biologic therapies (e.g., adalimumab, etanercept, infliximab, ustekinumab) have also shown efficacy in moderate to severe plaque psoriasis in this patient population.
-
-Since no specific step therapy requirements are documented in the policy for AMJEVITA in Plaque Psoriasis, the extracted value is:
-
-""NA",1,1,No,Yes,"[Source: 326557-4901234.pdf | Section: DAYS | Page: 43 | Brands: AMJEVITA, ADALIMUMAB, HUMIRA]
-Amjevita
-adalimumab-
-atto soln
-prefilled
-syringe
-- 40 MG/0.4ML: 2 Syringes, 28 DAYS
-- 40 MG/0.8ML: 2 Syringes, 28 DAYS
-- 20 MG/0.4ML: 2 Syringes, 28 DAYS
-- 20 MG/0.2ML: 2 Syringes, 28 DAYS
-- 10 MG/0.2ML: 2 Syringes, 28 DAYS",NA,NA,NA,Yes,"NA
-
-The provided context does not contain explicit reauthorization criteria for AMJEVITA (Ustekinumab) for the indication of Psoriasis (PsO). The context contains general reauthorization criteria for multiple brands and indications, but specific criteria for AMJEVITA are not documented.",50
-330107-4979411.pdf,YESINTEK,>=6,"The step therapy requirements documented in policy for YESINTEK in Plaque Psoriasis (moderate-to-severe) are as follows:
+Since AMJEVITA is not explicitly mentioned, and the provided context does not directly address step therapy for AMJEVITA in Plaque Psoriasis, the specific step therapy requirements for AMJEVITA are not directly stated. However, the above text provides a general approach to treating psoriasis and could imply that patients should have tried conventional agents before moving to biologics like AMJEVITA.",NA,1,No,Yes,"Amjevita adalimumab-atto soln prefilled syringe 40 MG/0.4ML 2 Syringes 28, 
+Amjevita adalimumab-atto soln prefilled syringe 40 MG/0.8ML 2 Syringes 28, 
+Amjevita adalimumab-atto soln prefilled syringe 20 MG/0.4ML 2 Syringes 28, 
+Amjevita adalimumab-atto soln prefilled syringe 20 MG/0.2ML 2 Syringes 28, 
+Amjevita adalimumab-atto soln prefilled syringe 10 MG/0.2ML 2 Syringes 28.",Dermatologist,12,12,Yes,The patient has been treated with the requested agent (starting on samples is not approvable) within the past 90 days OR the prescriber states the patient has been treated with the requested agent (starting on samples is not approvable) within the past 90 days AND is at risk if therapy is changed.,50
+330107-4979411.pdf,YESINTEK,>=6,"For YESINTEK (ustekinumab-kfce) in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in the policy are:
 
 ""The patient is unable to take Yesintek (ustekinumab-kfce), where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. Documentation is required for approval.
 
-For initial requests:
+For Plaque psoriasis (PsO), initial requests require:
 • Chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected (if applicable).
 • Chart notes, medical record documentation, or claims history supporting previous medications tried (if applicable), including response to therapy. If therapy is not advisable, documentation of clinical reason to avoid therapy.
 
-For continuation requests:
-• Chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.""
+Continuation requests require:
+Chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.
 
-Additionally, authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug (e.g., Sotyktu, Otezla) indicated for treatment of moderate to severe plaque psoriasis.","Based on the provided context, the extracted value for ""Number of Steps through Brands"" is:",1,NA,Yes,"NA
-
-The provided context does not mention ""YESINTEK"" or its generic name ""USTEKINUMAB"" explicitly. However, it does mention ""Stelara (ustekinumab)"" and other biosimilars. Since the context does not explicitly mention ""YESINTEK"", I will output ""NA"".",Dermatologist,12,12,Yes,"Continuation of Therapy for Plaque psoriasis (PsO)1-14,19,24,25: 
+Additionally, authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug indicated for treatment of moderate to severe plaque psoriasis, or who achieve or maintain a positive clinical response as evidenced by low disease activity or improvement in signs and symptoms of the condition, with either reduction in body surface area (BSA) affected from baseline or improvement in signs and symptoms from baseline.",1,3,No,Yes,NA,Dermatologist,12,12,Yes,"Continuation of Therapy 
+Plaque psoriasis (PsO)  
 Authorization of 12 months may be granted for all members 6 years of age and older 
 (including new members) who are using the requested medication for moderate to severe 
 plaque psoriasis and who achieve or maintain a positive clinical response as evidenced by 
@@ -813,14 +796,5 @@ the following is met:
 •  Reduction in body surface area (BSA) affected from baseline 
 •  Improvement in signs and symptoms from baseline (e.g., itching, redness,  
 flaking, scaling, burning, cracking, pain)",50
-361202-4967201.pdf,TREMFYA,NA,"**Step Therapy Requirements Documented in Policy:**
-
-""NA"" (No information available in the provided context regarding step therapy requirements for TREMFYA in Plaque Psoriasis)",2,NA,No,NA,NA,NA,NA,NA,NA,NA,50
-377585-4984547.pdf,STELARA,NA,"**Step Therapy Requirements Documented in Policy**
-
-For Plaque Psoriasis (moderate-to-severe), the following step therapy requirements apply:
-
-1. The patient must have previously received a biologic or a non-biologic systemic agent for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to the previous therapy.
-2. The patient must have a body surface area (BSA) of 10% or greater.
-3. The patient must have phototherapy as part of their treatment regimen.
-4. The patient must have tried and failed at least one non-biologic systemic agent for the treatment of moderate-to-severe plaque psoriasis.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,75
+361202-4967201.pdf,TREMFYA,FDA labelled age,NA,NA,NA,No,NA,NA,NA,6,6,Yes,NA,50
+377585-4984547.pdf,STELARA,>=6,NA,NA,NA,No,Yes,NA,Rheumatologist,6,NA,NA,NA,50
