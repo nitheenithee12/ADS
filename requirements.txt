@@ -1,0 +1,35 @@
+# ADS Hackathon - Payer Policy Intelligence Pipeline
+# Requirements
+
+# PDF Parsing
+PyMuPDF>=1.24.0
+
+# Data handling
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# Embeddings
+sentence-transformers>=3.0.0
+
+# Vector DB
+faiss-cpu>=1.7.4
+
+# LangChain ecosystem
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-text-splitters>=1.0.0
+langchain-groq>=0.2.0
+langgraph>=0.2.0
+
+# Retry logic
+tenacity>=8.2.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Streamlit UI (for app.py)
+streamlit>=1.35.0
+
+# Utilities
+tqdm>=4.65.0
