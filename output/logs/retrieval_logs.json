@@ -1,0 +1,2372 @@
+[
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "STELARA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "For STELARA in Plaque Psoriasis (moderate-to-severe), the step therapy requirements documented in the policy are:\n\nPrior Authorization (Initial Authorization) \nLength of Approval: 6 Month(s) \nFor diagnosis of Plaque Psoriasis \nPatient demonstrates one of the following: \nReduction in the body surface area (BSA) involvement from baseline \nImprovement in symptoms (e.g., pruritus, inflammation) from baseline \nAND \nPrescribed by or in consultation with a dermatologist",
+    "timestamp": "2026-05-30 16:08:10"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Number of Steps through Brands",
+    "query": "STELARA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:08:11"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Number of Steps through Generic",
+    "query": "STELARA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:08:37"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Step through-Phototherapy",
+    "query": "STELARA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:08:38"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Age",
+    "query": "STELARA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": ">=6",
+    "timestamp": "2026-05-30 16:08:40"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:08:53"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Quantity Limits",
+    "query": "STELARA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:08:55"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Specialist Types",
+    "query": "STELARA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:09:07"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "STELARA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 6,
+    "has_structured_field": true,
+    "extracted_value": "6",
+    "timestamp": "2026-05-30 16:09:16"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "STELARA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:09:21"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Required",
+    "query": "STELARA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:09:25"
+  },
+  {
+    "filename": "56263-4803097.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "STELARA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "For diagnosis of Plaque Psoriasis, Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following: \nReduction in the body surface area (BSA) involvement from baseline\nImprovement in symptoms (e.g., pruritus, inflammation) from baseline",
+    "timestamp": "2026-05-30 16:09:33"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "TREMFYA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "For diagnosis of Plaque Psoriasis (PsO), the step therapy requirements are: \nDiagnosis of moderate-to-severe plaque psoriasis \nAND \nOne of the following: \nGreater than or equal to 3% body surface area involvement \nSevere scalp psoriasis \nPalmoplantar (i.e., palms, soles), facial, or genital involvement \nAND \nMinimum duration of a 4-week trial and failure, contraindication, or intolerance to one of the following topical therapies.",
+    "timestamp": "2026-05-30 16:09:43"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Number of Steps through Brands",
+    "query": "TREMFYA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:09:51"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Number of Steps through Generic",
+    "query": "TREMFYA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:10:01"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step through-Phototherapy",
+    "query": "TREMFYA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:10:10"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Age",
+    "query": "TREMFYA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "FDA labelled age",
+    "timestamp": "2026-05-30 16:10:19"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:10:24"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Quantity Limits",
+    "query": "TREMFYA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:10:32"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Specialist Types",
+    "query": "TREMFYA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:10:41"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "TREMFYA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 6,
+    "has_structured_field": true,
+    "extracted_value": "6",
+    "timestamp": "2026-05-30 16:10:49"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "TREMFYA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:10:57"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Reauthorization Required",
+    "query": "TREMFYA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:11:05"
+  },
+  {
+    "filename": "183953-4805567.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "TREMFYA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "For diagnosis of Plaque Psoriasis (PsO), Patient demonstrates positive clinical response to therapy as evidenced by ONE of the following: \nReduction in the body surface area (BSA) involvement from baseline\nImprovement in symptoms (e.g., pruritus, inflammation) from baseline",
+    "timestamp": "2026-05-30 16:11:14"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "STELARA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "STELARA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "The clinical information must document why the member cannot use Stelara, including why it is medically necessary that the member receive a non-preferred ustekinumab-xxxx drug instead of Stelara. PA requests for non-preferred cytokine and CAM antagonist drugs used to treat psoriasis must be submitted using the Prior Authorization Drug Attachment for Cytokine and CAM Antagonist Drugs for Psoriasis form. \n\nHowever, specific step therapy requirements for STELARA in Plaque Psoriasis are not explicitly stated in the provided context. The context primarily discusses the process for submitting PA requests and the clinical criteria for psoriatic arthritis, rather than plaque psoriasis. \n\nTherefore, based on the given context, the step therapy requirements for STELARA in Plaque Psoriasis are not fully outlined, but it implies that the member must have a reason for not using Stelara, and instead, requiring a non-preferred ustekinumab-xxxx drug.",
+    "timestamp": "2026-05-30 16:11:19"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "STELARA",
+    "parameter": "Number of Steps through Brands",
+    "query": "STELARA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:11:26"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "STELARA",
+    "parameter": "Number of Steps through Generic",
+    "query": "STELARA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:11:31"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "STELARA",
+    "parameter": "Step through-Phototherapy",
+    "query": "STELARA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:11:37"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "STELARA",
+    "parameter": "Specialist Types",
+    "query": "STELARA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:11:40"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "TREMFYA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:11:47"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Number of Steps through Brands",
+    "query": "TREMFYA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:11:55"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Number of Steps through Generic",
+    "query": "TREMFYA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:12:01"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step through-Phototherapy",
+    "query": "TREMFYA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:12:08"
+  },
+  {
+    "filename": "365374-5059388.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Specialist Types",
+    "query": "TREMFYA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:12:12"
+  },
+  {
+    "filename": "299241-4702948.pdf",
+    "brand": "STELARA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "STELARA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "Exception: If one biologic DMARD that is FDA-approved for plaque psoriasis has been previously tried, then trial of a conventional systemic agent or phototherapy is not required.",
+    "timestamp": "2026-05-30 16:12:18"
+  },
+  {
+    "filename": "299241-4702948.pdf",
+    "brand": "STELARA",
+    "parameter": "Number of Steps through Brands",
+    "query": "STELARA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:12:20"
+  },
+  {
+    "filename": "299241-4702948.pdf",
+    "brand": "STELARA",
+    "parameter": "Number of Steps through Generic",
+    "query": "STELARA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:12:23"
+  },
+  {
+    "filename": "299241-4702948.pdf",
+    "brand": "STELARA",
+    "parameter": "Step through-Phototherapy",
+    "query": "STELARA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:12:27"
+  },
+  {
+    "filename": "299241-4702948.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Required",
+    "query": "STELARA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:12:31"
+  },
+  {
+    "filename": "299241-4702948.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "STELARA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Removed reauthorization requirement for positive response to therapy. Continued therapy approval to “Member is currently receiving medication that has been authorized.”",
+    "timestamp": "2026-05-30 16:12:34"
+  },
+  {
+    "filename": "297411-4840622.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step through-Phototherapy",
+    "query": "TREMFYA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:12:37"
+  },
+  {
+    "filename": "297411-4840622.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Reauthorization Required",
+    "query": "TREMFYA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:12:40"
+  },
+  {
+    "filename": "297411-4840622.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "TREMFYA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:12:42"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "AMJEVITA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:12:47"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Number of Steps through Brands",
+    "query": "AMJEVITA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:12:56"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Number of Steps through Generic",
+    "query": "AMJEVITA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:13:06"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Step through-Phototherapy",
+    "query": "AMJEVITA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:13:11"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Age",
+    "query": "AMJEVITA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "FDA labelled age",
+    "timestamp": "2026-05-30 16:13:20"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 6,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:13:28"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Quantity Limits",
+    "query": "AMJEVITA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "2 Syringes 28 DAYS for the following:\n- Amjevita adalimumab-atto soln prefilled syringe 20 MG/0.4 ML\n- Amjevita adalimumab-atto soln prefilled syringe 40 MG/0.4 ML\n- Amjevita adalimumab-atto soln prefilled syringe 40 MG/0.8 ML\n2 Pens 28 DAYS for the following:\n- Amjevita adalimumab-atto soln auto-injector 40 MG/0.4 ML\n- Amjevita adalimumab-atto soln auto-injector 40 MG/0.8 ML\n- Amjevita adalimumab-atto soln auto-injector 80 MG/0.8 ML",
+    "timestamp": "2026-05-30 16:13:37"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Specialist Types",
+    "query": "AMJEVITA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:13:47"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "AMJEVITA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:13:56"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "AMJEVITA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:14:04"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Reauthorization Required",
+    "query": "AMJEVITA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 7,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:14:13"
+  },
+  {
+    "filename": "8889-4641730.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "AMJEVITA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:14:22"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "COSENTYX step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "For COSENTYX in Plaque Psoriasis (moderate-to-severe), the step therapy requirements are: \n- Failure of methotrexate\n- Failure of cyclosporine\n- Failure of psoralen (methoxsalen or acitretin) with UVA radiation\n- Failure of UVB & coal tar on ditranol\n- Failure of acitretin\n- Failure of Narrow Band UVB (NBUVB)\nAs per Table 1, Cosentyx is a Step 1 agent. If Cosentyx is not successful, the patient must fail two Step 1 agents to be eligible for Cimzia or Ilumya (Step 2), and failure of three Step 1 agents is required for Siliq or Taltz (Step 3).",
+    "timestamp": "2026-05-30 16:14:28"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Number of Steps through Brands",
+    "query": "COSENTYX step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:14:35"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Number of Steps through Generic",
+    "query": "COSENTYX step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:14:43"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Step through-Phototherapy",
+    "query": "COSENTYX phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:14:48"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Age",
+    "query": "COSENTYX age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": ">=6",
+    "timestamp": "2026-05-30 16:14:51"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Quantity Limits",
+    "query": "COSENTYX quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:14:53"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Specialist Types",
+    "query": "COSENTYX prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:14:58"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "COSENTYX coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:15:03"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "COSENTYX coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:15:18"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Reauthorization Required",
+    "query": "COSENTYX renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:15:20"
+  },
+  {
+    "filename": "8898-4735285.pdf",
+    "brand": "COSENTYX",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "COSENTYX renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided document context does not contain information about COSENTYX (or its generic name/biosimilars) for the Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. The structured data is related to OTEZLA, not COSENTYX.",
+    "timestamp": "2026-05-30 16:15:57"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "ENBREL step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "**Step Therapy Requirements Documented in Policy for ENBREL in Plaque Psoriasis (moderate-to-severe)**\n\na) The patient has been established on Enbrel for ≥ 90 days, as determined by the prescriber, and site of care medical necessity is met*.\nb) Enbrel is prescribed by or in consultation with a dermatologist; AND \nc) The patient has a contraindication to one oral agent for psoriasis such as MTX, as determined by the prescribing physician; AND \nd) Site of care medical necessity is met*.\n \nNote: The policy does not specify separate criteria for moderate-to-severe and severe PsO, so we use the moderate-to-severe criteria.",
+    "timestamp": "2026-05-30 16:16:15"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Number of Steps through Brands",
+    "query": "ENBREL step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:16:34"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Age",
+    "query": "ENBREL age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": ">=18",
+    "timestamp": "2026-05-30 16:16:36"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:16:52"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Quantity Limits",
+    "query": "ENBREL quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA\n\nThe provided context does not explicitly mention quantity limits for ENBREL in the \"Quantity Level Limit\" or \"Quantity Limit\" sections. It does mention dosing information and approval periods, but not quantity limits.",
+    "timestamp": "2026-05-30 16:17:41"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Specialist Types",
+    "query": "ENBREL prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:17:42"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "ENBREL coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "6",
+    "timestamp": "2026-05-30 16:18:16"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "ENBREL coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:18:23"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Required",
+    "query": "ENBREL renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:18:32"
+  },
+  {
+    "filename": "9023-4381765.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "ENBREL renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "A response to therapy is required for continuation of therapy, unless otherwise noted below. The patient may not have a full response, but there should have been a recent or past response to Enbrel.",
+    "timestamp": "2026-05-30 16:18:41"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "REMICADE step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "Step Therapy Requirements Documented in Policy:\n\nPrior authorization is required for REMICADE for the treatment of moderate-to-severe plaque psoriasis. The following step therapy requirements apply:\n\n* The patient must have previously received a biologic or an oral systemic agent (e.g., apremilast, ustekinumab, secukinumab, or etanercept) for the treatment of moderate-to-severe plaque psoriasis and have had an inadequate response to the previous therapy.\n* The patient must have had phototherapy (UVB or PUVA) for at least 6 months and have had an inadequate response to the phototherapy.\n* The patient must have had topical therapy (e.g., corticosteroids, vitamin D analogues, or retinoids) for at least 6 months and have had an inadequate response to the topical therapy.\n* The patient must have had a body surface area (BSA) of at least 10% affected by psoriasis.\n* The patient must have had a history of inadequate response to at least two systemic agents (e.g., methotrexate, cyclosporine, or sulfasalazine) for the treatment of moderate-to-severe plaque psoriasis.",
+    "timestamp": "2026-05-30 16:18:47"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "Number of Steps through Brands",
+    "query": "REMICADE step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:19:02"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "Number of Steps through Generic",
+    "query": "REMICADE step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:20:19"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "Step through-Phototherapy",
+    "query": "REMICADE phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:20:21"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:20:23"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "Reauthorization Required",
+    "query": "REMICADE renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:20:24"
+  },
+  {
+    "filename": "9026-4997564.pdf",
+    "brand": "REMICADE",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "REMICADE renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Patient continues to meet the universal and other indication-specific relevant criteria identified in section III; AND \nDuration of authorization has not been exceeded (refer to Section I); AND \nAbsence of unacceptable toxicity from the drug. Examples of unacceptable toxicity include:",
+    "timestamp": "2026-05-30 16:20:25"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "SILIQ step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "The patient has concomitant severe psoriasis (PS) (e.g., greater than 10% body surface area involvement, occurring on select locations [i.e., hands, feet, scalp, face, or genitals], intractable pruritus, serious emotional consequences) OR \nThe patient's medication history indicates use of another biologic immunomodulator agent that is FDA labeled or supported in compendia for the treatment of JPsA OR \nThe patient has a diagnosis not mentioned previously AND \nONE of the following (reference Step Table): \nA. The requested indication does NOT require any prerequisite biologic immunomodulator agents OR \nB. The requested agent is a Step 1a agent for the requested indication OR \nC. BOTH of the following: \n1. The prescriber has stated that the patient has been diagnosed with stage four advanced, metastatic cancer and the requested agent is being used to treat the cancer OR \nB. The prescriber has submitted documentation that the patient has been diagnosed with stage four advanced, metastatic cancer and the requested agent is being used to treat an associated condition related to stage four advanced metastatic cancer [chart notes required] AND \n2. The use of the requested agent is consistent with best practices for the treatment of stage four advanced, metastatic cancer, or an associated condition; supported by peer-reviewed, evidence-based literature; and approved by the United States Food and Drug Administration OR \nD. If the requested agent is a Step 1b agent for the requested indication, then ONE of the following: \n1.",
+    "timestamp": "2026-05-30 16:20:30"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Number of Steps through Brands",
+    "query": "SILIQ step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "3",
+    "timestamp": "2026-05-30 16:20:32"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Number of Steps through Generic",
+    "query": "SILIQ step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:20:51"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Step through-Phototherapy",
+    "query": "SILIQ phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:21:01"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Age",
+    "query": "SILIQ age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": ">=18",
+    "timestamp": "2026-05-30 16:21:18"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:21:30"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Quantity Limits",
+    "query": "SILIQ quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThere is no explicit quantity limit mentioned in the provided context for SILIQ (adalimumab-ryvk prefilled syringe kit 40 MG/0.4ML) or its generic name. The document discusses clinical criteria for approval, but does not specify a quantity limit for SILIQ.",
+    "timestamp": "2026-05-30 16:21:51"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Specialist Types",
+    "query": "SILIQ prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:22:10"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "SILIQ coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "16 weeks",
+    "timestamp": "2026-05-30 16:22:23"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "SILIQ coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "For SILIQ (PsO), the Reauthorization Duration is 16 weeks.",
+    "timestamp": "2026-05-30 16:22:34"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Reauthorization Required",
+    "query": "SILIQ renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:22:54"
+  },
+  {
+    "filename": "55182-4590747.pdf",
+    "brand": "SILIQ",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "SILIQ renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided context does not explicitly document reauthorization requirements for SILIQ (Psoriasis) in the policy document.",
+    "timestamp": "2026-05-30 16:23:16"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Age",
+    "query": "CIMZIA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": ">=18",
+    "timestamp": "2026-05-30 16:23:20"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:23:26"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Quantity Limits",
+    "query": "CIMZIA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nNo quantity limits are mentioned for CIMZIA in the provided policy document context.",
+    "timestamp": "2026-05-30 16:23:41"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Specialist Types",
+    "query": "CIMZIA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:23:58"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "CIMZIA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "3",
+    "timestamp": "2026-05-30 16:24:01"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "CIMZIA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:24:07"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Reauthorization Required",
+    "query": "CIMZIA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:24:28"
+  },
+  {
+    "filename": "66156-4274314.pdf",
+    "brand": "CIMZIA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "CIMZIA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided policy document context does not contain specific reauthorization criteria for CIMZIA (certolizumab pegol) in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe). The extracted criteria are for various indications and treatments, but none are specific to CIMZIA for PsO.",
+    "timestamp": "2026-05-30 16:24:48"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "BIMZELX step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "The step therapy requirements for BIMZELX in Plaque Psoriasis (moderate-to-severe) are as follows:\n\n\"The member meets one (1) of the following criteria (i., ii., or iii.): \ni. The member has experienced therapeutic failure or intolerance to phototherapy (e.g. PUVA, UVB). \nii. The member has experienced therapeutic failure or intolerance to at least one (1) systemic therapy (e.g., methotrexate). \niii. The member is contraindicated to both phototherapy and systemic therapy.  \nd. The member has experienced therapeutic failure or intolerance to at least two (2) preferred biologic products for the treatment of PsO (see Table 1).",
+    "timestamp": "2026-05-30 16:25:06"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Number of Steps through Brands",
+    "query": "BIMZELX step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:25:28"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Number of Steps through Generic",
+    "query": "BIMZELX step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:25:49"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Step through-Phototherapy",
+    "query": "BIMZELX phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:26:05"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Age",
+    "query": "BIMZELX age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": ">=18",
+    "timestamp": "2026-05-30 16:26:30"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:26:48"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Quantity Limits",
+    "query": "BIMZELX quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "Bimzelx (bimekizumab-bkzx) may be authorized in quantities as follows: \n- PsO (< 120 kg): Ten (10) autoinjectors/prefilled syringes within the first sixteen (16) weeks of therapy, Two (2) autoinjectors/prefilled syringes every eight (8) weeks  \n- PsO (≥ 120 kg): Ten (10) autoinjectors/prefilled syringes within the first sixteen (16) weeks of therapy, Two (2) autoinjectors/prefilled syringes every four (4) weeks -OR- Two (2) autoinjectors/prefilled syringes every eight (8) weeks",
+    "timestamp": "2026-05-30 16:27:08"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Specialist Types",
+    "query": "BIMZELX prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "Based on the provided context, the parameter \"Specialist Types\" for BIMZELX specifically for Plaque Psoriasis (PsO) is:\n\nDermatologist\n\nThis is mentioned in the following section:\n\nII. Bimzelx (bimekizumab-bkzx) \nA. Approval Criteria \n1. Plaque Psoriasis (PsO)  \n\nThere is no mention of other specialties being required for initiating or managing treatment with BIMZELX for PsO.",
+    "timestamp": "2026-05-30 16:28:29"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "BIMZELX coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "16",
+    "timestamp": "2026-05-30 16:28:31"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "BIMZELX coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:28:32"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Reauthorization Required",
+    "query": "BIMZELX renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:28:40"
+  },
+  {
+    "filename": "163262-4627017.pdf",
+    "brand": "BIMZELX",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "BIMZELX renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "NA\n\nThere is no explicit mention of reauthorization requirements for BIMZELX in the provided policy document context.",
+    "timestamp": "2026-05-30 16:28:56"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "SKYRIZI step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "For moderate to severe plaque psoriasis (new starts only): \n1) at least 3% of body surface area (BSA) is affected OR crucial body areas (e.g., feet, hands, face, neck, groin, intertriginous areas) are affected at the time of diagnosis, \nAND \n2) patient meets any of the following: \na) patient has experienced an inadequate treatment response or intolerance to either phototherapy (e.g., UVB, PUVA) or pharmacologic treatment with methotrexate, cyclosporine, or acitretin, \nb) pharmacologic treatment with methotrexate, cyclosporine, or acitretin is contraindicated, \nc) patient has severe psoriasis that warrants a biologic as first-line therapy (i.e., at least 10% of the body surface area or crucial body areas [e.g., hands, feet, face, neck, scalp, genitals/groin, intertriginous areas] are affected).",
+    "timestamp": "2026-05-30 16:29:15"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Number of Steps through Brands",
+    "query": "SKYRIZI step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "3",
+    "timestamp": "2026-05-30 16:29:32"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Number of Steps through Generic",
+    "query": "SKYRIZI step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:29:58"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Step through-Phototherapy",
+    "query": "SKYRIZI phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:30:19"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Age",
+    "query": "SKYRIZI age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": ">= 18 years",
+    "timestamp": "2026-05-30 16:30:30"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:30:44"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Quantity Limits",
+    "query": "SKYRIZI quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:30:50"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Specialist Types",
+    "query": "SKYRIZI prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 7,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:31:09"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "SKYRIZI coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:31:21"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "SKYRIZI coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:31:27"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Reauthorization Required",
+    "query": "SKYRIZI renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 6,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:31:49"
+  },
+  {
+    "filename": "195158-4643510.pdf",
+    "brand": "SKYRIZI",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "SKYRIZI renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 6,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided policy document context does not contain specific reauthorization requirements for SKYRIZI (Psoriasis, moderate-to-severe).",
+    "timestamp": "2026-05-30 16:32:06"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Age",
+    "query": "OTEZLA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": ">=2",
+    "timestamp": "2026-05-30 16:32:10"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:32:20"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Quantity Limits",
+    "query": "OTEZLA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:32:29"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Specialist Types",
+    "query": "OTEZLA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:32:46"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "OTEZLA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:32:57"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "OTEZLA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:33:03"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Reauthorization Required",
+    "query": "OTEZLA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:33:16"
+  },
+  {
+    "filename": "195239-4641478.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "OTEZLA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "For reauthorization: must have documentation from prescriber indicating stabilization or improvement in condition.",
+    "timestamp": "2026-05-30 16:33:26"
+  },
+  {
+    "filename": "203402-5001149.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Number of Steps through Brands",
+    "query": "YESINTEK step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "5",
+    "timestamp": "2026-05-30 16:33:42"
+  },
+  {
+    "filename": "203402-5001149.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Number of Steps through Generic",
+    "query": "YESINTEK step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "3",
+    "timestamp": "2026-05-30 16:33:58"
+  },
+  {
+    "filename": "203402-5001149.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Specialist Types",
+    "query": "YESINTEK prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:34:12"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "Number of Steps through Brands",
+    "query": "OTULFI step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:34:35"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "Number of Steps through Generic",
+    "query": "OTULFI step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:34:43"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:34:49"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "Quantity Limits",
+    "query": "OTULFI quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "For OTULFI (brand) and Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication, the extracted quantity limit text is:\n\n\"Stelara, Imuldosa, Otulfi, Pyzchiva, Selarsdi, Steqeyma, Wezlana, and Yesintek for PsO \nWeight-based Dose Range \nQuantity Recommendation \nSubcutaneous, Syringe \n≤ 46.99 mg \n1 syringe of 45 mg/0.5 mL \n47 to 94.49 mg \n1 syringe of 90 mg/1 mL \n94.5 to 141.49 mg \n1 syringe of 45 mg/0.5 mL and 1 syringe of 90 mg/1 mL \nSubcutaneous, Vial \n≤ 46.99 mg \n1 vial of 45 mg/0.5 mL \n47 to 94.49 mg \n2 vials of 45 mg/0.5 mL",
+    "timestamp": "2026-05-30 16:35:09"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "Specialist Types",
+    "query": "OTULFI prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:35:34"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "Reauthorization Required",
+    "query": "OTULFI renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:35:36"
+  },
+  {
+    "filename": "247339-4770410.pdf",
+    "brand": "OTULFI",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "OTULFI renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided document context does not contain any information about OTULFI (or its generic name/biosimilars) for the Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe) indication. The structured data only includes information about other brands and indications.",
+    "timestamp": "2026-05-30 16:35:44"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "ENBREL step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "Patient meets the standard Inflammatory Conditions – Bimzelx Prior Authorization Policy criteria for plaque psoriasis; AND \nPatient has tried ONE of Enbrel, an adalimumab product, Otezla, Skyrizi subcutaneous, Sotyktu, Stelara subcutaneous, Taltz, or Tremfya. \n\nOR \nPatient meets BOTH of the following (i and ii): \ni. Patient meets the standard Inflammatory Conditions – Siliq Prior Authorization Policy criteria for plaque psoriasis; AND \nii. Patient has tried TWO of Enbrel, an adalimumab product, Otezla, Skyrizi subcutaneous, Sotyktu, Stelara subcutaneous, Taltz, or Tremfya [documentation required]. \n\nOR \nPatient meets BOTH of the following (i and ii): \ni. Patient meets the standard Inflammatory Conditions – Rinvoq/LQ Prior Authorization Policy criteria; AND \nii. Patient has tried one of Enbrel or an adalimumab product; OR",
+    "timestamp": "2026-05-30 16:36:09"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Number of Steps through Brands",
+    "query": "ENBREL step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:45:45"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Number of Steps through Generic",
+    "query": "ENBREL step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "269830",
+    "timestamp": "2026-05-30 16:46:39"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Step through-Phototherapy",
+    "query": "ENBREL phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:46:54"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Age",
+    "query": "ENBREL age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:46:59"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:47:06"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Quantity Limits",
+    "query": "ENBREL quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA\n\nNo quantity limits are mentioned in the provided context for ENBREL in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",
+    "timestamp": "2026-05-30 16:47:08"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Specialist Types",
+    "query": "ENBREL prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:47:19"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "ENBREL coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "3",
+    "timestamp": "2026-05-30 16:48:10"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "ENBREL coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:48:16"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Required",
+    "query": "ENBREL renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:48:27"
+  },
+  {
+    "filename": "269830-4591538.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "ENBREL renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Continuation of Therapy: Approval for a patient continuing therapy with ENBREL must be supported with verification, noted in the criteria as either [verification in prescription claims history required] or, if not available, as [verification by prescriber required]. \n\no If the patient has at least 130 days of prescription claims history on file, claims history must support that the patient has received ENBREL for the specified period of time (90 or 120 days) within a 130-day look-back period; OR \no When 130 days of the patient’s prescription claim history file is unavailable for verification, the prescriber must verify that the patient has been receiving ENBREL for a specified period of time (90 or 120 days), AND that the patient has been receiving ENBREL via paid claims (e.g., patient has not been receiving samples or coupons or other types of waivers in order to obtain access to ENBREL).",
+    "timestamp": "2026-05-30 16:48:37"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "ILUMYA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "The step therapy requirements for ILUMYA in Plaque Psoriasis (moderate-to-severe) are as follows:\n\n\"The member meets one (1) of the following criteria (i., ii., or iii.): \ni. The member has experienced therapeutic failure or intolerance to phototherapy (e.g., PUVA, UVB). \nii. The member has experienced therapeutic failure or intolerance to at least one (1) systemic therapy (e.g., methotrexate). \niii. The member is contraindicated to both phototherapy and systemic therapy. \ne. The member has experienced therapeutic failure or intolerance to at least two (2) step 1 or 2 plan-preferred agents for the treatment of PsO (see Table 1).",
+    "timestamp": "2026-05-30 16:49:00"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Number of Steps through Brands",
+    "query": "ILUMYA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:49:18"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Number of Steps through Generic",
+    "query": "ILUMYA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:49:33"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Step through-Phototherapy",
+    "query": "ILUMYA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:49:53"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Age",
+    "query": "ILUMYA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": ">=18",
+    "timestamp": "2026-05-30 16:50:10"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:50:22"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Quantity Limits",
+    "query": "ILUMYA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "For ILUMYA (tildrakizumab), the quantity limits are as follows:\n\n- Induction Therapy: Two (2) prefilled syringes within the first four (4) weeks of therapy\n- Maintenance Therapy: One (1) prefilled syringe every twelve (12) weeks",
+    "timestamp": "2026-05-30 16:50:41"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Specialist Types",
+    "query": "ILUMYA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:51:00"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "ILUMYA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:51:13"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "ILUMYA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:51:25"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Reauthorization Required",
+    "query": "ILUMYA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:51:38"
+  },
+  {
+    "filename": "270625-4631548.pdf",
+    "brand": "ILUMYA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "ILUMYA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "The member has demonstrated disease stability or a beneficial response to therapy.",
+    "timestamp": "2026-05-30 16:51:51"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "ENBREL step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "For ENBREL in Plaque Psoriasis (moderate-to-severe), the Step Therapy Requirements Documented in Policy are:\n\n\"Patient has had a prior trial and inadequate response to either of the following (AAD 2009): Any two (2) topical corticosteroids or any one (1) topical corticosteroids plus calcipotriene. For psoriasis use greater than 1 year, efficacy must be documented for continued use. Documentation may include chart notes, consultation notes.",
+    "timestamp": "2026-05-30 16:51:58"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Number of Steps through Brands",
+    "query": "ENBREL step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "0",
+    "timestamp": "2026-05-30 16:52:06"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Number of Steps through Generic",
+    "query": "ENBREL step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:52:13"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Step through-Phototherapy",
+    "query": "ENBREL phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:52:20"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Age",
+    "query": "ENBREL age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": ">=6",
+    "timestamp": "2026-05-30 16:52:34"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:52:43"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Quantity Limits",
+    "query": "ENBREL quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA\n\nNo quantity limits are explicitly stated in the provided document context for ENBREL in the treatment of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe).",
+    "timestamp": "2026-05-30 16:52:50"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Specialist Types",
+    "query": "ENBREL prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:52:59"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "ENBREL coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:53:05"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "ENBREL coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:53:13"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Required",
+    "query": "ENBREL renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:53:22"
+  },
+  {
+    "filename": "283789-5060638.pdf",
+    "brand": "ENBREL",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "ENBREL renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "Verification of previous improvement in disease activity following treatment with ENBREL indicating a therapeutic response including lack of disease progression, AND individual is using in combination with standard therapy (for example, topical therapies, phototherapy, or systemic agents).",
+    "timestamp": "2026-05-30 16:53:31"
+  },
+  {
+    "filename": "287728-4459856.pdf",
+    "brand": "STELARA",
+    "parameter": "Quantity Limits",
+    "query": "STELARA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:53:38"
+  },
+  {
+    "filename": "287728-4459856.pdf",
+    "brand": "STELARA",
+    "parameter": "Specialist Types",
+    "query": "STELARA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:53:48"
+  },
+  {
+    "filename": "287728-4459856.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Required",
+    "query": "STELARA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:53:55"
+  },
+  {
+    "filename": "287728-4459856.pdf",
+    "brand": "STELARA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "STELARA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided context does not contain specific reauthorization criteria for STELARA (PsO) / Plaque Psoriasis (moderate-to-severe). The general reauthorization criteria mentioned apply to \"medications for multiple myeloma (MM)\" and do not specifically mention STELARA or PsO.",
+    "timestamp": "2026-05-30 16:54:05"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "ACITRETIN step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "For ACITRETIN in Plaque Psoriasis (moderate-to-severe), the Step Therapy Requirements Documented in Policy are:\n\n\"Diagnosed with severe psoriasis \n• Patient is unresponsive to at least 2 conventional therapies \n(topical corticosteroids, vitamin D analogs, Tazorac, topical \ntacrolimus, Elidel, phototherapy). \nFemales of childbearing age AND able to bear children must comply with \nALL the following: \n• 2 negative urine or serum pregnancy tests prior to therapy \n• commit to using 2 effective forms of birth control starting 1 \nmonth prior to acitretin treatment monthly pregnancy tests during \ntherapy \nPrescribed by a dermatologist.",
+    "timestamp": "2026-05-30 16:54:15"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Number of Steps through Brands",
+    "query": "ACITRETIN step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:54:32"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Number of Steps through Generic",
+    "query": "ACITRETIN step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 16:54:43"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Step through-Phototherapy",
+    "query": "ACITRETIN phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:54:54"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Age",
+    "query": "ACITRETIN age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": ">=18 (FDA labelled age for PsO)",
+    "timestamp": "2026-05-30 16:55:09"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:55:26"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Quantity Limits",
+    "query": "ACITRETIN quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "7-day maximum quantity limit, equal to or less than 50 MED [morphine equivalents per day]. For opioid experienced (greater than or equal to 15 days filled in previous 120 days): equal to or less than 90 MED [morphine equivalents per day].",
+    "timestamp": "2026-05-30 16:55:42"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Specialist Types",
+    "query": "ACITRETIN prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:55:58"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "ACITRETIN coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:56:12"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "ACITRETIN coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:56:20"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Reauthorization Required",
+    "query": "ACITRETIN renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:56:35"
+  },
+  {
+    "filename": "308650-4595103.pdf",
+    "brand": "ACITRETIN",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "ACITRETIN renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "Renewal Criteria: Documentation of continued effectiveness. Renewal Criteria for females able to bear children: Documentation of required pregnancy monitoring AND continued effectiveness.",
+    "timestamp": "2026-05-30 16:56:50"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Number of Steps through Brands",
+    "query": "OTEZLA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:56:57"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Age",
+    "query": "OTEZLA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": ">=18",
+    "timestamp": "2026-05-30 16:57:04"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:57:10"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Quantity Limits",
+    "query": "OTEZLA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA\n\nThe document context does not mention any quantity limits for OTEZLA. It only discusses coverage duration, prescriber restrictions, and other criteria.",
+    "timestamp": "2026-05-30 16:57:14"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Specialist Types",
+    "query": "OTEZLA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 7,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 16:57:33"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "OTEZLA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:57:38"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "OTEZLA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 8,
+    "has_structured_field": false,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 16:57:52"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Reauthorization Required",
+    "query": "OTEZLA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:58:00"
+  },
+  {
+    "filename": "315085-4653251.pdf",
+    "brand": "OTEZLA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "OTEZLA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "NA\n\nThe policy document does not explicitly mention reauthorization requirements for OTEZLA in the context of Psoriasis (PsO) / Plaque Psoriasis (moderate-to-severe). It only discusses initial approval criteria and coverage duration.",
+    "timestamp": "2026-05-30 16:58:08"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "AMJEVITA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No specific step therapy requirements are documented in the policy for AMJEVITA in Plaque Psoriasis. However, the policy mentions the following general information:\n\n* No specific biologic drug/class is recommended as first-line for all patients with psoriasis.\n* Primary failure for biologics is defined as initial nonresponse to treatment.\n* Failure of one biologic therapy does not preclude successful response to another biologic therapy.\n* Concomitant use of MTX with a biologic may increase drug survival by limiting antibody formation.\n\nFor pediatric patients, the policy recommends the following step therapy options:\n\n* Topical corticosteroids as the mainstay option.\n* Topical calcineurin inhibitors as a treatment option for psoriasis of the face, genitalia, and body folds.\n* Vitamin D analogues as a treatment option for childhood plaque psoriasis.\n* Phototherapy may be efficacious and well tolerated for pediatric patients with generalized psoriasis or localized psoriasis refractory to topical agents.\n* Systemic non-biologic therapies, such as methotrexate, cyclosporine, and acitretin, as options for moderate to severe psoriasis.\n* Biologic therapies (e.g., adalimumab, etanercept, infliximab, ustekinumab) have also shown efficacy in moderate to severe plaque psoriasis in this patient population.\n\nSince no specific step therapy requirements are documented in the policy for AMJEVITA in Plaque Psoriasis, the extracted value is:\n\n\"NA",
+    "timestamp": "2026-05-30 16:58:22"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Number of Steps through Brands",
+    "query": "AMJEVITA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 7,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:58:40"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Number of Steps through Generic",
+    "query": "AMJEVITA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 16:58:58"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Step through-Phototherapy",
+    "query": "AMJEVITA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 16:59:10"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Age",
+    "query": "AMJEVITA age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 5,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 16:59:28"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 16:59:44"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Quantity Limits",
+    "query": "AMJEVITA quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "[Source: 326557-4901234.pdf | Section: DAYS | Page: 43 | Brands: AMJEVITA, ADALIMUMAB, HUMIRA]\nAmjevita\nadalimumab-\natto soln\nprefilled\nsyringe\n- 40 MG/0.4ML: 2 Syringes, 28 DAYS\n- 40 MG/0.8ML: 2 Syringes, 28 DAYS\n- 20 MG/0.4ML: 2 Syringes, 28 DAYS\n- 20 MG/0.2ML: 2 Syringes, 28 DAYS\n- 10 MG/0.2ML: 2 Syringes, 28 DAYS",
+    "timestamp": "2026-05-30 17:00:01"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Specialist Types",
+    "query": "AMJEVITA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 8,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:00:21"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "AMJEVITA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:00:39"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "AMJEVITA coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:00:56"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Reauthorization Required",
+    "query": "AMJEVITA renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 17:01:13"
+  },
+  {
+    "filename": "326557-4901234.pdf",
+    "brand": "AMJEVITA",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "AMJEVITA renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 5,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided context does not contain explicit reauthorization criteria for AMJEVITA (Ustekinumab) for the indication of Psoriasis (PsO). The context contains general reauthorization criteria for multiple brands and indications, but specific criteria for AMJEVITA are not documented.",
+    "timestamp": "2026-05-30 17:01:31"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "YESINTEK step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": "The step therapy requirements documented in policy for YESINTEK in Plaque Psoriasis (moderate-to-severe) are as follows:\n\n\"The patient is unable to take Yesintek (ustekinumab-kfce), where indicated, for the given diagnosis due to a trial and inadequate treatment response or intolerance, or a contraindication. Documentation is required for approval.\n\nFor initial requests:\n• Chart notes or medical record documentation of affected area(s) and body surface area (BSA) affected (if applicable).\n• Chart notes, medical record documentation, or claims history supporting previous medications tried (if applicable), including response to therapy. If therapy is not advisable, documentation of clinical reason to avoid therapy.\n\nFor continuation requests:\n• Chart notes or medical record documentation of decreased body surface area (BSA) affected and/or improvement in signs and symptoms.\"\n\nAdditionally, authorization of 12 months may be granted for members 6 years of age and older who have previously received a biologic or targeted synthetic drug (e.g., Sotyktu, Otezla) indicated for treatment of moderate to severe plaque psoriasis.",
+    "timestamp": "2026-05-30 17:01:48"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Number of Steps through Brands",
+    "query": "YESINTEK step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "Based on the provided context, the extracted value for \"Number of Steps through Brands\" is:",
+    "timestamp": "2026-05-30 17:01:56"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Number of Steps through Generic",
+    "query": "YESINTEK step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 2,
+    "has_structured_field": false,
+    "extracted_value": "1",
+    "timestamp": "2026-05-30 17:02:12"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Age",
+    "query": "YESINTEK age years old eligibility plaque psoriasis coverage criteria members authorization granted",
+    "num_chunks": 4,
+    "has_structured_field": false,
+    "extracted_value": ">=6",
+    "timestamp": "2026-05-30 17:02:25"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "TB Test required",
+    "query": "tuberculosis TB test tuberculin skin test TST interferon-release assay IGRA screening documented negative biologic",
+    "num_chunks": 3,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 17:02:39"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Quantity Limits",
+    "query": "YESINTEK quantity level limit vial syringe dose days supply exception limit quantity limit",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "NA\n\nThe provided context does not mention \"YESINTEK\" or its generic name \"USTEKINUMAB\" explicitly. However, it does mention \"Stelara (ustekinumab)\" and other biosimilars. Since the context does not explicitly mention \"YESINTEK\", I will output \"NA\".",
+    "timestamp": "2026-05-30 17:02:54"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Specialist Types",
+    "query": "YESINTEK prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Dermatologist",
+    "timestamp": "2026-05-30 17:03:10"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "YESINTEK coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 4,
+    "has_structured_field": true,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 17:03:26"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Reauthorization Duration(in-months)",
+    "query": "YESINTEK coverage duration renewal reauthorization months continuation approval period",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "12",
+    "timestamp": "2026-05-30 17:03:38"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Reauthorization Required",
+    "query": "YESINTEK renewal reauthorization continuation criteria required documentation clinical response",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Yes",
+    "timestamp": "2026-05-30 17:03:47"
+  },
+  {
+    "filename": "330107-4979411.pdf",
+    "brand": "YESINTEK",
+    "parameter": "Reauthorization Requirements Documented in Policy",
+    "query": "YESINTEK renewal criteria reauthorization requirements documentation positive clinical response body surface area BSA improvement symptoms continuation",
+    "num_chunks": 2,
+    "has_structured_field": true,
+    "extracted_value": "Continuation of Therapy for Plaque psoriasis (PsO)1-14,19,24,25: \nAuthorization of 12 months may be granted for all members 6 years of age and older \n(including new members) who are using the requested medication for moderate to severe \nplaque psoriasis and who achieve or maintain a positive clinical response as evidenced by \nlow disease activity or improvement in signs and symptoms of the condition when either of \nthe following is met: \n•  Reduction in body surface area (BSA) affected from baseline \n•  Improvement in signs and symptoms from baseline (e.g., itching, redness,  \nflaking, scaling, burning, cracking, pain)",
+    "timestamp": "2026-05-30 17:03:58"
+  },
+  {
+    "filename": "361202-4967201.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "TREMFYA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "**Step Therapy Requirements Documented in Policy:**\n\n\"NA\" (No information available in the provided context regarding step therapy requirements for TREMFYA in Plaque Psoriasis)",
+    "timestamp": "2026-05-30 17:04:07"
+  },
+  {
+    "filename": "361202-4967201.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Number of Steps through Brands",
+    "query": "TREMFYA step therapy biologic targeted synthetic drug previously received trial inadequate response preferred product",
+    "num_chunks": 6,
+    "has_structured_field": false,
+    "extracted_value": "2",
+    "timestamp": "2026-05-30 17:04:28"
+  },
+  {
+    "filename": "361202-4967201.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Number of Steps through Generic",
+    "query": "TREMFYA step therapy methotrexate cyclosporine acitretin topical pharmacologic treatment generic conventional",
+    "num_chunks": 3,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:04:50"
+  },
+  {
+    "filename": "361202-4967201.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Step through-Phototherapy",
+    "query": "TREMFYA phototherapy UVB PUVA light therapy requirement step criteria plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "No",
+    "timestamp": "2026-05-30 17:04:57"
+  },
+  {
+    "filename": "361202-4967201.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Specialist Types",
+    "query": "TREMFYA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 0,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:05:09"
+  },
+  {
+    "filename": "361202-4967201.pdf",
+    "brand": "TREMFYA",
+    "parameter": "Initial Authorization Duration(in-months)",
+    "query": "TREMFYA coverage duration initial authorization months approval period plaque psoriasis",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:05:16"
+  },
+  {
+    "filename": "377585-4984547.pdf",
+    "brand": "STELARA",
+    "parameter": "Step Therapy Requirements Documented in Policy",
+    "query": "STELARA step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
+    "num_chunks": 1,
+    "has_structured_field": false,
+    "extracted_value": "**Step Therapy Requirements Documented in Policy**\n\nFor Plaque Psoriasis (moderate-to-severe), the following step therapy requirements apply:\n\n1. The patient must have previously received a biologic or a non-biologic systemic agent for the treatment of moderate-to-severe plaque psoriasis, and have had an inadequate response to the previous therapy.\n2. The patient must have a body surface area (BSA) of 10% or greater.\n3. The patient must have phototherapy as part of their treatment regimen.\n4. The patient must have tried and failed at least one non-biologic systemic agent for the treatment of moderate-to-severe plaque psoriasis.",
+    "timestamp": "2026-05-30 17:05:24"
+  },
+  {
+    "filename": "377585-4984547.pdf",
+    "brand": "STELARA",
+    "parameter": "Specialist Types",
+    "query": "STELARA prescriber restrictions prescribed consultation dermatologist rheumatologist specialist",
+    "num_chunks": 1,
+    "has_structured_field": true,
+    "extracted_value": "NA",
+    "timestamp": "2026-05-30 17:05:34"
+  }
+]
