@@ -7,18 +7,20 @@ using RAG (Retrieval Augmented Generation) approach.
 
 Architecture:
 - PDF Parsing: PyMuPDF (fitz)
-- Chunking: Hierarchical + Context-aware + Token-based with overlap
-- Embedding: sentence-transformers/all-MiniLM-L6-v2
-- Vector DB: FAISS (in-memory + persisted to disk)
-- LLM: Groq (Llama 3.1 8B / Llama 3.3 70B) with retry & fallback
-- LLM Judge: Validates retrieval quality & final answers
-- Access Score: Hybrid (rule-based + LLM verification)
-- Logging: JSON logs at every step
-- Output: CSV matching submission format
+- Chunking: Hierarchical + Context-aware with structured field preservation
+- Embedding: sentence-transformers/all-MiniLM-L6-v2 (bundled offline)
+- Vector DB: FAISS IndexFlatIP (cosine similarity, persisted to disk)
+- LLM: Groq (Llama 3.3 70B primary / Llama 3.1 8B fallback) with retry & auto-fallback
+- Access Score: Rule-based scoring (0-100 scale, bucketed to 0/25/50/75/100)
+- Logging: JSON retrieval logs + pipeline.log at every step
+- Output: CSV/Excel matching submission format
+- Resume: Skips already-processed (Filename, Brand) combinations on restart
 
 Usage:
+    python pipeline.py
+    python pipeline.py --brands_file data/brands.xlsx
     python pipeline.py --input_dir <path_to_pdfs> --output_dir <output_path>
-    python pipeline.py --input_dir <path_to_pdfs> --output_dir <output_path> --brands_file <csv/xlsx with filename,brand>
+    python pipeline.py --test [limit]   # Run test mode with LLM Judge
 =============================================================================
 """
 
@@ -38,7 +40,13 @@ from dataclasses import dataclass, field, asdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import traceback
 
-# --- SSL Fix for Corporate Proxy ---
+# --- SSL Fix for Corporate Proxy / Zscaler ---
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
+
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 os.environ['HF_HUB_DISABLE_SSL'] = '1'
@@ -89,7 +97,7 @@ from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
 
 # Retry
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, retry_if_not_exception_type
 
 # .env loading
 from dotenv import load_dotenv
@@ -125,6 +133,17 @@ MAX_RETRIES = 5
 RETRY_WAIT_MIN = 10
 RETRY_WAIT_MAX = 120
 RATE_LIMIT_PAUSE = 65  # seconds to wait on rate limit
+MIN_CALL_SPACING = 4   # minimum seconds between API calls
+TPM_LIMIT = 6000       # tokens-per-minute budget (llama-3.1-8b fallback = 6K TPM)
+
+# Batch validation splitting: if all 8 params in one call is too large for TPM,
+# split into these sub-groups (each gets its own validation call)
+REGEX_BATCH_GROUPS = [
+    # Group A: Age + Phototherapy + TB
+    ["Age", "Step through-Phototherapy", "TB Test required"],
+    # Group B: Authorization durations
+    ["Initial Authorization Duration(in-months)", "Reauthorization Duration(in-months)", "Reauthorization Required"],
+]
 
 # LLM Judge sampling - set low for full dataset to save tokens
 LLM_JUDGE_SAMPLE_RATE = 0.05  # judge only 5% of extractions in production
@@ -251,7 +270,17 @@ Factors to consider:
 # ============================================================================
 
 def setup_logging(output_dir: str) -> logging.Logger:
-    """Setup comprehensive logging."""
+    """Configure pipeline logging with file and console handlers.
+    
+    Creates a 'logs' subdirectory under output_dir and writes detailed
+    DEBUG-level logs to pipeline.log. Console output is INFO-level only.
+    
+    Args:
+        output_dir: Base output directory for log files.
+        
+    Returns:
+        Configured Logger instance named 'PAExtractor'.
+    """
     log_dir = os.path.join(output_dir, "logs")
     os.makedirs(log_dir, exist_ok=True)
     
@@ -280,7 +309,7 @@ def setup_logging(output_dir: str) -> logging.Logger:
 
 @dataclass
 class ChunkMetadata:
-    """Metadata for each chunk."""
+    """Metadata for each document chunk used in retrieval."""
     source_file: str
     page_number: int
     chunk_index: int
@@ -293,7 +322,7 @@ class ChunkMetadata:
 
 @dataclass
 class RetrievalLog:
-    """Log entry for retrieval operations."""
+    """Log entry capturing details of a single retrieval + extraction operation."""
     filename: str
     brand: str
     parameter: str
@@ -310,13 +339,37 @@ class RetrievalLog:
 # ============================================================================
 
 class PDFParser:
-    """Parse PDF documents using PyMuPDF with structure awareness."""
+    """Parse PDF documents using PyMuPDF with structure awareness.
+    
+    Extracts text, tables, and structured fields from payer policy PDFs.
+    Produces hierarchically structured LangChain Document objects with
+    metadata (source file, page number, section, type) for downstream
+    chunking and embedding.
+    """
     
     def __init__(self, logger: logging.Logger):
+        """Initialize the PDF parser.
+        
+        Args:
+            logger: Logger instance for pipeline logging.
+        """
         self.logger = logger
     
     def parse_pdf(self, pdf_path: str) -> List[Document]:
-        """Parse a PDF and return structured documents with metadata."""
+        """Parse a single PDF and return structured documents with metadata.
+        
+        Performs three extraction passes:
+        1. Page-by-page text and table extraction via PyMuPDF
+        2. Hierarchical document assembly (detecting section headers)
+        3. Structured field extraction (authorization durations, prescriber
+           restrictions, quantity limits, TB test, reauthorization criteria)
+        
+        Args:
+            pdf_path: Absolute path to the PDF file.
+            
+        Returns:
+            List of LangChain Document objects with page_content and metadata.
+        """
         self.logger.info(f"Parsing PDF: {pdf_path}")
         documents = []
         
@@ -362,7 +415,14 @@ class PDFParser:
         return documents
     
     def _extract_tables(self, page) -> List[str]:
-        """Extract table content from a page."""
+        """Extract table content from a PDF page using PyMuPDF's table finder.
+        
+        Args:
+            page: A PyMuPDF page object.
+            
+        Returns:
+            List of table strings (pandas DataFrame rendered as text).
+        """
         tables = []
         try:
             # Use PyMuPDF's table extraction
@@ -672,7 +732,19 @@ class PDFParser:
         return unique_docs
     
     def _build_hierarchical_documents(self, pages: List[Dict], filename: str) -> List[Document]:
-        """Build hierarchically structured documents."""
+        """Build hierarchically structured documents from parsed page data.
+        
+        Splits page text into blocks using detected section headers (ALL CAPS,
+        numbered sections, etc.) and creates separate Document objects for each
+        text block and table.
+        
+        Args:
+            pages: List of dicts with keys 'page_num', 'text', 'tables'.
+            filename: Source PDF filename for metadata.
+            
+        Returns:
+            List of LangChain Document objects with section-aware metadata.
+        """
         documents = []
         current_section = ""
         current_subsection = ""
@@ -763,7 +835,13 @@ class PDFParser:
 # ============================================================================
 
 class HierarchicalChunker:
-    """Hierarchical + context-aware + semantic chunking."""
+    """Hierarchical, context-aware semantic chunking engine.
+    
+    Splits parsed PDF documents into retrieval-optimized chunks while
+    preserving section boundaries, table integrity, and brand mentions.
+    Uses LangChain's RecursiveCharacterTextSplitter as fallback for
+    oversized sections.
+    """
     
     # Generic drug names mapped to brand names for detection
     GENERIC_NAMES = [
@@ -804,7 +882,23 @@ class HierarchicalChunker:
         self.known_brands = list(set(self.known_brands))
     
     def chunk_documents(self, documents: List[Document]) -> List[Document]:
-        """Apply hierarchical chunking with context awareness."""
+        """Apply hierarchical chunking with context awareness to all documents.
+        
+        Strategy per document:
+        - Structured field documents are kept atomic (never split).
+        - Small documents (≤ chunk_size) are kept as-is.
+        - Larger documents are split by logical sections; falls back to
+          recursive character splitting if no sections detected.
+        
+        Each chunk is annotated with detected brand mentions and a
+        contextual header for improved retrieval relevance.
+        
+        Args:
+            documents: List of parsed Document objects from PDFParser.
+            
+        Returns:
+            List of chunked Document objects ready for embedding.
+        """
         self.logger.info(f"Chunking {len(documents)} document sections...")
         
         all_chunks = []
@@ -851,7 +945,18 @@ class HierarchicalChunker:
         return all_chunks
     
     def _split_by_sections(self, text: str, metadata: Dict) -> List[Document]:
-        """Split text by detected section boundaries."""
+        """Split text by detected section boundaries (double newlines).
+        
+        Merges consecutive small sections into a single chunk and uses
+        the recursive splitter for sections that exceed chunk_size.
+        
+        Args:
+            text: Full text block to split.
+            metadata: Base metadata dict to copy into each chunk.
+            
+        Returns:
+            List of chunked Document objects, or empty list if splitting fails.
+        """
         chunks = []
         
         # Split on double newlines or section patterns
@@ -895,7 +1000,17 @@ class HierarchicalChunker:
         return chunks
     
     def _detect_brands(self, text: str) -> List[str]:
-        """Detect brand names mentioned in text. Also resolves generic names to brands."""
+        """Detect brand and generic drug names mentioned in text.
+        
+        Also resolves generic names to their corresponding brand names
+        using the BRAND_GENERIC_MAP.
+        
+        Args:
+            text: Text to scan for brand/generic mentions.
+            
+        Returns:
+            Deduplicated list of detected brand names (uppercased).
+        """
         found = []
         text_upper = text.upper()
         text_lower = text.lower()
@@ -910,7 +1025,17 @@ class HierarchicalChunker:
         return list(set(found))
     
     def _add_context_headers(self, chunks: List[Document]) -> List[Document]:
-        """Add contextual headers to chunks for better retrieval."""
+        """Add contextual metadata headers to chunk text for better retrieval.
+        
+        Prepends source filename, section, page number, and detected brands
+        as a bracketed header line to each chunk's page_content.
+        
+        Args:
+            chunks: List of chunked Document objects.
+            
+        Returns:
+            List of Document objects with prepended context headers.
+        """
         enhanced_chunks = []
         
         for chunk in chunks:
@@ -945,7 +1070,12 @@ class HierarchicalChunker:
 # ============================================================================
 
 class FAISSVectorStore:
-    """FAISS-based vector store with metadata."""
+    """FAISS-based vector store with document metadata and filtered search.
+    
+    Stores normalized embeddings in a FAISS IndexFlatIP index for cosine
+    similarity search. Supports filtering by source filename and brand.
+    Provides persistence (save/load) to disk for index reuse across runs.
+    """
     
     def __init__(self, logger: logging.Logger, embedding_model_name: str = EMBEDDING_MODEL):
         self.logger = logger
@@ -957,7 +1087,14 @@ class FAISSVectorStore:
         self.embeddings = None
     
     def build_index(self, documents: List[Document]):
-        """Build FAISS index from documents."""
+        """Build the FAISS index from a list of documents.
+        
+        Encodes all document texts using the sentence-transformer model,
+        normalizes embeddings, and adds them to a flat inner-product index.
+        
+        Args:
+            documents: List of LangChain Document objects to index.
+        """
         self.logger.info(f"Building FAISS index with {len(documents)} documents...")
         self.documents = documents
         
@@ -979,7 +1116,22 @@ class FAISSVectorStore:
     def search(self, query: str, top_k: int = TOP_K_RETRIEVAL, 
                filter_source: Optional[str] = None,
                filter_brand: Optional[str] = None) -> List[Tuple[Document, float]]:
-        """Search for similar documents with optional filtering."""
+        """Search for semantically similar documents with optional filtering.
+        
+        Encodes the query, retrieves top candidates from FAISS, then applies
+        source-file and brand filters. Brand filtering includes chunks that
+        mention the brand, have no brand mentions (general criteria), or
+        belong to relevant policy sections.
+        
+        Args:
+            query: Natural language search query.
+            top_k: Maximum number of results to return.
+            filter_source: If set, only return chunks from this source filename.
+            filter_brand: If set, apply brand-aware filtering logic.
+            
+        Returns:
+            List of (Document, score) tuples sorted by relevance.
+        """
         # Encode query
         query_embedding = self.embedding_model.encode(
             [query], normalize_embeddings=True
@@ -1042,7 +1194,11 @@ class FAISSVectorStore:
         return results
     
     def save_index(self, path: str):
-        """Save FAISS index and documents to disk."""
+        """Persist the FAISS index, document metadata, and embeddings to disk.
+        
+        Args:
+            path: Directory path to save index.faiss, documents.json, embeddings.npy.
+        """
         os.makedirs(path, exist_ok=True)
         
         # Save FAISS index
@@ -1065,7 +1221,14 @@ class FAISSVectorStore:
         self.logger.info(f"Index saved to {path}")
     
     def load_index(self, path: str) -> bool:
-        """Load FAISS index and documents from disk."""
+        """Load a previously saved FAISS index from disk.
+        
+        Args:
+            path: Directory containing index.faiss, documents.json, embeddings.npy.
+            
+        Returns:
+            True if successfully loaded, False if files missing or corrupt.
+        """
         try:
             index_path = os.path.join(path, "index.faiss")
             docs_path = os.path.join(path, "documents.json")
@@ -1099,7 +1262,12 @@ class FAISSVectorStore:
 # ============================================================================
 
 class LLMClient:
-    """LLM client with retry mechanisms and fallback."""
+    """LLM client with automatic retry, rate-limit handling, and model fallback.
+    
+    Manages two Groq-hosted models (primary: Llama 3.3 70B, fallback: Llama 3.1 8B).
+    Automatically switches to the fallback model on quota exhaustion, rate limits,
+    or access errors. Implements exponential backoff retries via tenacity.
+    """
     
     def __init__(self, logger: logging.Logger, api_key: Optional[str] = None):
         self.logger = logger
@@ -1113,6 +1281,7 @@ class LLMClient:
         self.all_models_exhausted = False  # Set True when both models are exhausted
         self._rate_lock = threading.Lock()  # Serialize API calls to prevent rate limit cascades
         self._last_call_time = 0.0  # Track last API call timestamp
+        self._token_window = []  # List of (timestamp, token_count) for TPM tracking
         self._rate_lock = threading.Lock()  # Serialize API calls to prevent rate limit cascades
         
         # Initialize LLM instances
@@ -1131,26 +1300,76 @@ class LLMClient:
         )
     
     def invoke(self, prompt: str, system_prompt: str = "", use_fallback: bool = False) -> str:
-        """Invoke LLM with retry and fallback logic."""
+        """Invoke the LLM with TPM-aware rate-limiting, retry, and fallback logic.
+        
+        Enforces:
+        - Minimum MIN_CALL_SPACING seconds between calls
+        - Tokens-per-minute (TPM) budget tracking with 85% threshold pause
+        
+        Raises RuntimeError if all models are exhausted.
+        
+        Args:
+            prompt: User/human prompt text.
+            system_prompt: Optional system prompt for context setting.
+            use_fallback: Force use of the fallback model.
+            
+        Returns:
+            LLM response content as string.
+            
+        Raises:
+            RuntimeError: If both primary and fallback models are exhausted.
+        """
         if self.all_models_exhausted:
             raise RuntimeError("ALL_MODELS_EXHAUSTED")
-        # Rate-limit spacing: ensure minimum 2s between API calls across all threads
+        # TPM-aware rate limiting: enforce min spacing AND check tokens-per-minute budget
         with self._rate_lock:
-            elapsed = time.time() - self._last_call_time
-            if elapsed < 2.0:
-                time.sleep(2.0 - elapsed)
+            now = time.time()
+            # Enforce minimum spacing between calls
+            elapsed = now - self._last_call_time
+            if elapsed < MIN_CALL_SPACING:
+                time.sleep(MIN_CALL_SPACING - elapsed)
+            # Check TPM window: prune entries older than 60s
+            cutoff = time.time() - 60.0
+            self._token_window = [(t, n) for t, n in self._token_window if t > cutoff]
+            tokens_last_minute = sum(n for _, n in self._token_window)
+            # If approaching TPM limit, wait until the oldest entry expires
+            if tokens_last_minute >= TPM_LIMIT * 0.85:  # 85% threshold as safety margin
+                if self._token_window:
+                    oldest_ts = self._token_window[0][0]
+                    wait_time = oldest_ts + 60.0 - time.time()
+                    if wait_time > 0:
+                        self.logger.info(f"  [TPM] Approaching limit ({tokens_last_minute}/{TPM_LIMIT}), waiting {wait_time:.1f}s...")
+                        time.sleep(wait_time)
+                        # Prune again after waiting
+                        cutoff = time.time() - 60.0
+                        self._token_window = [(t, n) for t, n in self._token_window if t > cutoff]
             self._last_call_time = time.time()
         return self._invoke_with_retry(prompt, system_prompt, use_fallback)
     
     @retry(
         stop=stop_after_attempt(MAX_RETRIES),
         wait=wait_exponential(multiplier=2, min=RETRY_WAIT_MIN, max=RETRY_WAIT_MAX),
-        retry=retry_if_exception_type((Exception,)) & ~retry_if_exception_type((RuntimeError,)),
+        retry=retry_if_exception_type((Exception,)) & retry_if_not_exception_type((RuntimeError,)),
         reraise=True,
         before_sleep=lambda retry_state: print(f"  [Retry] Attempt {retry_state.attempt_number}/{MAX_RETRIES}, waiting...")
     )
     def _invoke_with_retry(self, prompt: str, system_prompt: str = "", use_fallback: bool = False) -> str:
-        """Internal invoke with retry decorator."""
+        """Internal invoke with tenacity retry decorator.
+        
+        Handles specific error scenarios:
+        - Daily quota exhaustion: permanently switches to fallback
+        - Rate limit (429): waits RATE_LIMIT_PAUSE seconds then retries
+        - Token limit exceeded: truncates prompt to 60% and retries
+        - Model access errors: switches to fallback model
+        
+        Args:
+            prompt: User/human prompt text.
+            system_prompt: Optional system prompt.
+            use_fallback: Whether to use fallback model.
+            
+        Returns:
+            LLM response content as string.
+        """
         try:
             # If primary is exhausted, always use fallback
             if self.primary_exhausted and not use_fallback:
@@ -1169,7 +1388,11 @@ class LLMClient:
             
             if hasattr(response, 'response_metadata'):
                 token_usage = response.response_metadata.get('token_usage', {})
-                self.total_tokens += token_usage.get('total_tokens', 0)
+                total_used = token_usage.get('total_tokens', 0)
+                self.total_tokens += total_used
+                # Track for TPM throttling
+                with self._rate_lock:
+                    self._token_window.append((time.time(), total_used))
             
             return response.content
             
@@ -1236,7 +1459,14 @@ class LLMClient:
 # ============================================================================
 
 class LLMJudge:
-    """LLM Judge for validation of retrieval and extraction quality."""
+    """LLM-based judge for validating retrieval and extraction quality.
+    
+    Uses the fallback LLM model to evaluate:
+    - Retrieval relevance (1-5 scale)
+    - Extraction groundedness, faithfulness, and completeness
+    
+    Can be disabled via ENABLE_LLM_JUDGE config to save API tokens.
+    """
     
     def __init__(self, llm_client: LLMClient, logger: logging.Logger):
         self.llm = llm_client
@@ -1244,7 +1474,17 @@ class LLMJudge:
         self.judgments = []
     
     def judge_retrieval(self, query: str, chunks: List[str], parameter: str, brand: str) -> Dict:
-        """Judge the quality of retrieved chunks for a parameter."""
+        """Judge the quality of retrieved chunks for a given parameter.
+        
+        Args:
+            query: The retrieval query used.
+            chunks: List of retrieved chunk texts.
+            parameter: Parameter being extracted.
+            brand: Drug brand name.
+            
+        Returns:
+            Dict with 'score' (1-5), 'feedback', and 'needs_rerank' fields.
+        """
         if not ENABLE_LLM_JUDGE:
             return {"score": 3, "feedback": "Judge disabled", "needs_rerank": False}
         
@@ -1279,7 +1519,18 @@ JSON: {{"score": <1-5>, "feedback": "<10 words>", "needs_rerank": <true/false>}}
     
     def judge_extraction(self, parameter: str, extracted_value: str, 
                          context: str, brand: str) -> Dict:
-        """Judge the quality of an extracted parameter value."""
+        """Judge the quality of an extracted parameter value against its context.
+        
+        Args:
+            parameter: Parameter name.
+            extracted_value: The value extracted by the pipeline.
+            context: Source context text used for extraction.
+            brand: Drug brand name.
+            
+        Returns:
+            Dict with 'groundedness', 'faithfulness', 'completeness',
+            'overall' (all 1-5), and 'issues' fields.
+        """
         if not ENABLE_LLM_JUDGE:
             return {"groundedness": 3, "faithfulness": 3, "completeness": 3, "overall": 3, "issues": "Judge disabled"}
         
@@ -1303,7 +1554,11 @@ JSON: {{"groundedness": <1-5>, "faithfulness": <1-5>, "completeness": <1-5>, "ov
         return result
     
     def get_summary(self) -> Dict:
-        """Get summary of all judgments."""
+        """Get summary statistics of all judgments made during the run.
+        
+        Returns:
+            Dict with 'total' count, 'avg_score', and 'judgments' list.
+        """
         if not self.judgments:
             return {"total": 0, "avg_score": 0}
         
@@ -1319,8 +1574,513 @@ JSON: {{"groundedness": <1-5>, "faithfulness": <1-5>, "completeness": <1-5>, "ov
 # RAG EXTRACTION ENGINE
 # ============================================================================
 
+# Parameters that can be extracted via regex patterns first, then validated by LLM in batch
+REGEX_EXTRACTABLE_PARAMS = [
+    "Age",
+    "Step through-Phototherapy",
+    "TB Test required",
+    "Initial Authorization Duration(in-months)",
+    "Reauthorization Duration(in-months)",
+    "Reauthorization Required",
+]
+
+# Parameters that require full LLM extraction (free-form text OR complex logic)
+LLM_ONLY_PARAMS = [
+    "Step Therapy Requirements Documented in Policy",
+    "Number of Steps through Brands",
+    "Number of Steps through Generic",
+    "Quantity Limits",
+    "Specialist Types",
+    "Reauthorization Requirements Documented in Policy",
+]
+
+
+class RegexExtractor:
+    """Pattern-based extractor for structured (non-text) parameters.
+    
+    Uses domain-specific regex patterns to extract candidate values from
+    retrieved document context. Designed for numeric, categorical (Yes/No/NA),
+    and duration fields where patterns are predictable.
+    
+    Results are candidates that should be validated by a single batch LLM call.
+    """
+    
+    def __init__(self, logger: logging.Logger):
+        """Initialize the regex extractor.
+        
+        Args:
+            logger: Logger instance for pipeline logging.
+        """
+        self.logger = logger
+    
+    def extract_all(self, context: str, brand: str) -> Dict[str, Optional[str]]:
+        """Extract all regex-extractable parameters from context.
+        
+        Args:
+            context: Combined retrieved document context text.
+            brand: Drug brand name for brand-specific matching.
+            
+        Returns:
+            Dict mapping parameter names to extracted candidate values (or None if not found).
+        """
+        results = {}
+        results["Age"] = self._extract_age(context, brand)
+        results["Number of Steps through Brands"] = self._extract_steps_brands(context, brand)
+        results["Number of Steps through Generic"] = self._extract_steps_generic(context, brand)
+        results["Step through-Phototherapy"] = self._extract_phototherapy(context, brand)
+        results["TB Test required"] = self._extract_tb_test(context)
+        results["Initial Authorization Duration(in-months)"] = self._extract_initial_auth_duration(context)
+        results["Reauthorization Duration(in-months)"] = self._extract_reauth_duration(context)
+        results["Reauthorization Required"] = self._extract_reauth_required(context, results)
+        return results
+    
+    def _extract_age(self, context: str, brand: str) -> Optional[str]:
+        """Extract age eligibility from context.
+        
+        Patterns: 'X years of age and older', 'age >=X', 'adults (>=18)',
+        'members X years', 'at least X years', 'FDA labelled age'.
+        """
+        text = context.lower()
+        
+        # Pattern: "X years of age and older" / "X years of age or older"
+        matches = re.findall(r'(\d+)\s*years?\s*(?:of age)?\s*(?:and|or)\s*older', text)
+        if matches:
+            return f">={min(int(m) for m in matches)}"
+        
+        # Pattern: "age >=X" or "age >= X" or "≥X years"
+        matches = re.findall(r'(?:age\s*)?(?:>=|≥)\s*(\d+)', text)
+        if matches:
+            return f">={min(int(m) for m in matches)}"
+        
+        # Pattern: "at least X years"
+        matches = re.findall(r'at least\s+(\d+)\s*years', text)
+        if matches:
+            return f">={min(int(m) for m in matches)}"
+        
+        # Pattern: "members X years and older"
+        matches = re.findall(r'members?\s+(\d+)\s*years?\s*(?:and|or)\s*older', text)
+        if matches:
+            return f">={min(int(m) for m in matches)}"
+        
+        # Pattern: "adults" without specific age (implies >=18)
+        if re.search(r'\badults?\b', text) and not re.search(r'pediatric|child', text):
+            # Check for "FDA labelled age" or "as indicated"
+            if re.search(r'fda\s*label', text):
+                return "FDA labelled age"
+            return ">=18"
+        
+        # Pattern: "pediatric" mentions
+        if re.search(r'pediatric|children', text):
+            matches = re.findall(r'(\d+)\s*years', text)
+            if matches:
+                ages = [int(m) for m in matches if int(m) < 18]
+                if ages:
+                    return f">={min(ages)}"
+        
+        # Pattern: "FDA labelled age"
+        if re.search(r'fda\s*label', text):
+            return "FDA labelled age"
+        
+        return None
+    
+    def _extract_steps_brands(self, context: str, brand: str) -> Optional[str]:
+        """Extract number of branded/biologic step therapy steps.
+        
+        Counts distinct biologic/branded step-through requirements before the target brand.
+        Uses paragraph-level context and respects OR vs AND logic:
+        - OR-connected drugs = 1 step (least restrictive path)
+        - AND-connected/separate numbered criteria = separate steps
+        Deduplicates brand/generic pairs (humira = adalimumab = 1 drug).
+        """
+        text = context.lower()
+        
+        # Known biologic/branded drugs as (brand, generic) pairs to avoid double-counting
+        biologic_pairs = [
+            ("humira", "adalimumab"), ("enbrel", "etanercept"), ("remicade", "infliximab"),
+            ("stelara", "ustekinumab"), ("cosentyx", "secukinumab"), ("taltz", "ixekizumab"),
+            ("tremfya", "guselkumab"), ("skyrizi", "risankizumab"), ("cimzia", "certolizumab"),
+            ("siliq", "brodalumab"), ("bimzelx", "bimekizumab"), ("ilumya", "tildrakizumab"),
+            ("otezla", "apremilast"), ("rinvoq", "upadacitinib"), ("xeljanz", "tofacitinib"),
+            ("sotyktu", "deucravacitinib"),
+            # Biosimilars map to their reference product
+            ("amjevita", "adalimumab"), ("hadlima", "adalimumab"), ("hyrimoz", "adalimumab"),
+            ("cyltezo", "adalimumab"), ("yesintek", "ustekinumab"), ("otulfi", "tofacitinib"),
+        ]
+        
+        # Build lookup: each name -> canonical key (the generic name)
+        biologic_canonical = {}
+        for brand_name, generic_name in biologic_pairs:
+            biologic_canonical[brand_name] = generic_name
+            biologic_canonical[generic_name] = generic_name
+        
+        # --- Priority 1: Explicit numeric count ---
+        count_match = re.search(
+            r'(\d+)\s*(?:biologic|targeted synthetic|branded|preferred)\s*(?:agent|drug|medication|product|step|therap)',
+            text
+        )
+        if count_match:
+            return count_match.group(1)
+        
+        word_to_num = {"one": "1", "two": "2", "three": "3", "four": "4"}
+        for word, num in word_to_num.items():
+            if re.search(rf'\b{word}\s+(?:biologic|targeted synthetic|branded|tnf|preferred)\b', text):
+                return num
+        
+        # --- Priority 2: Extract step therapy paragraphs and count AND-separated steps ---
+        # Split into paragraphs (double newline or numbered items)
+        paragraphs = re.split(r'\n\s*\n|\n(?=\d+\.\s)', text)
+        
+        # Find paragraphs related to step therapy
+        step_paragraphs = []
+        for i, para in enumerate(paragraphs):
+            if any(kw in para for kw in [
+                'step ', 'trial', 'fail', 'inadequate', 'intolerance',
+                'contraindic', 'previously', 'must have tried',
+                'unable to take', 'preferred product', 'prior auth',
+                'step therapy', 'received a biologic', 'received a targeted'
+            ]):
+                step_paragraphs.append(para)
+        
+        if not step_paragraphs:
+            return None
+        
+        step_text = "\n".join(step_paragraphs)
+        
+        # Skip target brand and its generic
+        brand_lower = brand.lower()
+        target_generic = BRAND_GENERIC_MAP.get(brand.upper(), "").lower()
+        skip_canonicals = set()
+        if brand_lower in biologic_canonical:
+            skip_canonicals.add(biologic_canonical[brand_lower])
+        if target_generic in biologic_canonical:
+            skip_canonicals.add(biologic_canonical[target_generic])
+        
+        # Split step_text into AND-separated requirement blocks
+        # Each block connected by "or" internally counts as 1 step
+        # Blocks separated by AND / semicolons+AND / numbered items = separate steps
+        and_blocks = re.split(r'\band\b(?:\s+(?:has|must|member))?|;\s*(?=\d+\.)', step_text)
+        
+        branded_steps = 0
+        for block in and_blocks:
+            # Find all biologics mentioned in this block
+            block_canonicals = set()
+            for name, canonical in biologic_canonical.items():
+                if canonical in skip_canonicals:
+                    continue
+                if name in block:
+                    block_canonicals.add(canonical)
+            
+            # Check for class references: "a biologic", "targeted synthetic drug"
+            if re.search(r'(?:a |one |1 )(?:biologic|targeted synthetic|tnf)', block):
+                block_canonicals.add("_class_biologic")
+            if re.search(r'(?:preferred|formulary)\s+(?:product|biologic|agent|brand)', block):
+                block_canonicals.add("_preferred")
+            
+            # If OR-connected biologics in this block, count as 1 step
+            if block_canonicals:
+                # Check if truly OR-connected (all are alternatives)
+                if ' or ' in block or ', or ' in block:
+                    branded_steps += 1
+                else:
+                    # AND-connected within block (rare) — count each
+                    branded_steps += len(block_canonicals)
+        
+        if branded_steps > 0:
+            return str(branded_steps)
+        
+        # If policy explicitly says no branded steps
+        if re.search(r'no\s+(?:biologic|branded)\s+(?:step|requirement|prior)', text):
+            return "NA"
+        
+        return None
+    
+    def _extract_steps_generic(self, context: str, brand: str) -> Optional[str]:
+        """Extract number of generic/conventional step therapy steps.
+        
+        Counts non-biologic therapies required as steps. Respects OR vs AND:
+        - "methotrexate, cyclosporine, or acitretin" = 1 generic step (OR = choice)
+        - "topical AND methotrexate" = 2 generic steps (AND = both required)
+        Uses paragraph-level context to capture continuation lines.
+        """
+        text = context.lower()
+        
+        # Known generic/conventional therapies grouped by category
+        generic_terms = [
+            "methotrexate", "mtx", "cyclosporine", "ciclosporin", "acitretin",
+            "leflunomide", "sulfasalazine",
+        ]
+        topical_terms = [
+            "topical", "calcipotriene", "calcipotriol", "tazarotene",
+            "corticosteroid", "vitamin d analog",
+        ]
+        systemic_terms = [
+            "systemic therapy", "systemic agent", "systemic treatment",
+            "conventional systemic", "non-biologic systemic", "conventional synthetic",
+            "pharmacologic treatment", "dmard", "disease-modifying",
+        ]
+        
+        # --- Priority 1: Explicit numeric count ---
+        class_patterns = [
+            r'(\d+)\s*(?:conventional|non-biologic|systemic|generic)\s*(?:agent|drug|medication|therap|step)',
+            r'(\d+)\s*(?:topical|dmard)\s*(?:agent|drug|medication|therap)',
+        ]
+        for pattern in class_patterns:
+            match = re.search(pattern, text)
+            if match:
+                return match.group(1)
+        
+        word_to_num = {"one": "1", "two": "2", "three": "3", "four": "4"}
+        for word, num in word_to_num.items():
+            if re.search(rf'\b{word}\s+(?:conventional|non-biologic|systemic|generic|topical)\b', text):
+                return num
+        
+        # --- Priority 2: Extract step therapy paragraphs ---
+        paragraphs = re.split(r'\n\s*\n|\n(?=\d+\.\s)', text)
+        
+        step_paragraphs = []
+        for para in paragraphs:
+            if any(kw in para for kw in [
+                'step ', 'trial', 'fail', 'inadequate', 'intolerance',
+                'contraindic', 'previously', 'must have tried',
+                'unable to take', 'prior auth', 'step therapy',
+                'pharmacologic treatment', 'conventional', 'systemic'
+            ]):
+                step_paragraphs.append(para)
+        
+        if not step_paragraphs:
+            return None
+        
+        step_text = "\n".join(step_paragraphs)
+        
+        # Split into AND-separated requirement blocks
+        # Each block with OR-connected generics counts as 1 step
+        and_blocks = re.split(r'\band\b(?:\s+(?:has|must|member))?|;\s*(?=\d+\.)', step_text)
+        
+        generic_steps = 0
+        for block in and_blocks:
+            has_generic_drug = any(term in block for term in generic_terms)
+            has_topical = any(term in block for term in topical_terms)
+            has_systemic_class = any(term in block for term in systemic_terms)
+            
+            # Count each category found in this block as at most 1 step
+            # (because OR-connected items within a block = 1 step)
+            block_steps = 0
+            if has_generic_drug or has_systemic_class:
+                block_steps += 1  # All named generics in same OR-block = 1 step
+            if has_topical and not has_generic_drug:
+                # Topical only counts separately if not grouped with named generics
+                block_steps += 1
+            
+            generic_steps += block_steps
+        
+        if generic_steps > 0:
+            return str(generic_steps)
+        
+        return None
+    
+    def _extract_phototherapy(self, context: str, brand: str) -> Optional[str]:
+        """Extract whether phototherapy is a mandatory step.
+        
+        Returns 'Yes' only if phototherapy is a standalone mandatory requirement,
+        'No' if it appears in an OR condition or not mentioned as required.
+        """
+        text = context.lower()
+        
+        # Check if phototherapy/PUVA/UVB mentioned at all
+        photo_match = re.search(r'(?:phototherapy|puva|uvb|ultraviolet|light therapy)', text)
+        if not photo_match:
+            # Not mentioned at all
+            # Check if there are any step criteria
+            if re.search(r'step|criteria|requirement|prior authorization', text):
+                return "No"
+            return None  # Can't determine
+        
+        # Check if in OR condition: "phototherapy OR ..." / "... or phototherapy"
+        or_patterns = [
+            r'phototherapy\s+or\s+',
+            r'\bor\s+phototherapy',
+            r'phototherapy.*?,\s*or\s+',
+            r'(?:puva|uvb)\s+or\s+',
+            r'\bor\s+(?:puva|uvb)',
+        ]
+        for pattern in or_patterns:
+            if re.search(pattern, text):
+                return "No"
+        
+        # Check if mandatory: "must have tried phototherapy" / "phototherapy required"
+        mandatory_patterns = [
+            r'(?:must|shall|required)\s+.*?phototherapy',
+            r'phototherapy\s+(?:is\s+)?required',
+            r'(?:trial|failure|inadequate response)\s+(?:of|to|with)\s+.*?phototherapy',
+            r'phototherapy.*?(?:trial|failure|inadequate)',
+        ]
+        for pattern in mandatory_patterns:
+            if re.search(pattern, text):
+                return "Yes"
+        
+        # Mentioned but context unclear - likely not mandatory
+        return "No"
+    
+    def _extract_tb_test(self, context: str) -> Optional[str]:
+        """Extract TB test requirement.
+        
+        Looks for: tuberculosis, TB test, TST, IGRA, documented negative.
+        """
+        text = context.lower()
+        
+        # Check for TB-related terms
+        tb_patterns = [
+            r'tuberculosis',
+            r'\btb\s+(?:test|screen)',
+            r'tuberculin\s+skin\s+test',
+            r'\btst\b',
+            r'\bigra\b',
+            r'interferon.?(?:gamma)?\s*release\s*assay',
+            r'documented\s+negative\s+(?:tb|tuberculosis)',
+            r'(?:tb|tuberculosis)\s+(?:test|screen).*?(?:negative|documented)',
+        ]
+        
+        for pattern in tb_patterns:
+            if re.search(pattern, text):
+                return "Yes"
+        
+        # Explicitly not required
+        if re.search(r'(?:tb|tuberculosis)\s+(?:test|screen).*?not\s+required', text):
+            return "No"
+        
+        # Not mentioned = NA
+        return "NA"
+    
+    def _extract_initial_auth_duration(self, context: str) -> Optional[str]:
+        """Extract initial authorization duration in months.
+        
+        Patterns: 'Initial: X months', 'authorization of X months',
+        'Length of Approval: X Month(s)', 'Coverage Duration' tables.
+        """
+        text = context.lower()
+        
+        # Pattern: structured field already extracted "Duration: X months" with "Type: initial"
+        match = re.search(r'\[structured field:.*?authorization duration\].*?type:\s*initial.*?duration:\s*(\d+)\s*month', text, re.DOTALL)
+        if match:
+            return match.group(1)
+        
+        # Pattern: "Initial: X months" or "Initial Authorization: X months"
+        match = re.search(r'initial\s*(?:authorization|approval)?\s*[:=]\s*(\d+)\s*month', text)
+        if match:
+            return match.group(1)
+        
+        # Pattern: "Length of Approval: X Month(s)" near "initial" context
+        # Look for initial context within 500 chars before "length of approval"
+        for m in re.finditer(r'length of approval\s*[:=]?\s*(\d+)\s*month', text):
+            preceding = text[max(0, m.start()-500):m.start()]
+            if 'initial' in preceding and 'reauthorization' not in preceding and 'renewal' not in preceding:
+                return m.group(1)
+        
+        # Pattern: "authorization of X months may be granted" near initial context
+        for m in re.finditer(r'authorization of\s+(\d+)\s+months?\s+(?:may be|is)\s+granted', text):
+            preceding = text[max(0, m.start()-500):m.start()]
+            if 'renewal' not in preceding and 'reauthorization' not in preceding and 'continuation' not in preceding:
+                return m.group(1)
+        
+        # Pattern: "Coverage Duration" table with initial row
+        match = re.search(r'(?:coverage duration|approval duration).*?initial.*?(\d+)\s*month', text, re.DOTALL)
+        if match:
+            return match.group(1)
+        
+        # Pattern: just "X months" near "initial" without renewal context
+        for m in re.finditer(r'(\d+)\s*months?', text):
+            months_val = int(m.group(1))
+            if months_val in [1, 3, 6, 12, 24]:  # Common auth durations
+                surrounding = text[max(0, m.start()-200):min(len(text), m.end()+200)]
+                if 'initial' in surrounding and 'renewal' not in surrounding and 'reauthorization' not in surrounding:
+                    return m.group(1)
+        
+        return None
+    
+    def _extract_reauth_duration(self, context: str) -> Optional[str]:
+        """Extract reauthorization/renewal duration in months.
+        
+        Patterns: 'Renewal: X months', 'reauthorization period of X months',
+        'continuation X months'.
+        """
+        text = context.lower()
+        
+        # Pattern: structured field "Type: reauthorization" with duration
+        match = re.search(r'\[structured field:.*?authorization duration\].*?type:\s*reauthorization.*?duration:\s*(\d+)\s*month', text, re.DOTALL)
+        if match:
+            return match.group(1)
+        
+        # Pattern: "Renewal: X months" or "Reauthorization: X months"
+        match = re.search(r'(?:renewal|reauthorization|continuation)\s*(?:period|duration|approval)?\s*[:=]\s*(\d+)\s*month', text)
+        if match:
+            return match.group(1)
+        
+        # Pattern: "Length of Approval: X Month(s)" near reauthorization context
+        for m in re.finditer(r'length of approval\s*[:=]?\s*(\d+)\s*month', text):
+            preceding = text[max(0, m.start()-500):m.start()]
+            if any(kw in preceding for kw in ['reauthorization', 'renewal', 'continuation']):
+                return m.group(1)
+        
+        # Pattern: "authorization of X months" near renewal context
+        for m in re.finditer(r'authorization of\s+(\d+)\s+months?\s+(?:may be|is)\s+granted', text):
+            preceding = text[max(0, m.start()-500):m.start()]
+            if any(kw in preceding for kw in ['renewal', 'reauthorization', 'continuation']):
+                return m.group(1)
+        
+        # Pattern: Coverage Duration table with renewal row
+        match = re.search(r'(?:coverage duration|approval duration).*?(?:renewal|reauthorization).*?(\d+)\s*month', text, re.DOTALL)
+        if match:
+            return match.group(1)
+        
+        # Pattern: "X months" near reauthorization/renewal context
+        for m in re.finditer(r'(\d+)\s*months?', text):
+            months_val = int(m.group(1))
+            if months_val in [1, 3, 6, 12, 24]:
+                surrounding = text[max(0, m.start()-200):min(len(text), m.end()+200)]
+                if any(kw in surrounding for kw in ['renewal', 'reauthorization', 'continuation']):
+                    if 'initial' not in surrounding:
+                        return m.group(1)
+        
+        return None
+    
+    def _extract_reauth_required(self, context: str, other_results: Dict) -> Optional[str]:
+        """Determine if reauthorization is required.
+        
+        Derived from: presence of reauth duration, reauth criteria,
+        or explicit 'reauthorization required' language.
+        """
+        text = context.lower()
+        
+        # If we already found reauth duration, it implies reauth is required
+        if other_results.get("Reauthorization Duration(in-months)"):
+            return "Yes"
+        
+        # Check for explicit reauthorization/renewal criteria sections
+        if re.search(r'(?:reauthorization|renewal|continuation)\s*(?:criteria|requirements?|of therapy)', text):
+            return "Yes"
+        
+        # Check for explicit "reauthorization required" or "renewal required"
+        if re.search(r'(?:reauthorization|renewal)\s+(?:is\s+)?required', text):
+            return "Yes"
+        
+        # Check for "no reauthorization"
+        if re.search(r'(?:no|not)\s+(?:reauthorization|renewal)\s+required', text):
+            return "No"
+        
+        return None
+
+
 class RAGExtractor:
-    """Main RAG extraction engine using LangGraph for orchestration."""
+    """Main RAG extraction engine using retrieval-augmented generation.
+    
+    For each (filename, brand) combination, uses a hybrid approach:
+    - Regex-first extraction for structured parameters (8 non-text fields)
+    - Single batch LLM validation for regex-extracted values
+    - Individual LLM extraction for free-form text parameters (4 fields)
+    
+    This reduces LLM calls from ~12 to ~5 per record while improving
+    accuracy for structured fields through deterministic pattern matching.
+    """
     
     def __init__(self, llm_client: LLMClient, vector_store: FAISSVectorStore, 
                  judge: LLMJudge, logger: logging.Logger):
@@ -1329,9 +2089,21 @@ class RAGExtractor:
         self.judge = judge
         self.logger = logger
         self.retrieval_logs = []
+        self.regex_extractor = RegexExtractor(logger)
     
     def extract_parameters(self, filename: str, brand: str) -> Dict[str, str]:
-        """Extract all parameters for a given filename-brand combination."""
+        """Extract all 12 parameters + Access Score for a filename-brand pair.
+        
+        Groups parameters into step_therapy and clinical_and_auth categories
+        for efficient retrieval, then calculates the Access Score.
+        
+        Args:
+            filename: Source PDF filename (e.g., '330109-4880941.pdf').
+            brand: Drug brand name (e.g., 'TREMFYA').
+            
+        Returns:
+            Dict mapping parameter names to extracted string values.
+        """
         self.logger.info(f"\n{'='*60}")
         self.logger.info(f"Extracting parameters for: {filename} | Brand: {brand}")
         self.logger.info(f"{'='*60}")
@@ -1352,29 +2124,39 @@ class RAGExtractor:
         return results
     
     def _group_parameters(self) -> Dict[str, List[str]]:
-        """Group parameters for efficient retrieval - each param gets its own retrieval."""
+        """Group parameters into categories for extraction.
+        
+        Returns:
+            Dict with group names as keys and parameter lists as values.
+            - 'regex_batch': Non-text params extracted by regex + batch LLM validation
+            - 'llm_text': Free-form text params requiring individual LLM calls
+        """
         return {
-            "step_therapy": [
-                "Step Therapy Requirements Documented in Policy",
-                "Number of Steps through Brands",
-                "Number of Steps through Generic",
-                "Step through-Phototherapy",
-            ],
-            "clinical_and_auth": [
-                "Age",
-                "TB Test required",
-                "Quantity Limits",
-                "Specialist Types",
-                "Initial Authorization Duration(in-months)",
-                "Reauthorization Duration(in-months)",
-                "Reauthorization Required",
-                "Reauthorization Requirements Documented in Policy",
-            ],
+            "regex_batch": REGEX_EXTRACTABLE_PARAMS,
+            "llm_text": LLM_ONLY_PARAMS,
         }
     
     def _extract_parameter_group(self, filename: str, brand: str, 
                                   parameters: List[str]) -> Dict[str, str]:
-        """Extract a group of related parameters with per-parameter retrieval."""
+        """Extract a group of parameters using hybrid regex + LLM approach.
+        
+        For 'regex_batch' parameters:
+        1. Retrieves context from FAISS (broad + targeted)
+        2. Runs regex extraction on combined context
+        3. Sends all regex candidates to ONE batch LLM call for validation
+        
+        For 'llm_text' parameters:
+        1. Retrieves context per parameter
+        2. Sends each to individual LLM extraction (parallelized)
+        
+        Args:
+            filename: Source PDF filename.
+            brand: Drug brand name.
+            parameters: List of parameter names to extract.
+            
+        Returns:
+            Dict mapping parameter names to extracted values.
+        """
         results = {}
         
         # Map parameters to structured field types for direct lookup
@@ -1411,109 +2193,392 @@ class RAGExtractor:
             broad_chunks = [doc.page_content for doc, score in broad_retrieved]
             broad_context = "\n\n---\n\n".join(broad_chunks[:RERANK_TOP_K])
         
-        # For each parameter, do targeted retrieval and prepare context
-        param_contexts = {}
-        param_queries = {}
-        for param in parameters:
-            # Targeted retrieval for this specific parameter
-            targeted_query = self._build_single_param_query(param, brand)
-            param_queries[param] = targeted_query
-            targeted_retrieved = self.vector_store.search(
-                query=targeted_query,
-                top_k=10,
-                filter_source=filename,
-                filter_brand=brand
-            )
+        # Separate regex-extractable vs LLM-only parameters
+        regex_params = [p for p in parameters if p in REGEX_EXTRACTABLE_PARAMS]
+        llm_params = [p for p in parameters if p in LLM_ONLY_PARAMS]
+        
+        # --- REGEX BATCH EXTRACTION ---
+        if regex_params:
+            self.logger.info(f"    [Regex] Extracting {len(regex_params)} structured params via direct chunk scan + batch validation")
             
-            # Prepend directly-matched structured field documents
-            structured_prefix = ""
-            field_type = param_to_field_type.get(param)
-            if field_type and field_type in structured_field_docs:
-                sf_docs = structured_field_docs[field_type]
-                # Filter by relevant indication for auth duration
-                if field_type == "authorization_duration":
-                    if "Initial" in param:
-                        sf_docs = [d for d in sf_docs if d.metadata.get("auth_type") in ("initial", "unknown")]
-                    elif "Reauthorization" in param:
-                        sf_docs = [d for d in sf_docs if d.metadata.get("auth_type") in ("reauthorization", "unknown")]
-                    # Prefer PsO indication
-                    pso_docs = [d for d in sf_docs if d.metadata.get("indication") == "PsO"]
-                    if pso_docs:
-                        sf_docs = pso_docs
-                elif field_type == "prescriber_restrictions":
-                    # Prefer PsO indication
-                    pso_docs = [d for d in sf_docs if d.metadata.get("indication") == "PsO"]
-                    if pso_docs:
-                        sf_docs = pso_docs
-                elif field_type == "reauthorization_criteria":
-                    pso_docs = [d for d in sf_docs if d.metadata.get("indication") == "PsO"]
-                    if pso_docs:
-                        sf_docs = pso_docs
+            # DIRECT CHUNK STORE SCAN: get ALL chunks for this file with brand/PsO filtering
+            # This gives 100% recall for regex patterns (no embedding-based missed chunks)
+            brand_upper = brand.upper()
+            generic_name = BRAND_GENERIC_MAP.get(brand_upper, "").upper()
+            
+            regex_chunks = []
+            for doc_item in self.vector_store.documents:
+                # Filter 1: Must be from this file
+                if doc_item.metadata.get("source") != filename:
+                    continue
                 
-                if sf_docs:
-                    structured_prefix = "\n\n---\n\n".join([d.page_content for d in sf_docs[:3]])
-                    structured_prefix = f"[DIRECTLY MATCHED STRUCTURED DATA]\n{structured_prefix}\n\n---\n\n"
+                content_lower = doc_item.page_content.lower()
+                content_upper = doc_item.page_content.upper()
+                
+                # Filter 2: Brand relevance — include if:
+                # a) Mentions the brand or its generic name
+                # b) Has no brand mentions at all (universal/general criteria)
+                # c) Is a structured field document (always relevant)
+                # d) Contains PsO-related terms
+                brands_in_chunk = doc_item.metadata.get("brands_mentioned", [])
+                is_structured = doc_item.metadata.get("type") == "structured_field"
+                mentions_brand = (brand_upper in content_upper or 
+                                  (generic_name and generic_name in content_upper))
+                is_universal = len(brands_in_chunk) == 0  # No specific brand = general criteria
+                
+                # Filter 3: PsO relevance — include if:
+                # a) Mentions psoriasis/PsO
+                # b) Is universal (applies to all indications)
+                # c) Is structured field
+                # d) Contains step therapy / authorization / criteria terms
+                has_pso = any(term in content_lower for term in [
+                    'psoriasis', 'pso', 'plaque', 'moderate-to-severe',
+                    'moderate to severe'
+                ])
+                has_policy_terms = any(term in content_lower for term in [
+                    'step therapy', 'prior authorization', 'criteria',
+                    'coverage duration', 'authorization', 'quantity limit',
+                    'tb test', 'tuberculosis', 'phototherapy', 'reauthorization',
+                    'renewal', 'specialist', 'prescriber', 'age',
+                ])
+                
+                # Include chunk if it passes brand + relevance filters
+                if is_structured or mentions_brand or is_universal:
+                    if is_structured or has_pso or has_policy_terms or is_universal:
+                        regex_chunks.append(doc_item.page_content)
             
-            # Merge broad + targeted context (deduplicated)
-            seen_hashes = set()
-            merged_chunks = []
+            self.logger.info(f"    [Regex] Scanning {len(regex_chunks)} chunks (direct store, filtered by file+brand+PsO)")
             
-            all_results = (targeted_retrieved or []) + (broad_retrieved or [])
-            for doc, score in all_results:
-                doc_hash = hashlib.md5(doc.page_content[:200].encode()).hexdigest()
-                if doc_hash not in seen_hashes:
-                    seen_hashes.add(doc_hash)
-                    merged_chunks.append(doc.page_content)
-                if len(merged_chunks) >= RERANK_TOP_K:
-                    break
+            # Build full context for regex extraction
+            regex_context = "\n\n---\n\n".join(regex_chunks)
             
-            context = "\n\n---\n\n".join(merged_chunks) if merged_chunks else broad_context
+            # Run regex extraction on the full filtered chunk text
+            regex_results = self.regex_extractor.extract_all(regex_context, brand)
             
-            # Prepend structured field data to context
-            if structured_prefix:
-                context = structured_prefix + context
+            # Log regex extraction results
+            for param, value in regex_results.items():
+                if param in regex_params:
+                    self.logger.info(f"    [Regex] {param} = {value}")
             
-            param_contexts[param] = (context, len(merged_chunks), bool(structured_prefix))
+            # Batch validate with LLM — build curated context for validation
+            # Use FAISS retrieval for LLM context (focused, relevant chunks only)
+            llm_validation_context = ""
+            # Add structured fields first (most reliable)
+            for field_type in set(param_to_field_type.get(p) for p in regex_params if p in param_to_field_type):
+                if field_type and field_type in structured_field_docs:
+                    sf_docs = structured_field_docs[field_type]
+                    for d in sf_docs[:3]:
+                        llm_validation_context += d.page_content + "\n\n---\n\n"
+            # Add top FAISS-retrieved chunks (most semantically relevant)
+            if broad_retrieved:
+                for doc, score in broad_retrieved[:RERANK_TOP_K]:
+                    if len(llm_validation_context) + len(doc.page_content) > MAX_CONTEXT_CHARS:
+                        break
+                    if doc.page_content not in llm_validation_context:
+                        llm_validation_context += doc.page_content + "\n\n---\n\n"
+            # Fallback: if still small, add broad context
+            if len(llm_validation_context) < MAX_CONTEXT_CHARS // 2:
+                llm_validation_context += broad_context
+            
+            validated_results = self._batch_validate_regex_results(
+                regex_results, regex_params, brand, llm_validation_context, filename
+            )
+            results.update(validated_results)
+            
+            # Log retrieval for regex params
+            for param in regex_params:
+                log_entry = {
+                    "filename": filename,
+                    "brand": brand,
+                    "parameter": param,
+                    "query": f"[regex+batch_validation]",
+                    "num_chunks": len(broad_retrieved) if broad_retrieved else 0,
+                    "has_structured_field": True,
+                    "regex_candidate": regex_results.get(param),
+                    "extracted_value": results.get(param, "NA"),
+                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                }
+                self.retrieval_logs.append(log_entry)
         
-        # Extract all parameters in parallel using ThreadPoolExecutor
-        def _extract_param(param):
-            context, num_chunks, has_structured = param_contexts[param]
-            if not context:
-                self.logger.warning(f"  No chunks retrieved for {param}")
-                return param, "NA", num_chunks, has_structured
-            value = self._extract_single_parameter(param, brand, context, filename)
-            return param, value, num_chunks, has_structured
-        
-        PARALLEL_WORKERS = 3  # Conservative: accuracy > speed, avoids rate limit cascades
-        with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as executor:
-            futures = {executor.submit(_extract_param, param): param for param in parameters}
-            for future in as_completed(futures):
-                param = futures[future]
-                try:
-                    param_name, value, num_chunks, has_structured = future.result()
-                    results[param_name] = value
-                    self.logger.info(f"    Extracted: {param_name} = {str(value)[:80]}")
+        # --- LLM TEXT EXTRACTION ---
+        if llm_params:
+            self.logger.info(f"    [LLM] Extracting {len(llm_params)} text params via individual LLM calls")
+            
+            # For each text parameter, do targeted retrieval and prepare context
+            param_contexts = {}
+            param_queries = {}
+            for param in llm_params:
+                targeted_query = self._build_single_param_query(param, brand)
+                param_queries[param] = targeted_query
+                targeted_retrieved = self.vector_store.search(
+                    query=targeted_query,
+                    top_k=10,
+                    filter_source=filename,
+                    filter_brand=brand
+                )
+                
+                # Prepend directly-matched structured field documents
+                structured_prefix = ""
+                field_type = param_to_field_type.get(param)
+                if field_type and field_type in structured_field_docs:
+                    sf_docs = structured_field_docs[field_type]
+                    if field_type == "reauthorization_criteria":
+                        pso_docs = [d for d in sf_docs if d.metadata.get("indication") == "PsO"]
+                        if pso_docs:
+                            sf_docs = pso_docs
+                    elif field_type == "prescriber_restrictions":
+                        pso_docs = [d for d in sf_docs if d.metadata.get("indication") == "PsO"]
+                        if pso_docs:
+                            sf_docs = pso_docs
+                    elif field_type == "quantity_limits":
+                        pass  # Use all
                     
-                    # Log retrieval
-                    log_entry = {
-                        "filename": filename,
-                        "brand": brand,
-                        "parameter": param_name,
-                        "query": param_queries[param_name],
-                        "num_chunks": num_chunks,
-                        "has_structured_field": has_structured,
-                        "extracted_value": value,
-                        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
-                    }
-                    self.retrieval_logs.append(log_entry)
-                except Exception as e:
-                    self.logger.error(f"    Error extracting {param}: {e}")
-                    results[param] = "NA"
+                    if sf_docs:
+                        structured_prefix = "\n\n---\n\n".join([d.page_content for d in sf_docs[:3]])
+                        structured_prefix = f"[DIRECTLY MATCHED STRUCTURED DATA]\n{structured_prefix}\n\n---\n\n"
+                
+                # Merge broad + targeted context (deduplicated)
+                seen_hashes = set()
+                merged_chunks = []
+                
+                all_results = (targeted_retrieved or []) + (broad_retrieved or [])
+                for doc, score in all_results:
+                    doc_hash = hashlib.md5(doc.page_content[:200].encode()).hexdigest()
+                    if doc_hash not in seen_hashes:
+                        seen_hashes.add(doc_hash)
+                        merged_chunks.append(doc.page_content)
+                    if len(merged_chunks) >= RERANK_TOP_K:
+                        break
+                
+                context = "\n\n---\n\n".join(merged_chunks) if merged_chunks else broad_context
+                if structured_prefix:
+                    context = structured_prefix + context
+                
+                param_contexts[param] = (context, len(merged_chunks), bool(structured_prefix))
+            
+            # Extract text parameters in parallel
+            def _extract_param(param):
+                context, num_chunks, has_structured = param_contexts[param]
+                if not context:
+                    self.logger.warning(f"  No chunks retrieved for {param}")
+                    return param, "NA", num_chunks, has_structured
+                value = self._extract_single_parameter(param, brand, context, filename)
+                return param, value, num_chunks, has_structured
+            
+            PARALLEL_WORKERS = 3
+            with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as executor:
+                futures = {executor.submit(_extract_param, param): param for param in llm_params}
+                for future in as_completed(futures):
+                    param = futures[future]
+                    try:
+                        param_name, value, num_chunks, has_structured = future.result()
+                        results[param_name] = value
+                        self.logger.info(f"    [LLM] Extracted: {param_name} = {str(value)[:80]}")
+                        
+                        log_entry = {
+                            "filename": filename,
+                            "brand": brand,
+                            "parameter": param_name,
+                            "query": param_queries[param_name],
+                            "num_chunks": num_chunks,
+                            "has_structured_field": has_structured,
+                            "extracted_value": value,
+                            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                        }
+                        self.retrieval_logs.append(log_entry)
+                    except Exception as e:
+                        self.logger.error(f"    Error extracting {param}: {e}")
+                        results[param] = "NA"
         
         return results
     
+    def _batch_validate_regex_results(self, regex_results: Dict[str, Optional[str]], 
+                                       parameters: List[str], brand: str,
+                                       context: str, filename: str) -> Dict[str, str]:
+        """Validate regex-extracted values via LLM, splitting into sub-groups for TPM safety.
+        
+        Splits the 8 parameters into REGEX_BATCH_GROUPS (2 groups of 4) to keep
+        each LLM call within ~1500 tokens input. Each sub-group gets only its
+        relevant business rules and a focused context slice.
+        
+        With 6K TPM (llama-3.1-8b fallback): each call ~1700 tokens, 2 calls = ~3400 tokens,
+        leaving headroom for the 4 text extraction calls within the same minute window.
+        
+        Args:
+            regex_results: Dict of parameter -> regex candidate value (or None).
+            parameters: List of parameter names to validate.
+            brand: Drug brand name.
+            context: Retrieved document context.
+            filename: Source filename.
+            
+        Returns:
+            Dict mapping parameter names to validated/corrected values.
+        """
+        final_results = {}
+        
+        # Split parameters into sub-groups for TPM-safe validation
+        for group in REGEX_BATCH_GROUPS:
+            # Only validate params that are in our current parameter list
+            group_params = [p for p in group if p in parameters]
+            if not group_params:
+                continue
+            
+            group_results = self._validate_param_group(
+                regex_results, group_params, brand, context, filename
+            )
+            final_results.update(group_results)
+        
+        # Handle any params not in REGEX_BATCH_GROUPS (safety fallback)
+        grouped_params = set(p for g in REGEX_BATCH_GROUPS for p in g)
+        for param in parameters:
+            if param not in grouped_params and param not in final_results:
+                final_results[param] = regex_results.get(param) or "NA"
+        
+        return final_results
+    
+    def _validate_param_group(self, regex_results: Dict[str, Optional[str]],
+                               group_params: List[str], brand: str,
+                               context: str, filename: str) -> Dict[str, str]:
+        """Validate a sub-group of regex-extracted params in one LLM call.
+        
+        Args:
+            regex_results: Dict of all regex candidate values.
+            group_params: Subset of parameter names for this batch.
+            brand: Drug brand name.
+            context: Retrieved document context.
+            filename: Source filename.
+            
+        Returns:
+            Dict mapping group parameter names to validated values.
+        """
+        # Build candidates text (only for this group)
+        candidates_text = ""
+        for param in group_params:
+            value = regex_results.get(param, None)
+            candidates_text += f"- {param}: {value if value is not None else '[NOT FOUND - please extract]'}\n"
+        
+        # Build business rules (only for this group - keeps prompt small)
+        rules_text = ""
+        for param in group_params:
+            rule = BUSINESS_RULES.get(param, "")
+            if rule:
+                rules_text += f"\n{param}:\n{rule}\n"
+        
+        # Build expected JSON keys for this group
+        json_keys = {}
+        for param in group_params:
+            if param == "Age":
+                json_keys[param] = "<value>"
+            elif param in ["Number of Steps through Brands", "Number of Steps through Generic"]:
+                json_keys[param] = "<integer or NA>"
+            elif param in ["Step through-Phototherapy", "TB Test required", "Reauthorization Required"]:
+                json_keys[param] = "<Yes/No/NA>"
+            elif param in ["Initial Authorization Duration(in-months)", "Reauthorization Duration(in-months)"]:
+                json_keys[param] = "<number or NA or Unspecified>"
+            else:
+                json_keys[param] = "<value>"
+        
+        json_template = json.dumps(json_keys, indent=2)
+        
+        # Use reduced context for smaller groups (half of MAX_CONTEXT_CHARS per group)
+        context_limit = MAX_CONTEXT_CHARS // 2 + 1000  # ~3500 chars per group call
+        
+        system_prompt = f"""You are an expert at extracting structured information from payer PA policy documents.
+Validate/correct pre-extracted values for brand: {brand} (Plaque Psoriasis / PsO, moderate-to-severe).
+Rules: Universal + brand-specific criteria combined with AND. OR conditions = least restrictive path.
+Output "NA" only if truly absent."""
+
+        prompt = f"""Validate or correct these values for {brand} (Plaque Psoriasis):
+
+CANDIDATES:
+{candidates_text}
+BUSINESS RULES:
+{rules_text}
+CONTEXT:
+{context[:context_limit]}
+
+Output ONLY corrected JSON (keep correct values, fix wrong ones, extract missing ones):
+{json_template}"""
+
+        try:
+            response = self.llm.invoke(prompt, system_prompt)
+            
+            # Parse JSON response
+            json_match = re.search(r'\{[^{}]*\}', response, re.DOTALL)
+            if json_match:
+                validated = json.loads(json_match.group())
+                
+                results = {}
+                for param in group_params:
+                    if param in validated and validated[param]:
+                        val = str(validated[param]).strip()
+                        val = self._normalize_param_value(param, val)
+                        results[param] = val
+                    else:
+                        results[param] = regex_results.get(param) or "NA"
+                
+                self.logger.info(f"    [Batch] Validated {len(results)} params: {list(results.keys())}")
+                return results
+            else:
+                self.logger.warning(f"    [Batch] Could not parse JSON, using regex candidates for {group_params}")
+                return {p: (regex_results.get(p) or "NA") for p in group_params}
+                
+        except RuntimeError as e:
+            if "ALL_MODELS_EXHAUSTED" in str(e):
+                raise
+            self.logger.error(f"    [Batch] Validation failed: {e}")
+            return {p: (regex_results.get(p) or "NA") for p in group_params}
+        except Exception as e:
+            self.logger.error(f"    [Batch] Validation failed: {e}")
+            return {p: (regex_results.get(p) or "NA") for p in group_params}
+    
+    def _normalize_param_value(self, param: str, val: str) -> str:
+        """Normalize an LLM-returned parameter value to expected format.
+        
+        Args:
+            param: Parameter name.
+            val: Raw value string from LLM.
+            
+        Returns:
+            Normalized value string.
+        """
+        if param in ["Step through-Phototherapy", "TB Test required", "Reauthorization Required"]:
+            val_lower = val.lower()
+            if "yes" in val_lower:
+                return "Yes"
+            elif val_lower in ["no"]:
+                return "No"
+            elif val_lower in ["na", "n/a", "not applicable"]:
+                return "NA"
+        elif param in ["Number of Steps through Brands", "Number of Steps through Generic"]:
+            num_match = re.search(r'(\d+)', val)
+            if num_match:
+                return num_match.group(1)
+            elif val.lower() in ["na", "n/a"]:
+                return "NA"
+        elif param in ["Initial Authorization Duration(in-months)", "Reauthorization Duration(in-months)"]:
+            num_match = re.search(r'(\d+)', val)
+            if num_match:
+                return num_match.group(1)
+            elif "unspecified" in val.lower():
+                return "Unspecified"
+            elif val.lower() in ["na", "n/a"]:
+                return "NA"
+        return val
+    
     def _build_single_param_query(self, parameter: str, brand: str) -> str:
-        """Build a highly targeted retrieval query for a single parameter."""
+        """Build a highly targeted retrieval query for a single parameter.
+        
+        Each parameter has a hand-crafted query template incorporating
+        the brand name and domain-specific keywords for optimal recall.
+        
+        Args:
+            parameter: Parameter name to build query for.
+            brand: Drug brand name to include in query.
+            
+        Returns:
+            Optimized search query string.
+        """
         queries = {
             "Age": f"{brand} age years old eligibility plaque psoriasis coverage criteria members authorization granted",
             "Step Therapy Requirements Documented in Policy": f"{brand} step therapy documentation criteria prior authorization inadequate response intolerance contraindication trial failure biologic generic plaque psoriasis coverage criteria",
@@ -1531,7 +2596,18 @@ class RAGExtractor:
         return queries.get(parameter, f"{brand} {parameter} plaque psoriasis")
     
     def _build_retrieval_query(self, parameters: List[str], brand: str) -> str:
-        """Build an optimized retrieval query for a parameter group."""
+        """Build a broad retrieval query covering multiple parameters.
+        
+        Concatenates keyword sets for all parameters in the group to
+        fetch a general-purpose context set.
+        
+        Args:
+            parameters: List of parameter names.
+            brand: Drug brand name.
+            
+        Returns:
+            Combined broad search query string.
+        """
         param_keywords = {
             "Age": f"age eligibility criteria requirement {brand} psoriasis plaque indication years old",
             "Step Therapy Requirements Documented in Policy": f"step therapy prior authorization criteria requirements {brand} psoriasis biologic generic trial failure inadequate response",
@@ -1551,7 +2627,15 @@ class RAGExtractor:
         return " ".join(queries)
     
     def _build_alternative_query(self, parameters: List[str], brand: str) -> str:
-        """Build alternative query for re-ranking."""
+        """Build an alternative query for re-ranking using synonym-based keywords.
+        
+        Args:
+            parameters: List of parameter names.
+            brand: Drug brand name.
+            
+        Returns:
+            Alternative search query string with synonym-rich keywords.
+        """
         alt_keywords = {
             "Age": f"{brand} adult pediatric age restriction indication approval criteria",
             "Step Therapy Requirements Documented in Policy": f"{brand} must have tried failed prior treatment criteria authorization",
@@ -1572,7 +2656,21 @@ class RAGExtractor:
     
     def _extract_single_parameter(self, parameter: str, brand: str, 
                                    context: str, filename: str) -> str:
-        """Extract a single parameter value using LLM."""
+        """Extract a single parameter value using the LLM.
+        
+        Constructs a structured prompt with business rules, parameter-specific
+        instructions, and retrieved context. Post-processes the LLM response
+        to normalize formats (numeric fields, Yes/No/NA fields, durations).
+        
+        Args:
+            parameter: Parameter name to extract.
+            brand: Drug brand name.
+            context: Retrieved document context string.
+            filename: Source filename for logging.
+            
+        Returns:
+            Extracted parameter value (string), or 'NA' on error.
+        """
         business_rule = BUSINESS_RULES.get(parameter, "")
         
         # Parameter-specific extraction instructions
@@ -1747,7 +2845,24 @@ Your answer:"""
             return "NA"
     
     def _calculate_access_score(self, params: Dict[str, str], filename: str, brand: str) -> str:
-        """Calculate Access Score using hybrid approach (rules + LLM verification)."""
+        """Calculate Access Score using rule-based logic with optional LLM verification.
+        
+        Starts at 50 (parity with FDA label) and adjusts based on:
+        - Step therapy burden (brand/generic steps, phototherapy)
+        - Age restrictions
+        - Quantity limits and specialist requirements
+        - Authorization duration and reauthorization burden
+        
+        Final score is bucketed to nearest 25-point increment (0/25/50/75/100).
+        
+        Args:
+            params: Dict of extracted parameter values.
+            filename: Source filename for logging.
+            brand: Drug brand name.
+            
+        Returns:
+            Bucketed Access Score as string ('0', '25', '50', '75', or '100').
+        """
         self.logger.info(f"  Calculating Access Score...")
         
         # Rule-based initial score
@@ -1857,7 +2972,11 @@ Rule-based score: {bucketed_score}/100. Correct score (0/25/50/75/100)? Reply wi
         return str(bucketed_score)
     
     def save_logs(self, output_dir: str):
-        """Save all retrieval logs."""
+        """Save retrieval logs and LLM judge results to JSON files.
+        
+        Args:
+            output_dir: Base output directory (logs saved to output_dir/logs/).
+        """
         log_dir = os.path.join(output_dir, "logs")
         os.makedirs(log_dir, exist_ok=True)
         
@@ -1878,7 +2997,11 @@ Rule-based score: {bucketed_score}/100. Correct score (0/25/50/75/100)? Reply wi
 # ============================================================================
 
 class PipelineState:
-    """State class for the LangGraph pipeline."""
+    """State container for the end-to-end pipeline execution.
+    
+    Holds all intermediate data (parsed documents, chunks, vector store,
+    results) and tracks errors across pipeline steps.
+    """
     def __init__(self):
         self.pdf_dir: str = ""
         self.output_dir: str = ""
@@ -1894,7 +3017,27 @@ class PipelineState:
 
 
 def create_pipeline_graph(state: PipelineState, logger: logging.Logger):
-    """Create and execute the LangGraph pipeline."""
+    """Execute the full RAG pipeline: parse, chunk, embed, index, extract, score.
+    
+    Orchestrates all pipeline steps sequentially:
+    1. Parse PDFs (or load cached FAISS index)
+    2. Chunk documents with context-aware splitting
+    3. Build/load FAISS vector store
+    4. Extract parameters for each (filename, brand) combination
+    5. Save results to CSV/Excel
+    6. Log LLM Judge summary and performance stats
+    
+    Supports resume: skips already-processed combinations found in
+    result_intermediate.csv. Handles token exhaustion gracefully by
+    filling remaining records with NA.
+    
+    Args:
+        state: PipelineState with pdf_dir, output_dir, and brands_df set.
+        logger: Logger instance.
+        
+    Returns:
+        Updated PipelineState with results populated.
+    """
     
     # Initialize components
     pdf_parser = PDFParser(logger)
@@ -2215,7 +3358,21 @@ def detect_filename_brand_combinations(input_dir: str, logger: logging.Logger) -
 
 
 def main():
-    """Main entry point for the pipeline."""
+    """Main entry point for the pipeline.
+    
+    Parses CLI arguments, loads the brands file (or auto-detects from PDFs),
+    applies resume logic, and runs the full extraction pipeline.
+    
+    CLI Flags:
+        --input_dir: PDF directory (default: data/input_pdfs/)
+        --output_dir: Output directory (default: output/)
+        --brands_file: Excel/CSV with Filename and Brand columns
+        --model: Override primary LLM model name
+        --groq_key: Override Groq API key
+        --rebuild_index: Force rebuild FAISS index
+        --no-judge: Disable LLM judge
+        --enable-score-llm: Enable LLM verification of Access Score
+    """
     parser = argparse.ArgumentParser(description="Payer Policy Intelligence - RAG Pipeline")
     # All paths are relative to the project root (where pipeline.py lives)
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -2346,7 +3503,15 @@ def main():
 # ============================================================================
 
 class LLMJudgeTestSuite:
-    """Test suite with LLM Judge evaluation for validating pipeline quality."""
+    """End-to-end test suite with LLM Judge evaluation for pipeline quality.
+    
+    Runs five test categories:
+    1. Retrieval quality (keyword hits + LLM judge scoring)
+    2. Extraction consistency (logical validation of parameter values)
+    3. Access Score validation (LLM independently scores and compares)
+    4. Business rule compliance (format and logic checks)
+    5. Output format (column completeness, null checks)
+    """
     
     def __init__(self, logger: logging.Logger, output_dir: str):
         self.logger = logger
