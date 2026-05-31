@@ -24,7 +24,7 @@ import pandas as pd
 # ============================================================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = BASE_DIR
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 RESULT_CSV = os.path.join(OUTPUT_DIR, "result_intermediate.csv")
 RESULT_XLSX = os.path.join(OUTPUT_DIR, "result.xlsx")
 LOGS_DIR = os.path.join(OUTPUT_DIR, "logs")
